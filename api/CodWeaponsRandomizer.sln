@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31512.422
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodWeaponsRandomizer.API", "src\CodWeaponsRandomizer.API\CodWeaponsRandomizer.API.csproj", "{2C91E38D-C6ED-46D6-89F4-3971E2EA4B80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodWeaponsRandomizer", "CodWeaponsRandomizer\CodWeaponsRandomizer.csproj", "{ED36B0EE-95A2-4182-B7CD-DF855F686EFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2C91E38D-C6ED-46D6-89F4-3971E2EA4B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C91E38D-C6ED-46D6-89F4-3971E2EA4B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C91E38D-C6ED-46D6-89F4-3971E2EA4B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C91E38D-C6ED-46D6-89F4-3971E2EA4B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED36B0EE-95A2-4182-B7CD-DF855F686EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED36B0EE-95A2-4182-B7CD-DF855F686EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED36B0EE-95A2-4182-B7CD-DF855F686EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED36B0EE-95A2-4182-B7CD-DF855F686EFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9265A35E-49AA-4EDC-9F97-90B82F7D6746}
+		SolutionGuid = {2933A3B5-D79A-4A8C-9178-B83529D5FFCF}
 	EndGlobalSection
 EndGlobal
