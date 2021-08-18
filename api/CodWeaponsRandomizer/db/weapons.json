@@ -1,0 +1,2987 @@
+[
+  {
+    "category": "Launchers",
+    "weapons": [
+      {
+        "name": "JOKR",
+        "attachments": [{ "category": null, "variants": null }]
+      },
+      {
+        "name": "PILA",
+        "attachments": [{ "category": null, "variants": null }]
+      },
+      {
+        "name": "RPG-7",
+        "attachments": [{ "category": null, "variants": null }]
+      },
+      {
+        "name": "Strela-P",
+        "attachments": [{ "category": null, "variants": null }]
+      }
+    ]
+  },
+  {
+    "category": "Marksman Rifles",
+    "weapons": [
+      {
+        "name": "EBR-14",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "15 Round Mags" },
+              { "name": "20 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "FORGE TAC Precision 20.0\"" },
+              { "name": "FORGE TAC Elite" },
+              { "name": "FORGE TAC Precision 22.0\"" }
+            ]
+          },
+          { "category": "Laser", "variants": [{ "name": "Tac Laser" }] },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Breacher Device" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Tactical Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FTAC Precision Comb" },
+              { "name": "FSS Raider Chassis Pro" },
+              { "name": "FTAC Lightweight Stock" },
+              { "name": "FSS Raider Chassis Elite" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "Tactical Foregrip" },
+              { "name": "Bipod" },
+              { "name": "Merc Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Operator Foregrip" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "MK2 Carbine",
+        "attachments": [
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "FSS 18.0\" Factory" },
+              { "name": "FSS 20.0\" Factory" },
+              { "name": "FSS 24.0\" Factory" }
+            ]
+          },
+          { "category": "Laser", "variants": [{ "name": "Tac Laser" }] },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Breacher Device" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Tactical Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Stippled Grip Tape" },
+              { "name": "Rubberized Grip Tape" },
+              { "name": "Granulated Grip Tape" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "SMG",
+    "weapons": [
+      {
+        "name": "AUG",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "32 Round Mags" },
+              { "name": "5.56 NATO 30-Round Mags" },
+              { "name": "5.56 Nato 60-Round Drums" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "407mm Extended Barrel" },
+              { "name": "407mm Lightweight" },
+              { "name": "622mm Long Barrel" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "CQB Breacher Device" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Integral 3.0x Optic" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "Integral Hybrid" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Rubberized Grip Tape" },
+              { "name": "Stippled Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FTAC Ultralight Hollow" },
+              { "name": "FORGE TAC CQB Comb" },
+              { "name": "FSS Heavy Stock Pro" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Merc Foregrip" },
+              { "name": "Commando Foregrip" },
+              { "name": "Tactical Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Operator Foregrip" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "MP5",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "45 Round Mags" },
+              { "name": "10mm Auto 30-Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "FSS Light" },
+              { "name": "Monolithic Integral Suppressor" },
+              { "name": "FSS Mini" },
+              { "name": "Subsonic Integral Suppressor" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Breacher Device" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Integral 3.0x Optic" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "Integral Hybrid" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Rubberized Grip Tape" },
+              { "name": "Granulated Grip Tape" },
+              { "name": "Stippled Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FORGE TAC Ultralight" },
+              { "name": "Classic Straight-line Stock" },
+              { "name": "FSS Close Quarters Stock" },
+              { "name": "FTAC Collapsible" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "Merc Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Tactical Foregrip" },
+              { "name": "Operator Foregrip" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "MP7",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "50 Round Mags" },
+              { "name": "60 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "FSS STRIKE" },
+              { "name": "FSS RECON" },
+              { "name": "FSS SWAT" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Breacher Device" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Integral 3.0x Optic" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "Integral Hybrid" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Stippled Grip Tape" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FORGE TAC Ultralight" },
+              { "name": "FORGE TAC Stalker" },
+              { "name": "FSS Close Quarters Stock" },
+              { "name": "No Stock" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "Merc Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Tactical Foregrip" },
+              { "name": "Operator Foregrip" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "P90",
+        "attachments": [
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "FORGE TAC Retribution" },
+              { "name": "FSS 10.6\" Pro" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Breacher Device" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Integral 3.0x Optic" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "Integral Hybrid" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Stippled Grip Tape" },
+              { "name": "Granulated Grip Tape" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FORGE TAC CQB Comb" },
+              { "name": "Fly Strap" },
+              { "name": "FSS Heavy Stock Pro" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Stippled Grip Tape" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "PP19 Bizon",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [{ "name": "84 Round Helical Mags" }]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "8.7\" Steel" },
+              { "name": "8.7\" Polygonal" },
+              { "name": "8.7\" Aluminum" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Breacher Device" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Integral 3.0x Optic" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "Integral Hybrid" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Stippled Grip Tape" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "Factory Aluminum Stock" },
+              { "name": "No Stock" },
+              { "name": "Corvus Skeleton Stock" },
+              { "name": "FSS Close Quarters Stock" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Uzi",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "40 Round Mags" },
+              { "name": "50 Round Mags" },
+              { "name": ".41 AE 32-Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "13.1\" First Responder" },
+              { "name": "8.5\" Factory Mini" },
+              { "name": "16.5\" Factory Carbine" },
+              { "name": "FSS Carbine Pro" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "CQB Breacher Device" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Integral 3.0x Optic" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "Integral Hybrid" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Stippled Grip Tape" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FORGE TAC Ultralight" },
+              { "name": "Standard-Issue Wood Stock" },
+              { "name": "No Stock" },
+              { "name": "FSS Close Quarters Stock" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "Merc Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Tactical Foregrip" },
+              { "name": "Operator Foregrip" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Melee",
+    "weapons": [
+      {
+        "name": "Dual Kodachis",
+        "attachments": [{ "category": null, "variants": null }]
+      },
+      {
+        "name": "Kali Sticks",
+        "attachments": [{ "category": null, "variants": null }]
+      },
+      {
+        "name": "Knife",
+        "attachments": [{ "category": null, "variants": null }]
+      },
+      {
+        "name": "Riot Shield",
+        "attachments": [{ "category": null, "variants": null }]
+      }
+    ]
+  },
+  {
+    "category": "Shotgun",
+    "weapons": [
+      {
+        "name": "Model 680",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "Tube Extension" },
+              { "name": "Slug Rounds" },
+              { "name": "12 Gauge 6-R Mags" },
+              { "name": "Slug 6-R Mags" },
+              { "name": "Dragon's Breath Rounds" },
+              { "name": "Dragon's Breath 6-R Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "XRK 18.0\" Liberator" },
+              { "name": "XRK 14.0\" SWAT" },
+              { "name": "XRK 30.0\" Sport" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Breacher Device" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Choke" },
+              { "name": "FORGE TAC Marauder" },
+              { "name": "Tactical Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Integral 3.0x Optic" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "Integral Hybrid" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FTAC Stalker-12" },
+              { "name": "FORGE TAC Ultralight" },
+              { "name": "No Stock" },
+              { "name": "Lockwood Precision Series" },
+              { "name": "FTAC Hunter" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "Merc Foregrip" },
+              { "name": "Tactical Foregrip" },
+              { "name": "Lockwood Precision Series" },
+              { "name": "Operator Foregrip" },
+              { "name": "XRK Truegrip Tactical" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "R9-0 Shotgun",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "Tube Extension" },
+              { "name": "Slug Rounds" },
+              { "name": "Dragon's Breath Rounds" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "FORGE TAC Sentry" },
+              { "name": "FORGE TAC Gemini" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Breacher Device" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Choke" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Tactical Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Integral 3.0x Optic" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "Integral Hybrid" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" }
+            ]
+          },
+          {
+            "category": "Pumps",
+            "variants": [
+              { "name": "FSS R9-0 Bulldog" },
+              { "name": "FTAC Ultralight Pump" },
+              { "name": "FTAC Close Quarters Pro" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Rubberized Grip Tape" },
+              { "name": "Stippled Grip Tape" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Merc Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Operator Foregrip" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Handguns",
+    "weapons": [
+      {
+        "name": "1911",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "10 Round Mags" },
+              { "name": "15 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": ".45 Compact" },
+              { "name": ".45 Match Grade" },
+              { "name": "1911 Stalker" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "Tac Laser" },
+              { "name": "5mW Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Oil Can Suppressor" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Tactical Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Cronen LP945 Mini Reflex" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Akimbo" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Stippled Grip Tape" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          },
+          {
+            "category": "Trigger Action",
+            "variants": [
+              { "name": "Lightweight Trigger" },
+              { "name": "Heavy Duty Trigger" },
+              { "name": "Match Grade Trigger" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "X16",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "17 Round Mags" },
+              { "name": "26 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "Singuard Arms Featherweight" },
+              { "name": "Vanguard Elite" },
+              { "name": "Singuard Arms Advantage" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "Tac Laser" },
+              { "name": "5mW Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Oil Can Suppressor" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Tactical Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Cronen LP945 Mini Reflex" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Akimbo" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Stippled Grip Tape" },
+              { "name": "X16 Stock" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          },
+          {
+            "category": "Trigger Action",
+            "variants": [
+              { "name": "Lightweight Trigger" },
+              { "name": "Heavy Duty Trigger" },
+              { "name": "Match Grade Trigger" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "AR",
+    "weapons": [
+      {
+        "name": "AK-47",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "40 Round Mags" },
+              { "name": "5.45x39mm 30-Round Mags" },
+              { "name": "75 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "Spetsnaz Elite" },
+              { "name": "23.0\" RPK Barrel" },
+              { "name": "8.1\" Compact Barrel" },
+              { "name": "23.0\" Romanian" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Flash Guard" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Bayonet" },
+              { "name": "Muzzle Brake" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Compensator" },
+              { "name": "Monolithic Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Stippled Grip Tape" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "Field LMG Stock" },
+              { "name": "Skeleton Stock" },
+              { "name": "No Stock" },
+              { "name": "FSS Close Quarters Stock" },
+              { "name": "FORGE Tac Ultralight" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "M203 40mm Concussive" },
+              { "name": "Merc Foregrip" },
+              { "name": "M203 40mm Smokescreen" },
+              { "name": "12-Gauge Deputy" },
+              { "name": "M203 40mm Recon" },
+              { "name": "M203 40mm High-explosive" },
+              { "name": "M203 40mm Flash" },
+              { "name": "Tactical Foregrip" },
+              { "name": "M203 40mm Incendiary" },
+              { "name": "Operator Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "AN-94",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "45 Round Mags" },
+              { "name": "60 Round Casket Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "AN-94 Factory 330mm" },
+              { "name": "AN-94 Factory X-438mm" },
+              { "name": "VLK AN-94 Sila" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Flash Guard" },
+              { "name": "Tactical Suppressor" },
+              { "name": "AN-94 Sonic Brake" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Compensator" },
+              { "name": "Monolithic Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Stippled Grip Tape" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "AN-94 Factory Heavy" },
+              { "name": "FORGE TAC Ultralight" },
+              { "name": "Folded Stock" },
+              { "name": "FSS Close Quarters Stock" },
+              { "name": "VLK PX-9 Pero" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "M203 40mm Concussive" },
+              { "name": "Merc Foregrip" },
+              { "name": "M203 40mm Smokescreen" },
+              { "name": "12-Gauge Deputy" },
+              { "name": "M203 40mm Recon" },
+              { "name": "M203 40mm High-explosive" },
+              { "name": "M203 40mm Flash" },
+              { "name": "Tactical Foregrip" },
+              { "name": "M203 40mm Incendiary" },
+              { "name": "Operator Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "AS VAL",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "30 Round Mags" },
+              { "name": "SPP 10-R Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "VLK 105mm Sova" },
+              { "name": "Stovl SOF" },
+              { "name": "VLK 200mm Osa" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Stippled Grip Tape" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "VLK Vintazh" },
+              { "name": "FSS Intl. Gen 4 GRU" },
+              { "name": "Stovl 6P30 Skelet" },
+              { "name": "VLK Strelok" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Merc Foregrip" },
+              { "name": "Bipod" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Commando Foregrip" },
+              { "name": "Operator Foregrip" },
+              { "name": "Cronen Shark II" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CR-56 AMAX",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "45 Round Mags" },
+              { "name": "M67 10-R Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "FSS 8.3\" Intruder" },
+              { "name": "XRK Zodiac S440" },
+              { "name": "FSS 11.8\" Squall" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Flash Guard" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Compensator" },
+              { "name": "Monolithic Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "XRK CR-56 Granulated Wrap" },
+              { "name": "XRK CR-56 Stippled Wrap" },
+              { "name": "XRK CR-56 Rubberized Wrap" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FSS Close Quarters Stock" },
+              { "name": "FTAC Hunter" },
+              { "name": "No Stock" },
+              { "name": "FTAC Spartan" },
+              { "name": "XRK Gatekeeper" },
+              { "name": "CR-56 EXO" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "M203 40mm Concussive" },
+              { "name": "Merc Foregrip" },
+              { "name": "M203 40mm Smokescreen" },
+              { "name": "12-Gauge Deputy" },
+              { "name": "M203 40mm Recon" },
+              { "name": "M203 40mm High-explosive" },
+              { "name": "M203 40mm Flash" },
+              { "name": "Tactical Foregrip" },
+              { "name": "M203 40mm Incendiary" },
+              { "name": "Operator Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "FAL",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "24 Round Mags" },
+              { "name": "30 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "18.0\" Ultralight" },
+              { "name": "XRK Marksman" },
+              { "name": "13.0\" OSW Para" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Muzzle Brake" },
+              { "name": "Flash Guard" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Compensator" },
+              { "name": "Monolithic Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Rubberized Grip Tape" },
+              { "name": "Stippled Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "Factory 18\" Aluminum Stock" },
+              { "name": "No Stock" },
+              { "name": "FSS Close Quarters Stock" },
+              { "name": "FORGE TAC Stalker" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "M203 40mm Concussive" },
+              { "name": "Merc Foregrip" },
+              { "name": "M203 40mm Smokescreen" },
+              { "name": "12-Gauge Deputy" },
+              { "name": "M203 40mm Recon" },
+              { "name": "M203 40mm High-explosive" },
+              { "name": "M203 40mm Flash" },
+              { "name": "Tactical Foregrip" },
+              { "name": "M203 40mm Incendiary" },
+              { "name": "Operator Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "FN Scar 17",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "25 Round Mags" },
+              { "name": "30 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "FORGE TAC 17.2\" LB" },
+              { "name": "FORGE TAC 20.0\" LB" },
+              { "name": "FORGE TAC CQC Pro" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Flash Guard" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Breacher Device" },
+              { "name": "Muzzle Brake" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Compensator" },
+              { "name": "Monolithic Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Stippled Grip Tape" },
+              { "name": "Granulated Grip Tape" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FTAC Hunter" },
+              { "name": "FTAC Collapsible" },
+              { "name": "FSS Close Quarters Stock" },
+              { "name": "XRK Obelisk Pro" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "M203 40mm Concussive" },
+              { "name": "Merc Foregrip" },
+              { "name": "M203 40mm Smokescreen" },
+              { "name": "12-Gauge Deputy" },
+              { "name": "M203 40mm Recon" },
+              { "name": "M203 40mm High-explosive" },
+              { "name": "M203 40mm Flash" },
+              { "name": "Tactical Foregrip" },
+              { "name": "M203 40mm Incendiary" },
+              { "name": "Operator Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "FR 5.56",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "50 Round Mags" },
+              { "name": "60 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "FR 15.9\" Commando" },
+              { "name": "FR 24.4\" Sniper" },
+              { "name": "FORGE TAC Ultralight" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Flash Guard" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Compensator" },
+              { "name": "Monolithic Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Rubberized Grip Tape" },
+              { "name": "Stippled Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FR Ultralight Hollow" },
+              { "name": "FORGE TAC Ballast Pack" },
+              { "name": "FSS Tac-Wrap" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "M203 40mm Concussive" },
+              { "name": "Merc Foregrip" },
+              { "name": "M203 40mm Smokescreen" },
+              { "name": "12-Gauge Deputy" },
+              { "name": "M203 40mm Recon" },
+              { "name": "M203 40mm High-explosive" },
+              { "name": "M203 40mm Flash" },
+              { "name": "Tactical Foregrip" },
+              { "name": "M203 40mm Incendiary" },
+              { "name": "Operator Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Grau 5.56",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "50 Round Mags" },
+              { "name": "60 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "ZLR Drifter A-08" },
+              { "name": "Tempus 26.4\" Archangel" },
+              { "name": "XRK CZEN mk2" },
+              { "name": "FSS 20.8\" Nexus" },
+              { "name": "FSS 11.8\" Squall" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Flash Guard" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Breacher Device" },
+              { "name": "Muzzle Brake" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Compensator" },
+              { "name": "Monolithic Suppressor" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "XRK Void II" },
+              { "name": "Cronen Sniper Elite" },
+              { "name": "FTAC R-89 Rubber" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kilo 141",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "50 Round Mags" },
+              { "name": "60 Round Mags" },
+              { "name": "100 Round Drums" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "Singuard Arms 16.6\" SOCOM" },
+              { "name": "Singuard Arms 19.8\" Prowler" },
+              { "name": "Singuard Arms Whisper" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Flash Guard" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Breacher Device" },
+              { "name": "Muzzle Brake" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Compensator" },
+              { "name": "Monolithic Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Rubberized Grip Tape" },
+              { "name": "Stippled Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FORGE TAC Ultralight" },
+              { "name": "Singuard Arms Sniper Pro" },
+              { "name": "No Stock" },
+              { "name": "FSS Close Quarters Stock" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "M203 40mm Concussive" },
+              { "name": "Merc Foregrip" },
+              { "name": "M203 40mm Smokescreen" },
+              { "name": "12-Gauge Deputy" },
+              { "name": "M203 40mm Recon" },
+              { "name": "M203 40mm High-explosive" },
+              { "name": "M203 40mm Flash" },
+              { "name": "Tactical Foregrip" },
+              { "name": "M203 40mm Incendiary" },
+              { "name": "Operator Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "M13",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "50 Round Mags" },
+              { "name": ".300 Blackout 30-Round Mags" },
+              { "name": "60 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "Tempus Mini" },
+              { "name": "Tempus Cyclone" },
+              { "name": "Tempus Marksman" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Flash Guard" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Breacher Device" },
+              { "name": "Muzzle Brake" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Compensator" },
+              { "name": "Monolithic Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Stippled Grip Tape" },
+              { "name": "Granulated Grip Tape" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FORGE TAC Stalker" },
+              { "name": "No Stock" },
+              { "name": "FSS Close Quarters Stock" },
+              { "name": "M13 Skeleton Stock" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "M203 40mm Concussive" },
+              { "name": "Merc Foregrip" },
+              { "name": "M203 40mm Smokescreen" },
+              { "name": "12-Gauge Deputy" },
+              { "name": "M203 40mm Recon" },
+              { "name": "M203 40mm High-explosive" },
+              { "name": "M203 40mm Flash" },
+              { "name": "Tactical Foregrip" },
+              { "name": "M203 40mm Incendiary" },
+              { "name": "Operator Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "M4A1",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "50 Round Mags" },
+              { "name": "60 Round Mags" },
+              { "name": "9mm Para 32-Round Mags" },
+              { "name": ".458 SOCOM 10-Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "FSS 11.5\" Commando" },
+              { "name": "Stock M16 Grenadier" },
+              { "name": "FSS 14.5\" Tac Lite" },
+              { "name": "Corvus Custom Marksman" },
+              { "name": "FSS 12.4\" Predator" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Flash Guard" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Breacher Device" },
+              { "name": "Muzzle Brake" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Compensator" },
+              { "name": "Monolithic Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Rubberized Grip Tape" },
+              { "name": "Stippled Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "M-16 Stock" },
+              { "name": "Singuard Arms Invader" },
+              { "name": "No Stock" },
+              { "name": "FORGE TAC CQS" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "M203 40mm Concussive" },
+              { "name": "Merc Foregrip" },
+              { "name": "M203 40mm Smokescreen" },
+              { "name": "12-Gauge Deputy" },
+              { "name": "M203 40mm Recon" },
+              { "name": "M203 40mm High-explosive" },
+              { "name": "M203 40mm Flash" },
+              { "name": "Tactical Foregrip" },
+              { "name": "M203 40mm Incendiary" },
+              { "name": "Operator Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Oden",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "25 Round Mags" },
+              { "name": "30 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "Oden Factory 810mm" },
+              { "name": "Oden Factory 730mm" },
+              { "name": "Oden Factory 420mm" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Flash Guard" },
+              { "name": "Tactical Suppressor" },
+              { "name": "CQB Breacher Device" },
+              { "name": "Muzzle Brake" },
+              { "name": "Colossus Suppressor" },
+              { "name": "Compensator" },
+              { "name": "Monolithic Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" },
+              { "name": "Burst Fire (x2)" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Stippled Grip Tape" },
+              { "name": "Granulated Grip Tape" },
+              { "name": "Rubberized Grip Tape" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "M203 40mm Concussive" },
+              { "name": "Merc Foregrip" },
+              { "name": "M203 40mm Smokescreen" },
+              { "name": "12-Gauge Deputy" },
+              { "name": "M203 40mm Recon" },
+              { "name": "M203 40mm High-explosive" },
+              { "name": "M203 40mm Flash" },
+              { "name": "Tactical Foregrip" },
+              { "name": "M203 40mm Incendiary" },
+              { "name": "Operator Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "RAM-7",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [{ "name": "50 Round Mags" }]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "FTAC 13.5\" Compact" },
+              { "name": "FORGE TAC Elipse" },
+              { "name": "FSS Ranger" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Flash Guard" },
+              { "name": "Tactical Suppressor" },
+              { "name": "Breacher Device" },
+              { "name": "Muzzle Brake" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Compensator" },
+              { "name": "Monolithic Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Mo' Money" },
+              { "name": "Fully Loaded" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Presence of Mind" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Granulated Grip Tape" },
+              { "name": "Rubberized Grip Tape" },
+              { "name": "Stippled Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FTAC Equilibrium" },
+              { "name": "XRK Ultralight Hollow" },
+              { "name": "XRK Close Quarters Stock" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Commando Foregrip" },
+              { "name": "M203 40mm Concussive" },
+              { "name": "Merc Foregrip" },
+              { "name": "M203 40mm Smokescreen" },
+              { "name": "12-Gauge Deputy" },
+              { "name": "M203 40mm Recon" },
+              { "name": "M203 40mm High-explosive" },
+              { "name": "M203 40mm Flash" },
+              { "name": "Tactical Foregrip" },
+              { "name": "M203 40mm Incendiary" },
+              { "name": "Operator Foregrip" },
+              { "name": "Ranger Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Sniper Rifles",
+    "weapons": [
+      {
+        "name": "Dragunov",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "15 Round Mags" },
+              { "name": "20 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "510mm Compact Barrel" },
+              { "name": "660mm Extended Barrel" }
+            ]
+          },
+          { "category": "Laser", "variants": [{ "name": "Tac Laser" }] },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Breacher Device" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Tactical Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Scout Combat Optic" },
+              { "name": "Thermal Sniper Scope" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Variable Zoom Scope" },
+              { "name": "Thermal Dual Power Scope" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Merc Thermal Optic" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FTAC Hunter-Scout" },
+              { "name": "Skeleton Stock" },
+              { "name": "VLK Lightweight Stock" },
+              { "name": "FTAC Stalker-Scout" }
+            ]
+          },
+          { "category": "Underbarrel", "variants": [{ "name": "Bipod" }] }
+        ]
+      },
+      {
+        "name": "HDR",
+        "attachments": [
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "26.9\" HDR Pro" },
+              { "name": "26.0\" Bull Barrel" },
+              { "name": "17.2\" Bull Barrel" }
+            ]
+          },
+          { "category": "Laser", "variants": [{ "name": "Tac Laser" }] },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "Breacher Device" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Tactical Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Scout Combat Optic" },
+              { "name": "Thermal Sniper Scope" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Variable Zoom Scope" },
+              { "name": "Thermal Dual Power Scope" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Merc Thermal Optic" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FTAC Hunter-Scout" },
+              { "name": "FTAC Champion" },
+              { "name": "FSS Nomad Stock" },
+              { "name": "FTAC Stalker-Scout" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "LMG",
+    "weapons": [
+      {
+        "name": "PKM",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "150 Round Belt" },
+              { "name": "200 Round Belt" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "18.2\" Compact Barrel" },
+              { "name": "26.9\" Extended Barrel" },
+              { "name": "25.9\" Heavy Barrel" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "CQB Breacher Device" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Tactical Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Stippled Grip Tape" },
+              { "name": "Rubberized Grip Tape" },
+              { "name": "Granulated Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "FORGE TAC Stalker" },
+              { "name": "FORGE TAC Ultralight" },
+              { "name": "FSS Close Quarters Stock" },
+              { "name": "No Stock" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Snatch Grip" },
+              { "name": "Tactical Foregrip" },
+              { "name": "Operator Foregrip" },
+              { "name": "Commando Foregrip" },
+              { "name": "Merc Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SA87",
+        "attachments": [
+          {
+            "category": "Ammunition",
+            "variants": [
+              { "name": "50 Round Mags" },
+              { "name": "60 Round Mags" }
+            ]
+          },
+          {
+            "category": "Barrel",
+            "variants": [
+              { "name": "SA87 18.2\" Factory" },
+              { "name": "SA87 25.4\" Factory" },
+              { "name": "SA87 12.4\" Factory" }
+            ]
+          },
+          {
+            "category": "Laser",
+            "variants": [
+              { "name": "1mW Laser" },
+              { "name": "5mW Laser" },
+              { "name": "Tac Laser" }
+            ]
+          },
+          {
+            "category": "Muzzle",
+            "variants": [
+              { "name": "CQB Breacher Device" },
+              { "name": "Flash Guard" },
+              { "name": "Monolithic Suppressor" },
+              { "name": "Muzzle Brake" },
+              { "name": "Compensator" },
+              { "name": "Lightweight Suppressor" },
+              { "name": "Tactical Suppressor" }
+            ]
+          },
+          {
+            "category": "Optic",
+            "variants": [
+              { "name": "Operator Reflex Sight" },
+              { "name": "Corp Combat Holo Sight" },
+              { "name": "Aim-Op Reflex Sight" },
+              { "name": "G.I. Mini Reflex" },
+              { "name": "Scout Combat Optic" },
+              { "name": "APX5 Holographic Sight" },
+              { "name": "Cronen LP945 Mini Reflex" },
+              { "name": "4.0x Flip Hybrid" },
+              { "name": "VLK 3.0x Optic" },
+              { "name": "Integral Hybrid" },
+              { "name": "Viper Reflex Sight" },
+              { "name": "Cronen C480 Pro Optic" },
+              { "name": "Solozero NVG Enhanced" },
+              { "name": "Monocle Reflex Sight" },
+              { "name": "Sniper Scope" },
+              { "name": "Merc Thermal Optic" },
+              { "name": "PBX Holo 7 Sight" },
+              { "name": "Thermal Hybrid" },
+              { "name": "Solozero Optics Mini Reflex" },
+              { "name": "Canted Hybrid" },
+              { "name": "Variable Zoom Scope" }
+            ]
+          },
+          {
+            "category": "Perk",
+            "variants": [
+              { "name": "FMJ" },
+              { "name": "Heavy Hitter" },
+              { "name": "Recon" },
+              { "name": "Frangible - Wounding" },
+              { "name": "Sleight of Hand" },
+              { "name": "Fully Loaded" },
+              { "name": "Mo' Money" },
+              { "name": "Frangible - Disabling" },
+              { "name": "Fast Melee" },
+              { "name": "Burst" }
+            ]
+          },
+          {
+            "category": "Rear Grip",
+            "variants": [
+              { "name": "Stippled Grip Tape" },
+              { "name": "Rubberized Grip Tape" },
+              { "name": "Granulated Grip Tape" }
+            ]
+          },
+          {
+            "category": "Stock",
+            "variants": [
+              { "name": "XRK SA87 Heavy Stock Pro" },
+              { "name": "SA87 Ultralight Hollow" },
+              { "name": "FORGE TAC CQB Comb" }
+            ]
+          },
+          {
+            "category": "Underbarrel",
+            "variants": [
+              { "name": "Ranger Foregrip" },
+              { "name": "Tactical Foregrip" },
+              { "name": "Operator Foregrip" },
+              { "name": "Commando Foregrip" },
+              { "name": "Merc Foregrip" },
+              { "name": "Bipod" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
