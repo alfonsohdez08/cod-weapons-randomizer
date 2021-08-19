@@ -1,49 +1,72 @@
 [
   {
-    "category": "Launchers",
+    "name": "Launchers",
     "weapons": [
       {
         "name": "JOKR",
-        "attachments": [{ "category": null, "variants": null }]
+        "gunsmith": [
+          {
+            "name": null,
+            "variants": null
+          }
+        ]
       },
       {
         "name": "PILA",
-        "attachments": [{ "category": null, "variants": null }]
+        "gunsmith": [
+          {
+            "name": null,
+            "variants": null
+          }
+        ]
       },
       {
         "name": "RPG-7",
-        "attachments": [{ "category": null, "variants": null }]
+        "gunsmith": [
+          {
+            "name": null,
+            "variants": null
+          }
+        ]
       },
       {
         "name": "Strela-P",
-        "attachments": [{ "category": null, "variants": null }]
+        "gunsmith": [
+          {
+            "name": null,
+            "variants": null
+          }
+        ]
       }
     ]
   },
   {
-    "category": "Marksman Rifles",
+    "name": "Marksman Rifles",
     "weapons": [
       {
         "name": "EBR-14",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "15 Round Mags" },
               { "name": "20 Round Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "FORGE TAC Precision 20.0\"" },
               { "name": "FORGE TAC Elite" },
               { "name": "FORGE TAC Precision 22.0\"" }
             ]
           },
-          { "category": "Laser", "variants": [{ "name": "Tac Laser" }] },
           {
-            "category": "Muzzle",
+            "name": "Laser",
+            "variants": [ { "name": "Tac Laser" } ]
+          },
+          {
+            "name": "Muzzle",
             "variants": [
               { "name": "Breacher Device" },
               { "name": "Flash Guard" },
@@ -55,7 +78,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -81,7 +104,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -96,7 +119,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FTAC Precision Comb" },
               { "name": "FSS Raider Chassis Pro" },
@@ -105,7 +128,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "Tactical Foregrip" },
@@ -119,18 +142,21 @@
       },
       {
         "name": "MK2 Carbine",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "FSS 18.0\" Factory" },
               { "name": "FSS 20.0\" Factory" },
               { "name": "FSS 24.0\" Factory" }
             ]
           },
-          { "category": "Laser", "variants": [{ "name": "Tac Laser" }] },
           {
-            "category": "Muzzle",
+            "name": "Laser",
+            "variants": [ { "name": "Tac Laser" } ]
+          },
+          {
+            "name": "Muzzle",
             "variants": [
               { "name": "Breacher Device" },
               { "name": "Flash Guard" },
@@ -142,7 +168,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -168,7 +194,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -183,7 +209,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Stippled Grip Tape" },
               { "name": "Rubberized Grip Tape" },
@@ -195,13 +221,13 @@
     ]
   },
   {
-    "category": "SMG",
+    "name": "SMG",
     "weapons": [
       {
         "name": "AUG",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "32 Round Mags" },
               { "name": "5.56 NATO 30-Round Mags" },
@@ -209,7 +235,7 @@
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "407mm Extended Barrel" },
               { "name": "407mm Lightweight" },
@@ -217,7 +243,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -225,7 +251,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "CQB Breacher Device" },
               { "name": "Tactical Suppressor" },
@@ -237,7 +263,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -261,7 +287,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -276,7 +302,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Rubberized Grip Tape" },
@@ -284,7 +310,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FTAC Ultralight Hollow" },
               { "name": "FORGE TAC CQB Comb" },
@@ -292,7 +318,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Merc Foregrip" },
               { "name": "Commando Foregrip" },
@@ -305,16 +331,16 @@
       },
       {
         "name": "MP5",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "45 Round Mags" },
               { "name": "10mm Auto 30-Round Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "FSS Light" },
               { "name": "Monolithic Integral Suppressor" },
@@ -323,7 +349,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -331,7 +357,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Breacher Device" },
               { "name": "Tactical Suppressor" },
@@ -343,7 +369,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -367,7 +393,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -382,7 +408,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Rubberized Grip Tape" },
               { "name": "Granulated Grip Tape" },
@@ -390,7 +416,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FORGE TAC Ultralight" },
               { "name": "Classic Straight-line Stock" },
@@ -399,7 +425,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "Merc Foregrip" },
@@ -412,16 +438,16 @@
       },
       {
         "name": "MP7",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "50 Round Mags" },
               { "name": "60 Round Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "FSS STRIKE" },
               { "name": "FSS RECON" },
@@ -429,7 +455,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -437,7 +463,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Breacher Device" },
               { "name": "Tactical Suppressor" },
@@ -449,7 +475,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -473,7 +499,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -488,7 +514,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Stippled Grip Tape" },
@@ -496,7 +522,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FORGE TAC Ultralight" },
               { "name": "FORGE TAC Stalker" },
@@ -505,7 +531,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "Merc Foregrip" },
@@ -518,16 +544,16 @@
       },
       {
         "name": "P90",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "FORGE TAC Retribution" },
               { "name": "FSS 10.6\" Pro" }
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -535,7 +561,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Breacher Device" },
               { "name": "Tactical Suppressor" },
@@ -547,7 +573,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -571,7 +597,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -586,7 +612,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Stippled Grip Tape" },
               { "name": "Granulated Grip Tape" },
@@ -594,7 +620,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FORGE TAC CQB Comb" },
               { "name": "Fly Strap" },
@@ -602,7 +628,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Stippled Grip Tape" },
@@ -613,13 +639,13 @@
       },
       {
         "name": "PP19 Bizon",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
-            "variants": [{ "name": "84 Round Helical Mags" }]
+            "name": "Ammunition",
+            "variants": [ { "name": "84 Round Helical Mags" } ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "8.7\" Steel" },
               { "name": "8.7\" Polygonal" },
@@ -627,7 +653,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -635,7 +661,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Breacher Device" },
               { "name": "Tactical Suppressor" },
@@ -647,7 +673,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -671,7 +697,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Stippled Grip Tape" },
@@ -679,7 +705,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "Factory Aluminum Stock" },
               { "name": "No Stock" },
@@ -691,9 +717,9 @@
       },
       {
         "name": "Uzi",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "40 Round Mags" },
               { "name": "50 Round Mags" },
@@ -701,7 +727,7 @@
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "13.1\" First Responder" },
               { "name": "8.5\" Factory Mini" },
@@ -710,7 +736,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -718,7 +744,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "CQB Breacher Device" },
               { "name": "Tactical Suppressor" },
@@ -730,7 +756,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -754,7 +780,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -769,7 +795,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Stippled Grip Tape" },
@@ -777,7 +803,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FORGE TAC Ultralight" },
               { "name": "Standard-Issue Wood Stock" },
@@ -786,7 +812,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "Merc Foregrip" },
@@ -800,34 +826,54 @@
     ]
   },
   {
-    "category": "Melee",
+    "name": "Melee",
     "weapons": [
       {
         "name": "Dual Kodachis",
-        "attachments": [{ "category": null, "variants": null }]
+        "gunsmith": [
+          {
+            "name": null,
+            "variants": null
+          }
+        ]
       },
       {
         "name": "Kali Sticks",
-        "attachments": [{ "category": null, "variants": null }]
+        "gunsmith": [
+          {
+            "name": null,
+            "variants": null
+          }
+        ]
       },
       {
         "name": "Knife",
-        "attachments": [{ "category": null, "variants": null }]
+        "gunsmith": [
+          {
+            "name": null,
+            "variants": null
+          }
+        ]
       },
       {
         "name": "Riot Shield",
-        "attachments": [{ "category": null, "variants": null }]
+        "gunsmith": [
+          {
+            "name": null,
+            "variants": null
+          }
+        ]
       }
     ]
   },
   {
-    "category": "Shotgun",
+    "name": "Shotgun",
     "weapons": [
       {
         "name": "Model 680",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "Tube Extension" },
               { "name": "Slug Rounds" },
@@ -838,7 +884,7 @@
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "XRK 18.0\" Liberator" },
               { "name": "XRK 14.0\" SWAT" },
@@ -846,7 +892,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -854,7 +900,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Breacher Device" },
               { "name": "Flash Guard" },
@@ -867,7 +913,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -891,7 +937,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -906,7 +952,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FTAC Stalker-12" },
               { "name": "FORGE TAC Ultralight" },
@@ -916,7 +962,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "Merc Foregrip" },
@@ -930,9 +976,9 @@
       },
       {
         "name": "R9-0 Shotgun",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "Tube Extension" },
               { "name": "Slug Rounds" },
@@ -940,14 +986,14 @@
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "FORGE TAC Sentry" },
               { "name": "FORGE TAC Gemini" }
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -955,7 +1001,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Breacher Device" },
               { "name": "Flash Guard" },
@@ -968,7 +1014,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -992,7 +1038,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -1007,7 +1053,7 @@
             ]
           },
           {
-            "category": "Pumps",
+            "name": "Pumps",
             "variants": [
               { "name": "FSS R9-0 Bulldog" },
               { "name": "FTAC Ultralight Pump" },
@@ -1015,7 +1061,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Rubberized Grip Tape" },
@@ -1023,7 +1069,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Merc Foregrip" },
               { "name": "Ranger Foregrip" },
@@ -1035,20 +1081,20 @@
     ]
   },
   {
-    "category": "Handguns",
+    "name": "Handguns",
     "weapons": [
       {
         "name": "1911",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "10 Round Mags" },
               { "name": "15 Round Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": ".45 Compact" },
               { "name": ".45 Match Grade" },
@@ -1056,7 +1102,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "Tac Laser" },
@@ -1064,7 +1110,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Oil Can Suppressor" },
               { "name": "Flash Guard" },
@@ -1076,7 +1122,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Solozero Optics Mini Reflex" },
               { "name": "G.I. Mini Reflex" },
@@ -1084,7 +1130,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -1099,7 +1145,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Stippled Grip Tape" },
@@ -1107,7 +1153,7 @@
             ]
           },
           {
-            "category": "Trigger Action",
+            "name": "Trigger Action",
             "variants": [
               { "name": "Lightweight Trigger" },
               { "name": "Heavy Duty Trigger" },
@@ -1118,16 +1164,16 @@
       },
       {
         "name": "X16",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "17 Round Mags" },
               { "name": "26 Round Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "Singuard Arms Featherweight" },
               { "name": "Vanguard Elite" },
@@ -1135,7 +1181,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "Tac Laser" },
@@ -1143,7 +1189,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Oil Can Suppressor" },
               { "name": "Flash Guard" },
@@ -1155,7 +1201,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Solozero Optics Mini Reflex" },
               { "name": "G.I. Mini Reflex" },
@@ -1163,7 +1209,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -1178,7 +1224,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Stippled Grip Tape" },
@@ -1187,7 +1233,7 @@
             ]
           },
           {
-            "category": "Trigger Action",
+            "name": "Trigger Action",
             "variants": [
               { "name": "Lightweight Trigger" },
               { "name": "Heavy Duty Trigger" },
@@ -1199,13 +1245,13 @@
     ]
   },
   {
-    "category": "AR",
+    "name": "AR",
     "weapons": [
       {
         "name": "AK-47",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "40 Round Mags" },
               { "name": "5.45x39mm 30-Round Mags" },
@@ -1213,7 +1259,7 @@
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "Spetsnaz Elite" },
               { "name": "23.0\" RPK Barrel" },
@@ -1222,7 +1268,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -1230,7 +1276,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Flash Guard" },
               { "name": "Tactical Suppressor" },
@@ -1242,7 +1288,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -1268,7 +1314,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -1284,7 +1330,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Stippled Grip Tape" },
@@ -1292,7 +1338,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "Field LMG Stock" },
               { "name": "Skeleton Stock" },
@@ -1302,7 +1348,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "M203 40mm Concussive" },
@@ -1323,16 +1369,16 @@
       },
       {
         "name": "AN-94",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "45 Round Mags" },
               { "name": "60 Round Casket Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "AN-94 Factory 330mm" },
               { "name": "AN-94 Factory X-438mm" },
@@ -1340,7 +1386,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -1348,7 +1394,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Flash Guard" },
               { "name": "Tactical Suppressor" },
@@ -1359,7 +1405,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -1385,7 +1431,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -1401,7 +1447,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Stippled Grip Tape" },
@@ -1409,7 +1455,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "AN-94 Factory Heavy" },
               { "name": "FORGE TAC Ultralight" },
@@ -1419,7 +1465,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "M203 40mm Concussive" },
@@ -1440,16 +1486,16 @@
       },
       {
         "name": "AS VAL",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "30 Round Mags" },
               { "name": "SPP 10-R Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "VLK 105mm Sova" },
               { "name": "Stovl SOF" },
@@ -1457,7 +1503,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -1465,7 +1511,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -1491,7 +1537,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -1507,7 +1553,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Stippled Grip Tape" },
@@ -1515,7 +1561,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "VLK Vintazh" },
               { "name": "FSS Intl. Gen 4 GRU" },
@@ -1524,7 +1570,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Merc Foregrip" },
               { "name": "Bipod" },
@@ -1538,16 +1584,16 @@
       },
       {
         "name": "CR-56 AMAX",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "45 Round Mags" },
               { "name": "M67 10-R Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "FSS 8.3\" Intruder" },
               { "name": "XRK Zodiac S440" },
@@ -1555,7 +1601,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -1563,7 +1609,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Flash Guard" },
               { "name": "Tactical Suppressor" },
@@ -1574,7 +1620,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -1600,7 +1646,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -1616,7 +1662,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "XRK CR-56 Granulated Wrap" },
               { "name": "XRK CR-56 Stippled Wrap" },
@@ -1624,7 +1670,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FSS Close Quarters Stock" },
               { "name": "FTAC Hunter" },
@@ -1635,7 +1681,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "M203 40mm Concussive" },
@@ -1656,16 +1702,16 @@
       },
       {
         "name": "FAL",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "24 Round Mags" },
               { "name": "30 Round Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "18.0\" Ultralight" },
               { "name": "XRK Marksman" },
@@ -1673,7 +1719,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -1681,7 +1727,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Muzzle Brake" },
               { "name": "Flash Guard" },
@@ -1692,7 +1738,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -1718,7 +1764,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -1734,7 +1780,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Rubberized Grip Tape" },
@@ -1742,7 +1788,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "Factory 18\" Aluminum Stock" },
               { "name": "No Stock" },
@@ -1751,7 +1797,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "M203 40mm Concussive" },
@@ -1772,16 +1818,16 @@
       },
       {
         "name": "FN Scar 17",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "25 Round Mags" },
               { "name": "30 Round Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "FORGE TAC 17.2\" LB" },
               { "name": "FORGE TAC 20.0\" LB" },
@@ -1789,7 +1835,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -1797,7 +1843,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Flash Guard" },
               { "name": "Tactical Suppressor" },
@@ -1809,7 +1855,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -1835,7 +1881,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -1851,7 +1897,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Stippled Grip Tape" },
               { "name": "Granulated Grip Tape" },
@@ -1859,7 +1905,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FTAC Hunter" },
               { "name": "FTAC Collapsible" },
@@ -1868,7 +1914,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "M203 40mm Concussive" },
@@ -1889,16 +1935,16 @@
       },
       {
         "name": "FR 5.56",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "50 Round Mags" },
               { "name": "60 Round Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "FR 15.9\" Commando" },
               { "name": "FR 24.4\" Sniper" },
@@ -1906,7 +1952,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -1914,7 +1960,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Flash Guard" },
               { "name": "Tactical Suppressor" },
@@ -1925,7 +1971,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -1951,7 +1997,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -1967,7 +2013,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Rubberized Grip Tape" },
@@ -1975,7 +2021,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FR Ultralight Hollow" },
               { "name": "FORGE TAC Ballast Pack" },
@@ -1983,7 +2029,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "M203 40mm Concussive" },
@@ -2004,16 +2050,16 @@
       },
       {
         "name": "Grau 5.56",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "50 Round Mags" },
               { "name": "60 Round Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "ZLR Drifter A-08" },
               { "name": "Tempus 26.4\" Archangel" },
@@ -2023,7 +2069,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Flash Guard" },
               { "name": "Tactical Suppressor" },
@@ -2035,7 +2081,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -2051,7 +2097,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "XRK Void II" },
               { "name": "Cronen Sniper Elite" },
@@ -2062,9 +2108,9 @@
       },
       {
         "name": "Kilo 141",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "50 Round Mags" },
               { "name": "60 Round Mags" },
@@ -2072,7 +2118,7 @@
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "Singuard Arms 16.6\" SOCOM" },
               { "name": "Singuard Arms 19.8\" Prowler" },
@@ -2080,7 +2126,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -2088,7 +2134,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Flash Guard" },
               { "name": "Tactical Suppressor" },
@@ -2100,7 +2146,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -2126,7 +2172,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -2142,7 +2188,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Rubberized Grip Tape" },
@@ -2150,7 +2196,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FORGE TAC Ultralight" },
               { "name": "Singuard Arms Sniper Pro" },
@@ -2159,7 +2205,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "M203 40mm Concussive" },
@@ -2180,9 +2226,9 @@
       },
       {
         "name": "M13",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "50 Round Mags" },
               { "name": ".300 Blackout 30-Round Mags" },
@@ -2190,7 +2236,7 @@
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "Tempus Mini" },
               { "name": "Tempus Cyclone" },
@@ -2198,7 +2244,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -2206,7 +2252,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Flash Guard" },
               { "name": "Tactical Suppressor" },
@@ -2218,7 +2264,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -2244,7 +2290,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -2260,7 +2306,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Stippled Grip Tape" },
               { "name": "Granulated Grip Tape" },
@@ -2268,7 +2314,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FORGE TAC Stalker" },
               { "name": "No Stock" },
@@ -2277,7 +2323,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "M203 40mm Concussive" },
@@ -2298,9 +2344,9 @@
       },
       {
         "name": "M4A1",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "50 Round Mags" },
               { "name": "60 Round Mags" },
@@ -2309,7 +2355,7 @@
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "FSS 11.5\" Commando" },
               { "name": "Stock M16 Grenadier" },
@@ -2319,7 +2365,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -2327,7 +2373,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Flash Guard" },
               { "name": "Tactical Suppressor" },
@@ -2339,7 +2385,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -2365,7 +2411,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -2381,7 +2427,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Rubberized Grip Tape" },
@@ -2389,7 +2435,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "M-16 Stock" },
               { "name": "Singuard Arms Invader" },
@@ -2398,7 +2444,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "M203 40mm Concussive" },
@@ -2419,16 +2465,16 @@
       },
       {
         "name": "Oden",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "25 Round Mags" },
               { "name": "30 Round Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "Oden Factory 810mm" },
               { "name": "Oden Factory 730mm" },
@@ -2436,7 +2482,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -2444,7 +2490,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Flash Guard" },
               { "name": "Tactical Suppressor" },
@@ -2456,7 +2502,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -2482,7 +2528,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -2499,7 +2545,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Stippled Grip Tape" },
               { "name": "Granulated Grip Tape" },
@@ -2507,7 +2553,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "M203 40mm Concussive" },
@@ -2528,13 +2574,13 @@
       },
       {
         "name": "RAM-7",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
-            "variants": [{ "name": "50 Round Mags" }]
+            "name": "Ammunition",
+            "variants": [ { "name": "50 Round Mags" } ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "FTAC 13.5\" Compact" },
               { "name": "FORGE TAC Elipse" },
@@ -2542,7 +2588,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -2550,7 +2596,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "Flash Guard" },
               { "name": "Tactical Suppressor" },
@@ -2562,7 +2608,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -2588,7 +2634,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -2604,7 +2650,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Granulated Grip Tape" },
               { "name": "Rubberized Grip Tape" },
@@ -2612,7 +2658,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FTAC Equilibrium" },
               { "name": "XRK Ultralight Hollow" },
@@ -2620,7 +2666,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Commando Foregrip" },
               { "name": "M203 40mm Concussive" },
@@ -2642,28 +2688,31 @@
     ]
   },
   {
-    "category": "Sniper Rifles",
+    "name": "Sniper Rifles",
     "weapons": [
       {
         "name": "Dragunov",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "15 Round Mags" },
               { "name": "20 Round Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "510mm Compact Barrel" },
               { "name": "660mm Extended Barrel" }
             ]
           },
-          { "category": "Laser", "variants": [{ "name": "Tac Laser" }] },
           {
-            "category": "Muzzle",
+            "name": "Laser",
+            "variants": [ { "name": "Tac Laser" } ]
+          },
+          {
+            "name": "Muzzle",
             "variants": [
               { "name": "Breacher Device" },
               { "name": "Flash Guard" },
@@ -2675,7 +2724,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Scout Combat Optic" },
               { "name": "Thermal Sniper Scope" },
@@ -2687,7 +2736,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -2702,7 +2751,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FTAC Hunter-Scout" },
               { "name": "Skeleton Stock" },
@@ -2710,23 +2759,29 @@
               { "name": "FTAC Stalker-Scout" }
             ]
           },
-          { "category": "Underbarrel", "variants": [{ "name": "Bipod" }] }
+          {
+            "name": "Underbarrel",
+            "variants": [ { "name": "Bipod" } ]
+          }
         ]
       },
       {
         "name": "HDR",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "26.9\" HDR Pro" },
               { "name": "26.0\" Bull Barrel" },
               { "name": "17.2\" Bull Barrel" }
             ]
           },
-          { "category": "Laser", "variants": [{ "name": "Tac Laser" }] },
           {
-            "category": "Muzzle",
+            "name": "Laser",
+            "variants": [ { "name": "Tac Laser" } ]
+          },
+          {
+            "name": "Muzzle",
             "variants": [
               { "name": "Breacher Device" },
               { "name": "Flash Guard" },
@@ -2738,7 +2793,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Scout Combat Optic" },
               { "name": "Thermal Sniper Scope" },
@@ -2750,7 +2805,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FTAC Hunter-Scout" },
               { "name": "FTAC Champion" },
@@ -2763,20 +2818,20 @@
     ]
   },
   {
-    "category": "LMG",
+    "name": "LMG",
     "weapons": [
       {
         "name": "PKM",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "150 Round Belt" },
               { "name": "200 Round Belt" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "18.2\" Compact Barrel" },
               { "name": "26.9\" Extended Barrel" },
@@ -2784,7 +2839,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -2792,7 +2847,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "CQB Breacher Device" },
               { "name": "Flash Guard" },
@@ -2804,7 +2859,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -2830,7 +2885,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -2845,7 +2900,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Stippled Grip Tape" },
               { "name": "Rubberized Grip Tape" },
@@ -2853,7 +2908,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "FORGE TAC Stalker" },
               { "name": "FORGE TAC Ultralight" },
@@ -2862,7 +2917,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Snatch Grip" },
               { "name": "Tactical Foregrip" },
@@ -2876,16 +2931,16 @@
       },
       {
         "name": "SA87",
-        "attachments": [
+        "gunsmith": [
           {
-            "category": "Ammunition",
+            "name": "Ammunition",
             "variants": [
               { "name": "50 Round Mags" },
               { "name": "60 Round Mags" }
             ]
           },
           {
-            "category": "Barrel",
+            "name": "Barrel",
             "variants": [
               { "name": "SA87 18.2\" Factory" },
               { "name": "SA87 25.4\" Factory" },
@@ -2893,7 +2948,7 @@
             ]
           },
           {
-            "category": "Laser",
+            "name": "Laser",
             "variants": [
               { "name": "1mW Laser" },
               { "name": "5mW Laser" },
@@ -2901,7 +2956,7 @@
             ]
           },
           {
-            "category": "Muzzle",
+            "name": "Muzzle",
             "variants": [
               { "name": "CQB Breacher Device" },
               { "name": "Flash Guard" },
@@ -2913,7 +2968,7 @@
             ]
           },
           {
-            "category": "Optic",
+            "name": "Optic",
             "variants": [
               { "name": "Operator Reflex Sight" },
               { "name": "Corp Combat Holo Sight" },
@@ -2939,7 +2994,7 @@
             ]
           },
           {
-            "category": "Perk",
+            "name": "Perk",
             "variants": [
               { "name": "FMJ" },
               { "name": "Heavy Hitter" },
@@ -2954,7 +3009,7 @@
             ]
           },
           {
-            "category": "Rear Grip",
+            "name": "Rear Grip",
             "variants": [
               { "name": "Stippled Grip Tape" },
               { "name": "Rubberized Grip Tape" },
@@ -2962,7 +3017,7 @@
             ]
           },
           {
-            "category": "Stock",
+            "name": "Stock",
             "variants": [
               { "name": "XRK SA87 Heavy Stock Pro" },
               { "name": "SA87 Ultralight Hollow" },
@@ -2970,7 +3025,7 @@
             ]
           },
           {
-            "category": "Underbarrel",
+            "name": "Underbarrel",
             "variants": [
               { "name": "Ranger Foregrip" },
               { "name": "Tactical Foregrip" },

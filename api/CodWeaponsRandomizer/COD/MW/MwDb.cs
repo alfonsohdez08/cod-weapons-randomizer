@@ -1,14 +1,14 @@
 ﻿
-using CodWeaponsRandomizer.Models;
+using CodWeaponsRandomizer.COD.MW.Data;
 using System.Text.Json;
 
-namespace CodWeaponsRandomizer;
+namespace CodWeaponsRandomizer.COD.MW;
 public class MwDb
 {
     public List<WeaponCategory> Weapons { get; private set; }
-    public List<PerkSlot> Perks { get; private set;  }
-    public List<Tactical> Tacticals { get; private set; }
-    public List<Lethal> Lethals { get; private set; }
+    public List<PerkSlot> Perks { get; private set; }
+    public List<GameItem> Tacticals { get; private set; }
+    public List<GameItem> Lethals { get; private set; }
 
     private readonly string _rootPath;
 
@@ -38,9 +38,9 @@ public class MwDb
 
     private List<PerkSlot> LoadPerks() => Load<List<PerkSlot>>("perks.json");
 
-    private List<Tactical> LoadTacticals() => Load<List<Tactical>>("tacticals.json");
+    private List<GameItem> LoadTacticals() => Load<List<GameItem>>("tacticals.json");
 
-    private List<Lethal> LoadLethals() => Load<List<Lethal>>("lethals.json");
+    private List<GameItem> LoadLethals() => Load<List<GameItem>>("lethals.json");
 
     public static MwDb Load(string path)
     {
