@@ -1,9 +1,10 @@
 using System;
 using CodWeaponsRandomizer.COD.MW;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 
-const string MwDbFolderPath = "";
+const string MwDbFolderPath = @".\db";
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,9 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/weapons", ([FromServices]MwDb db) =>
+{
+    return db.Weapons;
+});
 
 app.Run();

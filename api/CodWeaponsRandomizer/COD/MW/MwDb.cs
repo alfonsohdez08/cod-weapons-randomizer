@@ -1,6 +1,7 @@
 ﻿
 using CodWeaponsRandomizer.COD.MW.Data;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace CodWeaponsRandomizer.COD.MW;
 public class MwDb
@@ -12,12 +13,18 @@ public class MwDb
 
     private readonly string _rootPath;
 
+    private readonly JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions()
+    {
+        PropertyNameCaseInsensitive = true,
+        ReferenceHandler = ReferenceHandler.Preserve
+    };
+
     private MwDb(string rootPath)
     {
         _rootPath = rootPath;
         LoadDb();
 
-        UpdateWeaponReferences();
+        //UpdateWeaponReferences();
     }
 
     private void UpdateWeaponReferences()
@@ -48,7 +55,7 @@ public class MwDb
     {
         using (var jsonStream = File.OpenRead(Path.Combine(_rootPath, file)))
         {
-            return JsonSerializer.Deserialize<T>(jsonStream);
+            return JsonSerializer.Deserialize<T>(jsonStream, _jsonSerializerOptions);
         }
     }
 
