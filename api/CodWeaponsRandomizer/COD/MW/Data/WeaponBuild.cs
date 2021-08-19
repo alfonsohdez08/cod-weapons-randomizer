@@ -2,6 +2,6 @@
 namespace CodWeaponsRandomizer.COD.MW.Data;
 public class WeaponBuild
 {
-    public string Weapon { get; set; }
-    
+    public Weapon Weapon { get; set; }
+    public List<Attachment> Attachments { get; set; }
 }
