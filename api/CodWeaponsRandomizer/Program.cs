@@ -1,5 +1,6 @@
 using System;
 using CodWeaponsRandomizer.COD.MW;
+using CodWeaponsRandomizer.COD.MW.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
@@ -20,6 +21,11 @@ if (app.Environment.IsDevelopment())
 app.MapGet("/weapons", ([FromServices]MwDb db) =>
 {
     return db.Weapons;
+});
+
+app.MapPost("/loadouts", ([FromBody]LoadoutHints hints) =>
+{
+   
 });
 
 app.Run();
