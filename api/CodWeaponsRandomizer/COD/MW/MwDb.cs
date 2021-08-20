@@ -23,24 +23,6 @@ public class MwDb
     {
         _rootPath = rootPath;
         LoadDb();
-
-        //UpdateWeaponReferences();
-    }
-
-    private void UpdateWeaponReferences()
-    {
-        foreach (var weaponCategory in Weapons)
-        {
-            foreach (var weapon in weaponCategory.Weapons)
-            {
-                weapon.Category = weaponCategory;
-                foreach (var attachmentCategory in weapon.Gunsmith)
-                {
-                    foreach (var attachment in attachmentCategory.Attachments)
-                        attachment.Category = attachmentCategory;
-                }
-            }
-        }
     }
 
     private void LoadDb()
