@@ -2,7 +2,7 @@
 using CodWeaponsRandomizer.COD.MW.Data;
 
 namespace CodWeaponsRandomizer.COD.MW;
-public class WeaponBuilder: MwBuilder
+public class WeaponBuilder: GameItemBuilder
 {
     public CustomWeaponBuild BuildWeapon(List<WeaponCategory> weapons, bool forceUseAllAttachmentSlots)
     {

@@ -1,6 +1,6 @@
 ﻿
 namespace CodWeaponsRandomizer.COD.MW;
-public abstract class MwBuilder
+public abstract class GameItemBuilder
 {
     private readonly Random _random = new Random();
 
