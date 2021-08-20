@@ -1,6 +1,9 @@
 ﻿
+using System.Text.Json.Serialization;
+
 namespace CodWeaponsRandomizer.COD.MW.Data;
 public class Perk: GameItem
 {
-    public PerkSlot Slot { get; set; }
+    [JsonInclude]
+    public PerkSlot Slot { get; private set; }
 }

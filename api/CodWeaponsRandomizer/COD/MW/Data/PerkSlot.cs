@@ -1,7 +1,11 @@
-﻿
+﻿using System.Text.Json.Serialization;
+
 namespace CodWeaponsRandomizer.COD.MW.Data;
 public class PerkSlot
 {
-    public int Slot { get; set; }
-    public List<Perk> Perks { get; set; }
+    [JsonInclude]
+    public int Slot { get; private set; }
+
+    [JsonInclude]
+    public List<Perk> Perks { get; private set; }
 }

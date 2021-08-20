@@ -1,6 +1,9 @@
 ﻿
+using System.Text.Json.Serialization;
+
 namespace CodWeaponsRandomizer.COD.MW.Data;
 public class Attachment: GameItem
 {
-    public AttachmentCategory Category { get; set; }
+    [JsonInclude]
+    public AttachmentCategory Category { get; private set; }
 }

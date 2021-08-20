@@ -1,7 +1,12 @@
 ﻿
+using System.Text.Json.Serialization;
+
 namespace CodWeaponsRandomizer.COD.MW.Data;
 public class WeaponCategory: GameItem
 {
-    public List<Weapon> Weapons { get; set; }
-    public bool IsForPrimaryUsage { get; set; }
+    [JsonInclude]
+    public List<Weapon> Weapons { get; private set; }
+
+    [JsonInclude]
+    public bool IsForPrimaryUsage { get; private set; }
 }
