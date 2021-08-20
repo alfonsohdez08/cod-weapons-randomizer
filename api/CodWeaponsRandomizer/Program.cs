@@ -10,6 +10,8 @@ const string MwDbFolderPath = @".\db";
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton(typeof(MwDb), MwDb.Load(MwDbFolderPath));
+builder.Services.AddScoped<WeaponBuilder>();
+builder.Services.AddScoped<LoadoutBuilder>();
 
 var app = builder.Build();
 
