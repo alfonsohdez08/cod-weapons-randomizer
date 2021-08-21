@@ -6,8 +6,8 @@ using System.Text.Json.Serialization;
 namespace CodWeaponsRandomizer.COD.MW;
 public class MwDb
 {
-    public List<WeaponCategory> Weapons { get; private set; }
-    public List<PerkSlot> Perks { get; private set; }
+    public List<WeaponCategory> WeaponCategories { get; private set; }
+    public List<PerkSlot> PerkSlots { get; private set; }
     public List<GameItem> Tacticals { get; private set; }
     public List<GameItem> Lethals { get; private set; }
 
@@ -27,8 +27,8 @@ public class MwDb
 
     private void LoadDb()
     {
-        Weapons = LoadWeapons();
-        Perks = LoadPerks();
+        WeaponCategories = LoadWeaponCategories();
+        PerkSlots = LoadPerkSlots();
         Tacticals = LoadTacticals();
         Lethals = LoadLethals();
     }
@@ -41,9 +41,9 @@ public class MwDb
         }
     }
 
-    private List<WeaponCategory> LoadWeapons() => Load<List<WeaponCategory>>("weapons.json");
+    private List<WeaponCategory> LoadWeaponCategories() => Load<List<WeaponCategory>>("weapons.json");
 
-    private List<PerkSlot> LoadPerks() => Load<List<PerkSlot>>("perks.json");
+    private List<PerkSlot> LoadPerkSlots() => Load<List<PerkSlot>>("perks.json");
 
     private List<GameItem> LoadTacticals() => Load<List<GameItem>>("tacticals.json");
 

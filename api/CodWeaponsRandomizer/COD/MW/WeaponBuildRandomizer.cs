@@ -11,13 +11,16 @@ public class WeaponBuildRandomizer: CodRandomizer
     private List<Attachment> _attachments;
     private bool _useAllAttachmentSlots;
     private bool _primaryWeapon;
+    private Weapon _excludedWeapon;
 
-    public WeaponBuildRandomizer(MwDb mwDb) => _weaponCategories = mwDb.Weapons;
+    public WeaponBuildRandomizer(MwDb mwDb) => _weaponCategories = mwDb.WeaponCategories;
 
-    public CustomWeaponBuild Build(bool forceUseAllAttachmentSlots, bool primaryWeapon, Weapon weaponExcluded = null)
+    public CustomWeaponBuild Build(bool forceUseAllAttachmentSlots, bool primaryWeapon, Weapon excludedWeapon = null)
     {
         _useAllAttachmentSlots = forceUseAllAttachmentSlots;
         _primaryWeapon = primaryWeapon;
+        _excludedWeapon = excludedWeapon;
+
         try
         {
             PickWeaponCategory();
@@ -32,22 +35,49 @@ public class WeaponBuildRandomizer: CodRandomizer
             _weapon = null;
             _attachments = null;
             _useAllAttachmentSlots = false;
+            _excludedWeapon = null;
         }
     }
 
-    private void PickWeaponCategory() => _weaponCategory = _weaponCategories[GenerateRandomIndex(_weaponCategories.Count)];
+    private void PickWeaponCategory()
+    {
+        Func<WeaponCategory, bool> filterInWeaponCategoriesBasedOnWeaponSelectionOrder;
+        if (_primaryWeapon)
+            filterInWeaponCategoriesBasedOnWeaponSelectionOrder = w => w.IsForPrimaryUsage;
+        else
+            filterInWeaponCategoriesBasedOnWeaponSelectionOrder = w => !w.IsForPrimaryUsage;
 
-    private void PickWeapon() => _weapon = _weaponCategory.Weapons[GenerateRandomIndex(_weaponCategory.Weapons.Count)];
+        var weaponCategories = _weaponCategories.Where(filterInWeaponCategoriesBasedOnWeaponSelectionOrder).ToList();
+
+        _weaponCategory = weaponCategories[GenerateRandomIndex(weaponCategories.Count)];
+
+    }
+
+    private void PickWeapon()
+    {
+        List<Weapon> weapons =
+            _excludedWeapon != null && _excludedWeapon.Category == _weaponCategory ? 
+                _weaponCategory.Weapons.Where(w => w != _excludedWeapon).ToList() : _weaponCategory.Weapons;
+
+        _weapon = weapons[GenerateRandomIndex(weapons.Count)];
+    }
 
     private void PickWeaponAttachments()
     {
-        const int maxAttachmentSlots = 5;
+        const int gameMaxAttachmentSlots = 5;
 
-        int attachmentSlots = _useAllAttachmentSlots ? maxAttachmentSlots : GenerateRandomNumber(1, maxAttachmentSlots);
+        if (!_weapon.Gunsmith.Any())
+        {
+            _attachments = new List<Attachment>();
+            return;
+        }
+
+        int maxAttachmentSlots = _weapon.Gunsmith.Count < gameMaxAttachmentSlots ? _weapon.Gunsmith.Count + 1 : gameMaxAttachmentSlots;
+        int attachmentSlots = _useAllAttachmentSlots ? gameMaxAttachmentSlots : GenerateRandomNumber(1, maxAttachmentSlots);
         _attachments = new List<Attachment>(attachmentSlots);
 
         var attachmentCategories = new List<AttachmentCategory>(_weapon.Gunsmith);
-        for (int index = 0; index < _attachments.Count; index++)
+        for (int slot = 1; slot <= attachmentSlots; slot++)
         {
             var attachmentCategoryIdx = GenerateRandomIndex(attachmentCategories.Count);
             var attachmentCategory = attachmentCategories[attachmentCategoryIdx];

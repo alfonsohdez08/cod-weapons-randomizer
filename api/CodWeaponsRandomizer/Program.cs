@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 
 const string MwDbFolderPath = @".\db";
+const string CorsPolicyName = "";
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,12 +15,24 @@ builder.Services.AddSingleton(typeof(MwDb), MwDb.Load(MwDbFolderPath));
 builder.Services.AddTransient<WeaponBuildRandomizer>();
 builder.Services.AddTransient<LoadoutRandomizer>();
 
+builder.Services.AddCors((corsOptions) =>
+{
+    corsOptions.AddPolicy(CorsPolicyName, (corsPolicyBuilder) =>
+    {
+        corsPolicyBuilder.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
+
+app.UseCors(CorsPolicyName);
 
 app.MapPost("/loadouts", RandomizeLoadout);
 

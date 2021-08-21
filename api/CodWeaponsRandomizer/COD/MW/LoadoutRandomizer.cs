@@ -4,6 +4,8 @@ using CodWeaponsRandomizer.COD.MW.Data;
 namespace CodWeaponsRandomizer.COD.MW;
 public class LoadoutRandomizer: CodRandomizer
 {
+    private const string OverkillPerk = "Overkill";
+
     private readonly MwDb _mwDb;
     private readonly WeaponBuildRandomizer _weaponBuildRandomizer;
 
@@ -54,9 +56,11 @@ public class LoadoutRandomizer: CodRandomizer
 
     private void PickSecondaryWeapon()
     {
-        bool buildSecondaryWeaponAsPrimary = _hints.EnforceOverkillPerk || _perks.Single(p => p.Slot.Slot == 2).Name == "Overkill";
+        bool buildSecondaryWeaponAsAPrimaryOne = IsOverkillPerkSelected();
 
-        _secondaryWeapon = _weaponBuildRandomizer.Build(_hints.EnforceAllAttachmentSlots, buildSecondaryWeaponAsPrimary, _primaryWeapon.Weapon);
+        _secondaryWeapon = _weaponBuildRandomizer.Build(_hints.EnforceAllAttachmentSlots, buildSecondaryWeaponAsAPrimaryOne, _primaryWeapon.Weapon);
+
+        bool IsOverkillPerkSelected() => _perks.Single(p => p.Slot.Slot == 2).Name == OverkillPerk;
     }
 
     private void PickLethal()
@@ -71,19 +75,20 @@ public class LoadoutRandomizer: CodRandomizer
 
     private void PickPerks()
     {
-        _perks = new List<Perk>(3);
+        const int perksCount = 3;
 
-        var perkSlots = new List<PerkSlot>(_mwDb.Perks);
-        for (int index = 0; index < _perks.Count; index++)
+        _perks = new List<Perk>(perksCount);
+
+        for (int index = 0; index < perksCount; index++)
         {
-            var perkSlotIndex = GenerateRandomIndex(perkSlots.Count);
-            var perkSlot = perkSlots[perkSlotIndex];
+            var perkSlot = _mwDb.PerkSlots[index];
+            Perk perk = index == 1 && _hints.EnforceOverkillPerk ? PickOverkillPerk(perkSlot) : PickPerk(perkSlot);
 
-            var perk = PickPerk(perkSlot);
             _perks.Add(perk);
-
-            perkSlots.RemoveAt(perkSlotIndex);
         }
+
+
+        Perk PickOverkillPerk(PerkSlot perkSlot) => perkSlot.Perks.Single(p => p.Name == OverkillPerk);
     }
 
     private Perk PickPerk(PerkSlot perkSlot) => perkSlot.Perks[GenerateRandomIndex(perkSlot.Perks.Count)];
