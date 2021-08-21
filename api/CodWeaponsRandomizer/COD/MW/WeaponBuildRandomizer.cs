@@ -50,7 +50,6 @@ public class WeaponBuildRandomizer: CodRandomizer
         var weaponCategories = _weaponCategories.Where(filterInWeaponCategoriesBasedOnWeaponSelectionOrder).ToList();
 
         _weaponCategory = weaponCategories[GenerateRandomIndex(weaponCategories.Count)];
-
     }
 
     private void PickWeapon()
