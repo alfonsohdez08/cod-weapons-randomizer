@@ -1,6 +1,7 @@
 using System;
 using CodWeaponsRandomizer.COD.MW;
 using CodWeaponsRandomizer.COD.MW.Data;
+using CodWeaponsRandomizer.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
@@ -20,14 +21,34 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-app.MapGet("/weapons", ([FromServices]MwDb db) =>
-{
-    return db.Weapons;
-});
+app.MapPost("/loadouts", RandomizeLoadout);
 
-app.MapPost("/loadouts", ([FromBody]LoadoutHints hints) =>
+static LoadoutDto RandomizeLoadout([FromServices]LoadoutRandomizer loadoutRandomizer, [FromBody]LoadoutHints hints)
 {
-   
-});
+    var loadout = loadoutRandomizer.Build(hints);
+
+    static WeaponDto MapWeapon(CustomWeaponBuild weaponBuild) => new WeaponDto()
+    {
+        Name = weaponBuild.Weapon.Name,
+        Attachments = weaponBuild.Attachments.Select(a => new AttachmentDto()
+        {
+            Name = a.Name,
+            AttachmentCategory = a.Category.Name
+        })
+    };
+
+    return new LoadoutDto()
+    {
+        PrimaryWeapon = MapWeapon(loadout.PrimaryWeapon),
+        SecondaryWeapon = MapWeapon(loadout.SecondaryWeapon),
+        Perks = loadout.Perks.Select(p => new PerkDto()
+        {
+            Slot = p.Slot.Slot,
+            Name = p.Name
+        }),
+        Lethal = loadout.Lethal.Name,
+        Tactical = loadout.Tactical.Name
+    };
+}
 
 app.Run();
