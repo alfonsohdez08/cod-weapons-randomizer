@@ -35,6 +35,7 @@ public class WeaponBuildRandomizer: CodRandomizer
             _weapon = null;
             _attachments = null;
             _useAllAttachmentSlots = false;
+            _primaryWeapon = false;
             _excludedWeapon = null;
         }
     }
@@ -71,8 +72,8 @@ public class WeaponBuildRandomizer: CodRandomizer
             return;
         }
 
-        int maxAttachmentSlots = _weapon.Gunsmith.Count < gameMaxAttachmentSlots ? _weapon.Gunsmith.Count + 1 : gameMaxAttachmentSlots;
-        int attachmentSlots = _useAllAttachmentSlots ? gameMaxAttachmentSlots : GenerateRandomNumber(1, maxAttachmentSlots);
+        int maxAttachmentSlots = _weapon.Gunsmith.Count < gameMaxAttachmentSlots ? _weapon.Gunsmith.Count : gameMaxAttachmentSlots;
+        int attachmentSlots = _useAllAttachmentSlots ? gameMaxAttachmentSlots : GenerateRandomNumber(1, maxAttachmentSlots + 1);
         _attachments = new List<Attachment>(attachmentSlots);
 
         var attachmentCategories = new List<AttachmentCategory>(_weapon.Gunsmith);

@@ -43,6 +43,7 @@ static LoadoutDto RandomizeLoadout([FromServices]LoadoutRandomizer loadoutRandom
     static WeaponDto MapWeapon(CustomWeaponBuild weaponBuild) => new WeaponDto()
     {
         Name = weaponBuild.Weapon.Name,
+        Category = weaponBuild.Weapon.Category.Name,
         Attachments = weaponBuild.Attachments.Select(a => new AttachmentDto()
         {
             Name = a.Name,
