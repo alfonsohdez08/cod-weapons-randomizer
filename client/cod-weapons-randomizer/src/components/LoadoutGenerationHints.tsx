@@ -15,12 +15,12 @@ const LoadoutGenerationHints = ({
 }: LoadoutGenerationHintsProps) => {
   const checkBoxes: JSX.Element[] = [
     <Checkbox
-      placeholder="Enforce all attachment slots"
+      placeholder="Enforce use all weapon attachments"
       value={useAllAttachments}
       onChange={onUseAllAttachmentsChange}
     />,
     <Checkbox
-      placeholder="Enforece Overkill perk"
+      placeholder="Enforce use Overkill perk"
       value={enforceOverkillPerk}
       onChange={onEnforceOverkillPerkChange}
     />,
@@ -28,14 +28,14 @@ const LoadoutGenerationHints = ({
 
   return (
     <>
-      <div className="d-sm-none border border-2 border-secondary rounded rounded-2 p-2">
+      <div className="d-md-none ">
         {checkBoxes.map((ch, idx) => (
           <div key={idx} className="d-block">
             {ch}
           </div>
         ))}
       </div>
-      <div className="d-none d-sm-flex justify-content-center">
+      <div className="d-none d-md-flex justify-content-center">
         {checkBoxes.map((ch, idx) => (
           <span key={idx} className={idx < checkBoxes.length - 1 ? "me-3" : ""}>
             {ch}
