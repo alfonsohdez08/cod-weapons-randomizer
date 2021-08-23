@@ -15,12 +15,12 @@ const LoadoutGenerationHints = ({
 }: LoadoutGenerationHintsProps) => {
   const checkBoxes: JSX.Element[] = [
     <Checkbox
-      placeholder="Use all attachment slots"
+      placeholder="Enforce all attachment slots"
       value={useAllAttachments}
       onChange={onUseAllAttachmentsChange}
     />,
     <Checkbox
-      placeholder="Use Overkill perk"
+      placeholder="Enforece Overkill perk"
       value={enforceOverkillPerk}
       onChange={onEnforceOverkillPerkChange}
     />,

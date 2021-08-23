@@ -5,8 +5,13 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import API from "../api";
+import { Loadout } from "../api/models";
 
-const GenerateRandomLoadoutForm = () => {
+const GenerateRandomLoadoutForm = ({
+  onGenerateLoadout,
+}: {
+  onGenerateLoadout: (loadout: Loadout) => void;
+}) => {
   const [enforceOverkillPerk, setEnforceOverkillPerk] = React.useState(false);
   const [enforceAllAttachments, setEnforceAllAttachments] =
     React.useState(false);
@@ -15,7 +20,10 @@ const GenerateRandomLoadoutForm = () => {
     API.generateRandomLoadout({
       enforceAllAttachmentSlots: enforceAllAttachments,
       enforceOverkillPerk: enforceOverkillPerk,
-    }).then((loadout) => console.log(loadout));
+    }).then((loadout) => {
+      console.log(loadout);
+      onGenerateLoadout(loadout);
+    });
   };
 
   return (
