@@ -7,6 +7,23 @@ import { Container, Row, Col } from "react-bootstrap";
 import API from "../api";
 import { Loadout } from "../api/models";
 
+const Form = ({
+  onSubmit,
+  children,
+}: {
+  onSubmit: () => void;
+  children: React.ReactNode;
+}) => (
+  <form
+    onSubmit={(e) => {
+      e.preventDefault();
+      onSubmit();
+    }}
+  >
+    {children}
+  </form>
+);
+
 const GenerateRandomLoadoutForm = ({
   onGenerateLoadout,
 }: {
@@ -27,20 +44,15 @@ const GenerateRandomLoadoutForm = ({
   };
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        generateRandomLoadout();
-      }}
-    >
+    <Form onSubmit={generateRandomLoadout}>
       <Container className="px-0">
         <Row className="row-cols-1 gy-2">
           <Col>
             <LoadoutGenerationHints
-              useAllAttachments={enforceAllAttachments}
-              onUseAllAttachmentsChange={setEnforceAllAttachments}
-              enforceOverkillPerk={enforceOverkillPerk}
-              onEnforceOverkillPerkChange={setEnforceOverkillPerk}
+              enforceUseAllWeaponAttachments={enforceAllAttachments}
+              onEnforceUseAllWeaponAttachmentsChange={setEnforceAllAttachments}
+              enforceUseOverkillPerk={enforceOverkillPerk}
+              onEnforceUseOverkillPerkChange={setEnforceOverkillPerk}
             />
           </Col>
           <Col>
@@ -54,7 +66,7 @@ const GenerateRandomLoadoutForm = ({
           </Col>
         </Row>
       </Container>
-    </form>
+    </Form>
   );
 };
 

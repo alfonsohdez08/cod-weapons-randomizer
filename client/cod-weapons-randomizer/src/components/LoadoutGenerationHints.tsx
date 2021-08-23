@@ -1,28 +1,28 @@
 import Checkbox from "./Checkbox";
 
 export interface LoadoutGenerationHintsProps {
-  useAllAttachments: boolean;
-  onUseAllAttachmentsChange: (value: boolean) => void;
-  enforceOverkillPerk: boolean;
-  onEnforceOverkillPerkChange: (value: boolean) => void;
+  enforceUseAllWeaponAttachments: boolean;
+  onEnforceUseAllWeaponAttachmentsChange: (value: boolean) => void;
+  enforceUseOverkillPerk: boolean;
+  onEnforceUseOverkillPerkChange: (value: boolean) => void;
 }
 
 const LoadoutGenerationHints = ({
-  useAllAttachments,
-  onUseAllAttachmentsChange,
-  enforceOverkillPerk,
-  onEnforceOverkillPerkChange,
+  enforceUseAllWeaponAttachments,
+  onEnforceUseAllWeaponAttachmentsChange,
+  enforceUseOverkillPerk,
+  onEnforceUseOverkillPerkChange,
 }: LoadoutGenerationHintsProps) => {
   const checkBoxes: JSX.Element[] = [
     <Checkbox
-      placeholder="Enforce use all weapon attachments"
-      value={useAllAttachments}
-      onChange={onUseAllAttachmentsChange}
+      label="Enforce use all weapon attachments"
+      value={enforceUseAllWeaponAttachments}
+      onChange={onEnforceUseAllWeaponAttachmentsChange}
     />,
     <Checkbox
-      placeholder="Enforce use Overkill perk"
-      value={enforceOverkillPerk}
-      onChange={onEnforceOverkillPerkChange}
+      label="Enforce use Overkill perk"
+      value={enforceUseOverkillPerk}
+      onChange={onEnforceUseOverkillPerkChange}
     />,
   ];
 

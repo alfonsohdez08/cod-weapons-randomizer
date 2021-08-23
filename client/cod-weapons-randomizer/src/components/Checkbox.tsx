@@ -1,17 +1,18 @@
 import { Form } from "react-bootstrap";
 
-import InputProps from "./InputProps";
+export interface CheckboxProps {
+  label: string;
+  value: boolean;
+  onChange: (newValue: boolean) => void;
+}
 
-const Checkbox = ({ placeholder, value, onChange }: InputProps) => {
-  const checkBoxValue: string | number =
-    typeof value === "boolean" ? Number(value) : value;
-
+const Checkbox = ({ label, value, onChange }: CheckboxProps) => {
   return (
     <Form.Check
-      label={placeholder}
-      value={checkBoxValue}
+      label={label}
+      value={Number(value)}
       className="d-inline-block"
-      onChange={(e) => onChange(e.currentTarget.checked)}
+      onChange={(e) => onChange(e.target.checked)}
     />
   );
 };
