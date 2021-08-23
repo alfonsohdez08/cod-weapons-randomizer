@@ -22,7 +22,7 @@ public class LoadoutRandomizer: CodRandomizer
         _weaponBuildRandomizer = weaponBuildRandomizer;
     }
 
-    public Loadout Build(LoadoutHints hints = null)
+    public Loadout Randomize(LoadoutHints hints = null)
     {
         _hints = hints ?? new LoadoutHints();
 
@@ -51,14 +51,14 @@ public class LoadoutRandomizer: CodRandomizer
 
     private void PickPrimaryWeapon()
     {
-        _primaryWeapon = _weaponBuildRandomizer.Build(_hints.EnforceAllAttachmentSlots, true);
+        _primaryWeapon = _weaponBuildRandomizer.Randomize(_hints.EnforceUseAllWeaponAttachments, true);
     }
 
     private void PickSecondaryWeapon()
     {
         bool buildSecondaryWeaponAsAPrimaryOne = IsOverkillPerkSelected();
 
-        _secondaryWeapon = _weaponBuildRandomizer.Build(_hints.EnforceAllAttachmentSlots, buildSecondaryWeaponAsAPrimaryOne, _primaryWeapon.Weapon);
+        _secondaryWeapon = _weaponBuildRandomizer.Randomize(_hints.EnforceUseAllWeaponAttachments, buildSecondaryWeaponAsAPrimaryOne, _primaryWeapon.Weapon);
 
         bool IsOverkillPerkSelected() => _perks.Single(p => p.Slot.Slot == 2).Name == OverkillPerk;
     }
@@ -82,7 +82,7 @@ public class LoadoutRandomizer: CodRandomizer
         for (int index = 0; index < perksCount; index++)
         {
             var perkSlot = _mwDb.PerkSlots[index];
-            Perk perk = index == 1 && _hints.EnforceOverkillPerk ? PickOverkillPerk(perkSlot) : PickPerk(perkSlot);
+            Perk perk = index == 1 && _hints.EnforceUseOverkillPerk ? PickOverkillPerk(perkSlot) : PickPerk(perkSlot);
 
             _perks.Add(perk);
         }
