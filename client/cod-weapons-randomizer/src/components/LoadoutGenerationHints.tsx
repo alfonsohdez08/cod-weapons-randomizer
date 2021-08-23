@@ -1,9 +1,29 @@
 import Checkbox from "./Checkbox";
 
-const LoadoutGenerationHints = () => {
+export interface LoadoutGenerationHintsProps {
+  useAllAttachments: boolean;
+  onUseAllAttachmentsChange: (value: boolean) => void;
+  enforceOverkillPerk: boolean;
+  onEnforceOverkillPerkChange: (value: boolean) => void;
+}
+
+const LoadoutGenerationHints = ({
+  useAllAttachments,
+  onUseAllAttachmentsChange,
+  enforceOverkillPerk,
+  onEnforceOverkillPerkChange,
+}: LoadoutGenerationHintsProps) => {
   const checkBoxes: JSX.Element[] = [
-    <Checkbox placeholder="Use all attachment slots" value={false} />,
-    <Checkbox placeholder="Use Overkill perk" value={false} />,
+    <Checkbox
+      placeholder="Use all attachment slots"
+      value={useAllAttachments}
+      onChange={onUseAllAttachmentsChange}
+    />,
+    <Checkbox
+      placeholder="Use Overkill perk"
+      value={enforceOverkillPerk}
+      onChange={onEnforceOverkillPerkChange}
+    />,
   ];
 
   return (
