@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 import GenerateRandomLoadoutForm from "./components/GenerateRandomLoadoutForm";
-import WeaponCard from "./components/WeaponCard";
+import LoadoutContainer from "./components/LoadoutContainer";
 
 import { Loadout } from "./api/models";
 
@@ -15,16 +15,16 @@ const App = () => {
     <>
       <div className="w-75 mt-3 mx-auto">
         <GenerateRandomLoadoutForm onGenerateLoadout={setLoadout} />
-        {loadout ? <LoadoutContainer loadout={loadout} /> : <></>}
+        {loadout ? (
+          <div className="mt-3">
+            <LoadoutContainer loadout={loadout} />
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );
 };
-
-const LoadoutContainer = ({ loadout }: { loadout: Loadout }) => (
-  <div>
-    {/* <WeaponCard weapon={loadout.primaryWeapon} weaponOrder="primary" /> */}
-  </div>
-);
 
 export default App;
