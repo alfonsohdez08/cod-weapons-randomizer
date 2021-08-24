@@ -1,50 +1,42 @@
 import { Weapon, Attachment } from "../api/models";
 
-import { Card } from "react-bootstrap";
+import { Card, ListGroup } from "react-bootstrap";
 
-const WeaponCard = ({
-  weapon,
-  weaponOrder,
-}: {
-  weapon: Weapon;
-  weaponOrder: "primary" | "secondary";
-}) => {
+const WeaponCard = ({ weapon }: { weapon: Weapon }) => {
   console.log(weapon);
   return (
     <Card>
       <Card.Header>
-        <span className="h4">
-          {weaponOrder === "primary" ? "Primary Weapon" : "Secondary Weapon"}
-        </span>
+        <div className="d-inline-block h4">{weapon.name}</div>
+        <span className="ms-1 text-muted h6">({weapon.category})</span>
       </Card.Header>
-      <Card.Body>
-        <div className="card-title">
-          <span className="h4">{weapon.name}</span>
-          <span className="ms-1 text-muted">({weapon.category})</span>
-        </div>
-        <Card.Text className="mt-1">
-          {weapon.attachments ? (
-            <WeaponAttachments attachments={weapon.attachments} />
-          ) : (
-            <></>
-          )}
-        </Card.Text>
-      </Card.Body>
+      <Card.Img></Card.Img>
+      {weapon.attachments ? (
+        <WeaponAttachmentList attachments={weapon.attachments} />
+      ) : (
+        <></>
+      )}
     </Card>
   );
 };
 
-const WeaponAttachments = ({ attachments }: { attachments: Attachment[] }) => (
+const WeaponAttachmentList = ({
+  attachments,
+}: {
+  attachments: Attachment[];
+}) => (
   <>
-    <div className="h5">Attachments</div>
-    {attachments.map((a, idx) => (
-      <div key={idx}>
-        <span className={"d-block " + (idx > 0 ? "mt-1" : "")}>
-          <strong>{a.attachmentCategory}</strong>
-        </span>
-        <span className="mt-1">{a.name}</span>
-      </div>
-    ))}
+    <ListGroup variant="flush">
+      <ListGroup.Item variant="secondary">
+        <span className="h5">Attachments</span>
+      </ListGroup.Item>
+      {attachments.map((a, idx) => (
+        <ListGroup.Item variant="light" key={idx}>
+          <strong>{a.attachmentCategory}:</strong>
+          <span className="ms-2">{a.name}</span>
+        </ListGroup.Item>
+      ))}
+    </ListGroup>
   </>
 );
 

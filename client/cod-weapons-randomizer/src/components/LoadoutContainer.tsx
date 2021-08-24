@@ -4,7 +4,7 @@ import WeaponCard from "./WeaponCard";
 
 const LoadoutContainer = ({ loadout }: { loadout: Loadout }) => (
   <div>
-    <WeaponCard weapon={loadout.primaryWeapon} weaponOrder="primary" />
+    <WeaponCard weapon={loadout.primaryWeapon} />
   </div>
 );
 
