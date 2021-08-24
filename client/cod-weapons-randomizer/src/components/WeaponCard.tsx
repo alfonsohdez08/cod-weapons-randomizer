@@ -27,11 +27,11 @@ const WeaponAttachmentList = ({
 }) => (
   <>
     <ListGroup variant="flush">
-      <ListGroup.Item variant="secondary">
+      <ListGroup.Item variant="dark">
         <span className="h5">Attachments</span>
       </ListGroup.Item>
       {attachments.map((a, idx) => (
-        <ListGroup.Item variant="light" key={idx}>
+        <ListGroup.Item variant="secondary" key={idx}>
           <strong>{a.attachmentCategory}:</strong>
           <span className="ms-2">{a.name}</span>
         </ListGroup.Item>
