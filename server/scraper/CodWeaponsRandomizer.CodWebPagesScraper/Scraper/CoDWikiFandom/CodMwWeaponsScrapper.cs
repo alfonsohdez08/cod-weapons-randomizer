@@ -4,7 +4,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
     class CodMwWeaponsScrapper : WikiScraper<IEnumerable<WeaponCategory>>
     {
-        private CodMwWeaponsScrapper() : base("/Call_of_Duty:_Modern_Warfare_(2019)")
+        private CodMwWeaponsScrapper() : base("Call_of_Duty:_Modern_Warfare_(2019)")
         {
         }
         private static IEnumerable<IElement> GetWeaponAnchorElements(IElement weaponsCell) => weaponsCell.QuerySelectorAll("a");

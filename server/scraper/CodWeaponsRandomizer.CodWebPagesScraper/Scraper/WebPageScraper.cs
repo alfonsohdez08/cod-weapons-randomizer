@@ -1,5 +1,6 @@
 ﻿using AngleSharp;
 using AngleSharp.Dom;
+using AngleSharp.Html.Parser;
 using AngleSharp.Io;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
@@ -18,9 +19,9 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
 
         private IDocument ReadWebPage()
         {
-            var context = BrowsingContext.New(Configuration.Default);
+            var context = BrowsingContext.New(Configuration.Default.WithDefaultLoader());
             
-            return context.OpenAsync(new DocumentRequest(new Url(WebPage))).Result;
+            return context.OpenAsync(WebPage).Result;
         }
 
         public abstract T Scrap();
