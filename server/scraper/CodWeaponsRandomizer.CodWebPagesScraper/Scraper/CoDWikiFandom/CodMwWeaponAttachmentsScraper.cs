@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
-    class CodMwWeaponAttachmentsScrapper : WikiScraper<IEnumerable<AttachmentCategory>>
+    class CodMwWeaponAttachmentsScraper : WikiScraper<IEnumerable<AttachmentCategory>>
     {
-        private CodMwWeaponAttachmentsScrapper(string weaponWikiPath): base(weaponWikiPath)
+        private CodMwWeaponAttachmentsScraper(string weaponWikiPath): base(weaponWikiPath)
         {
 
         }
@@ -19,6 +19,6 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
         }
 
 
-        public static IEnumerable<AttachmentCategory> ScrapAttachmentCategories(string weaponWikiPath) => new CodMwWeaponAttachmentsScrapper(weaponWikiPath).Scrap();
+        public static IEnumerable<AttachmentCategory> ScrapAttachmentCategories(string weaponWikiPath) => new CodMwWeaponAttachmentsScraper(weaponWikiPath).Scrap();
     }
 }

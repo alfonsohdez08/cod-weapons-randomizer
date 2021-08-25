@@ -2,15 +2,15 @@
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
-    class CodMwWeaponsScrapper : WikiScraper<IEnumerable<WeaponCategory>>
+    class CodMwWeaponsScraper : WikiScraper<IEnumerable<WeaponCategory>>
     {
-        private CodMwWeaponsScrapper() : base("Call_of_Duty:_Modern_Warfare_(2019)")
+        private CodMwWeaponsScraper() : base("Call_of_Duty:_Modern_Warfare_(2019)")
         {
         }
         private static IEnumerable<IElement> GetWeaponAnchorElements(IElement weaponsCell) => weaponsCell.QuerySelectorAll("a");
 
         private static IEnumerable<AttachmentCategory> GetWeaponAttachmentCategories(Weapon weapon)
-            => CodMwWeaponAttachmentsScrapper.ScrapAttachmentCategories(weapon.WeaponDetailsPagePath);
+            => CodMwWeaponAttachmentsScraper.ScrapAttachmentCategories(weapon.WeaponDetailsPagePath);
 
         private IElement GetWeaponTableElement()
         {
@@ -46,6 +46,6 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
             return weaponCategories;
         }
 
-        public static IEnumerable<WeaponCategory> ScrapWeapons() => new CodMwWeaponsScrapper().Scrap();
+        public static IEnumerable<WeaponCategory> ScrapWeapons() => new CodMwWeaponsScraper().Scrap();
     }
 }
