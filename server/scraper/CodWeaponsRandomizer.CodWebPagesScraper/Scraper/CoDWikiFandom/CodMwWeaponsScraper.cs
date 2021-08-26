@@ -1,8 +1,9 @@
 ﻿using AngleSharp.Dom;
+using AngleSharp.Html.Dom;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
-    class CodMwWeaponsScraper : WikiScraper<IEnumerable<WeaponCategory>>
+    class CodMwWeaponsScraper : WikiScraper<IEnumerable<Weapon>>
     {
         private CodMwWeaponsScraper() : base("Call_of_Duty:_Modern_Warfare_(2019)")
         {
@@ -12,43 +13,53 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
         private static IEnumerable<AttachmentCategory> GetWeaponAttachmentCategories(Weapon weapon)
             => CodMwWeaponAttachmentsScraper.ScrapAttachmentCategories(weapon.WeaponDetailsPagePath);
 
-        private IElement GetWeaponTableElement()
+        private IHtmlTableElement FindWeaponTableElement()
         {
-            var weaponsHeader = HtmlDocument.GetElementById("Weapons");
-            if (weaponsHeader is null)
-                throw new InvalidOperationException("Did not find the header HTML tag for the Weapons section. Please, make sure you are in the Wiki home page " +
-                    "for Call of Duty Modern Warfare 2019.");
+            var weaponsHeader = FindWeaponTableHeaderElement();
 
             return weaponsHeader.ParentElement.NextElementSibling.QuerySelector("table");
         }
 
-        public override IEnumerable<WeaponCategory> Scrap()
+        private IElement FindWeaponTableHeaderElement () => HtmlDocument.GetElementById("Weapons");
+
+        private static IElement GetWeaponTableCellElements(Table)
+
+        public override IEnumerable<Weapon> Scrap()
         {
-            var weaponCategories = new List<WeaponCategory>();
+            IElement weaponTableElement = FindWeaponTableElement();
 
-            IElement weaponTableElement = GetWeaponTableElement();
-            foreach (IElement weaponCategoryCell in weaponTableElement.QuerySelectorAll("td.navbox-group"))
-            {
-                WeaponCategory weaponCategory = WeaponCategory.Parse(weaponCategoryCell.QuerySelector("a"));
-                if (weaponCategory.Name == "Attachments")
-                    break;
 
-                weaponCategories.Add(weaponCategory);
-
-                foreach (IElement weaponAnchorElement in GetWeaponAnchorElements(weaponCategoryCell.NextElementSibling))
-                {
-                    Weapon weapon = Weapon.Parse(weaponAnchorElement);
-                    
-                    weapon.Category = weaponCategory;
-                    weaponCategory.AddWeapon(weapon);
-
-                    //weapon.AttachmentCategories = GetWeaponAttachmentCategories(weapon);
-                }
-            }
-
-            return weaponCategories;
+            throw new NotImplementedException();
         }
 
-        public static IEnumerable<WeaponCategory> ScrapWeapons() => new CodMwWeaponsScraper().Scrap();
+        //public override IEnumerable<Weapon> Scrap()
+        //{
+        //    var weaponCategories = new List<WeaponCategory>();
+
+        //    IElement weaponTableElement = FindWeaponTableElement();
+        //    foreach (IElement weaponCategoryCell in weaponTableElement.QuerySelectorAll("td.navbox-group"))
+        //    {
+        //        WeaponCategory weaponCategory = WeaponCategory.Parse(weaponCategoryCell.QuerySelector("a"));
+        //        if (weaponCategory.Name == "Attachments")
+        //            break;
+
+        //        weaponCategories.Add(weaponCategory);
+
+        //        foreach (IElement weaponAnchorElement in GetWeaponAnchorElements(weaponCategoryCell.NextElementSibling))
+        //        {
+        //            Weapon weapon = Weapon.Parse(weaponAnchorElement);
+
+        //            weapon.Category = weaponCategory;
+        //            weaponCategory.AddWeapon(weapon);
+
+        //            //weapon.AttachmentCategories = GetWeaponAttachmentCategories(weapon);
+        //        }
+        //    }
+
+        //    throw new NotImplementedException();
+
+        //}
+
+        public static IEnumerable<Weapon> ScrapWeapons() => new CodMwWeaponsScraper().Scrap();
     }
 }
