@@ -14,7 +14,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 
         private IElement GetWeaponTableElement()
         {
-            var weaponsHeader = Document.GetElementById("Weapons");
+            var weaponsHeader = HtmlDocument.GetElementById("Weapons");
             if (weaponsHeader is null)
                 throw new InvalidOperationException("Did not find the header HTML tag for the Weapons section. Please, make sure you are in the Wiki home page " +
                     "for Call of Duty Modern Warfare 2019.");
