@@ -5,7 +5,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
     class CodMwWeaponsScraper : WebPageScraper<IEnumerable<Weapon>>
     {
-        private CodMwWeaponsScraper() : base()
+        public CodMwWeaponsScraper() : base()
         {
         }
 
@@ -20,20 +20,40 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
             => HtmlDocument.QuerySelector<IHtmlHeadingElement>("#Weapons");
 
         private static IEnumerable<IHtmlTableDataCellElement> GetWeaponTableDataCellElements(IHtmlTableElement tableElement)
-            => tableElement.QuerySelectorAll<IHtmlTableDataCellElement>("td.navbox-group");
+        {
+            foreach (IHtmlTableDataCellElement dataCellElement in tableElement.QuerySelectorAll<IHtmlTableDataCellElement>("td.navbox-group"))
+            {
+                IHtmlAnchorElement weaponCategoryAnchorElement = dataCellElement.QuerySelector<IHtmlAnchorElement>("a");
+                if (weaponCategoryAnchorElement.Text == "Special")
+                    yield break;
+
+                yield return dataCellElement;
+            }
+        }
+
+        private static IEnumerable<IHtmlAnchorElement> GetWeaponAnchors(IHtmlTableElement tableElement)
+        {
+            var weaponAnchors = new List<IHtmlAnchorElement>();
+            foreach (IHtmlTableDataCellElement dataCellElement in GetWeaponTableDataCellElements(tableElement))
+            {
+                var anchors = dataCellElement.NextElementSibling.QuerySelectorAll<IHtmlAnchorElement>("a");
+                weaponAnchors.AddRange(anchors);
+            }
+
+            return weaponAnchors;
+        }
+
+        private static Weapon GetWeaponDetails(IHtmlAnchorElement anchorElement) => new CodMwWeaponDetailsScraper(anchorElement.Href).Scrap();
 
         public override IEnumerable<Weapon> Scrap()
         {
+            var weapons = new List<Weapon>();
+
             IHtmlTableElement weaponTableElement = FindWeaponTableElement();
-            foreach (IHtmlTableDataCellElement dataCellElement in GetWeaponTableDataCellElements(weaponTableElement))
-            {
-                //WeaponCategory weaponCategory = WeaponCategory.Parse(dataCellElement.QuerySelector<IHtmlAnchorElement>("a"));
+            foreach (IHtmlAnchorElement anchorElement in GetWeaponAnchors(weaponTableElement))
+                weapons.Add(GetWeaponDetails(anchorElement));
 
-            }
-
-            throw new NotImplementedException();
+            return weapons;
         }
-
-        public static IEnumerable<Weapon> ScrapWeapons() => new CodMwWeaponsScraper().Scrap();
     }
 }
