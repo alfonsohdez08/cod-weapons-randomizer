@@ -15,18 +15,24 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 
         private IHtmlTableElement FindWeaponTableElement()
         {
-            var weaponsHeader = FindWeaponTableHeaderElement();
+            IHtmlHeadingElement weaponsHeading = FindWeaponsSectionHeadingElement();
 
-            return weaponsHeader.ParentElement.NextElementSibling.QuerySelector("table");
+            return weaponsHeading.ParentElement.NextElementSibling.QuerySelector<IHtmlTableElement>("table");
         }
 
-        private IElement FindWeaponTableHeaderElement () => HtmlDocument.GetElementById("Weapons");
+        private IHtmlHeadingElement FindWeaponsSectionHeadingElement()
+            => HtmlDocument.QuerySelector<IHtmlHeadingElement>("#Weapons");
 
-        private static IElement GetWeaponTableCellElements(Table)
+        private static IEnumerable<IHtmlTableDataCellElement> GetWeaponTableDataCellElements(IHtmlTableElement tableElement)
+            => tableElement.QuerySelectorAll<IHtmlTableDataCellElement>("td.navbox-group");
 
         public override IEnumerable<Weapon> Scrap()
         {
-            IElement weaponTableElement = FindWeaponTableElement();
+            IHtmlTableElement weaponTableElement = FindWeaponTableElement();
+            foreach (IHtmlTableDataCellElement dataCellElement in GetWeaponTableDataCellElements(weaponTableElement))
+            {
+
+            }
 
 
             throw new NotImplementedException();
