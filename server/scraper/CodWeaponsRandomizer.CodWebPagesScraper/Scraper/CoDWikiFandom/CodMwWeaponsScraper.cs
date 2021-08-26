@@ -30,6 +30,9 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
             foreach (IElement weaponCategoryCell in weaponTableElement.QuerySelectorAll("td.navbox-group"))
             {
                 WeaponCategory weaponCategory = WeaponCategory.Parse(weaponCategoryCell.QuerySelector("a"));
+                if (weaponCategory.Name == "Attachments")
+                    break;
+
                 weaponCategories.Add(weaponCategory);
 
                 foreach (IElement weaponAnchorElement in GetWeaponAnchorElements(weaponCategoryCell.NextElementSibling))
@@ -39,7 +42,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
                     weapon.Category = weaponCategory;
                     weaponCategory.AddWeapon(weapon);
 
-                    weapon.AttachmentCategories = GetWeaponAttachmentCategories(weapon);
+                    //weapon.AttachmentCategories = GetWeaponAttachmentCategories(weapon);
                 }
             }
 
