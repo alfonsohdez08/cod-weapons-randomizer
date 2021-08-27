@@ -21,12 +21,9 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 
         public override Weapon Scrap()
         {
-            // the idea would have a scraper for the aside container
-            // and then another scraper for the attachments container
-            // so this means the html scraper can either receive a web page url (using url class) or a html as stream
             IHtmlElement asideElement = FindWeaponAsideElement();
 
-            throw new NotImplementedException();
+            return new ModernWarfareWeaponContainerScraper(asideElement).Scrap();
         }
     }
 }

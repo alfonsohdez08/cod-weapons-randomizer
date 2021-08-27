@@ -21,42 +21,17 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
         private IHtmlSpanElement FindWeaponSectionSpanElement()
             => HtmlDocument.QuerySelector<IHtmlSpanElement>("#Weapons");
 
-        private static IEnumerable<IHtmlTableDataCellElement> GetWeaponTableDataCellElements(IHtmlTableElement tableElement)
-        {
-            foreach (IHtmlTableDataCellElement dataCellElement in tableElement.QuerySelectorAll<IHtmlTableDataCellElement>("td.navbox-group"))
-            {
-                IHtmlAnchorElement weaponCategoryAnchorElement = dataCellElement.QuerySelector<IHtmlAnchorElement>("a");
-                if (weaponCategoryAnchorElement.Text == "Special")
-                    yield break;
+        private static IEnumerable<string> ScrapWeaponHrefs(IHtmlTableElement tableElement) => new ModernWarfareWeaponTableScraper(tableElement).Scrap();
 
-                yield return dataCellElement;
-            }
-        }
-
-        private static IEnumerable<IHtmlAnchorElement> GetWeaponAnchors(IHtmlTableElement tableElement)
-        {
-            var weaponAnchors = new List<IHtmlAnchorElement>();
-            foreach (IHtmlTableDataCellElement dataCellElement in GetWeaponTableDataCellElements(tableElement))
-            {
-                var anchors = dataCellElement.NextElementSibling.QuerySelectorAll<IHtmlAnchorElement>("a");
-                weaponAnchors.AddRange(anchors);
-            }
-
-            return weaponAnchors;
-        }
-
-        private static Weapon GetWeaponDetails(IHtmlAnchorElement anchorElement) => new ModernWarfareWeaponDetailsPageScraper(anchorElement.Href).Scrap();
+        private static Weapon ScrapWeapon(string weaponHref) => new ModernWarfareWeaponDetailsPageScraper(weaponHref).Scrap();
 
         public override IEnumerable<Weapon> Scrap()
         {
             var weapons = new List<Weapon>();
 
             IHtmlTableElement weaponTableElement = FindWeaponTableElement();
-            foreach (IHtmlAnchorElement anchorElement in GetWeaponAnchors(weaponTableElement))
-            {
-                Console.WriteLine($"{anchorElement.Text} | {anchorElement.Href}");
-                weapons.Add(GetWeaponDetails(anchorElement));
-            }
+            foreach (string weaponHref in ScrapWeaponHrefs(weaponTableElement))
+                weapons.Add(ScrapWeapon(weaponHref));
 
             return weapons;
         }

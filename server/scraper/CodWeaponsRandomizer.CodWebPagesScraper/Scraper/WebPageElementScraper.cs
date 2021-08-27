@@ -8,9 +8,9 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
     {
         protected readonly THtmlElementType HtmlElement;
 
-        public WebPageElementScraper(string rawHtmlElement)
+        public WebPageElementScraper(THtmlElementType htmlElement)
         {
-            HtmlElement = HtmlParser.ParseElement<THtmlElementType>(rawHtmlElement);
+            HtmlElement = htmlElement;
         }
     }
 }
