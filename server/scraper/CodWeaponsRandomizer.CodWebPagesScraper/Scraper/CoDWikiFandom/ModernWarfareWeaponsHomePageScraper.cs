@@ -3,11 +3,11 @@ using AngleSharp.Html.Dom;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
-    class CodMwWeaponsScraper : WebPageScraper<IEnumerable<Weapon>>
+    class ModernWarfareWeaponsHomePageScraper : HtmlScraper<IEnumerable<Weapon>>
     {
         private const string CodMwWikiPagePath = "https://callofduty.fandom.com/Call_of_Duty:_Modern_Warfare_(2019)";
 
-        public CodMwWeaponsScraper() : base(CodMwWikiPagePath)
+        public ModernWarfareWeaponsHomePageScraper() : base(CodMwWikiPagePath)
         {
         }
 
@@ -45,7 +45,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
             return weaponAnchors;
         }
 
-        private static Weapon GetWeaponDetails(IHtmlAnchorElement anchorElement) => new CodMwWeaponDetailsScraper(anchorElement.Href).Scrap();
+        private static Weapon GetWeaponDetails(IHtmlAnchorElement anchorElement) => new ModernWarfareWeaponDetailsPageScraper(anchorElement.Href).Scrap();
 
         public override IEnumerable<Weapon> Scrap()
         {

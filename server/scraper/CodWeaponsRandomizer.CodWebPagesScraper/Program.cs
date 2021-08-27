@@ -4,6 +4,6 @@ using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom;
 
 Console.ForegroundColor = ConsoleColor.Green;
 
-var weapons = new CodMwWeaponsScraper().Scrap();
+var weapons = new ModernWarfareWeaponsHomePageScraper().Scrap();
 
 Console.ReadLine();

@@ -4,13 +4,18 @@ using AngleSharp.Html.Parser;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
 {
-    abstract class WebPageScraper<T> where T: class
+    abstract class HtmlScraper<T> where T: class
     {
         protected readonly IHtmlDocument HtmlDocument;
 
-        protected WebPageScraper(string webPageUrl)
+        protected HtmlScraper(string webPageUrl)
         {
             HtmlDocument = LoadWebPage(webPageUrl);
+        }
+
+        protected HtmlScraper(Stream htmlContent)
+        {
+
         }
 
         private static IHtmlDocument LoadWebPage(string webPageUrl)
