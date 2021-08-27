@@ -5,7 +5,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
     class CodMwWeaponsScraper : WebPageScraper<IEnumerable<Weapon>>
     {
-        private const string CodMwWikiPagePath = "/Call_of_Duty:_Modern_Warfare_(2019)";
+        private const string CodMwWikiPagePath = "https://callofduty.fandom.com/Call_of_Duty:_Modern_Warfare_(2019)";
 
         public CodMwWeaponsScraper() : base(CodMwWikiPagePath)
         {
@@ -53,7 +53,10 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 
             IHtmlTableElement weaponTableElement = FindWeaponTableElement();
             foreach (IHtmlAnchorElement anchorElement in GetWeaponAnchors(weaponTableElement))
+            {
+                Console.WriteLine($"{anchorElement.Text} | {anchorElement.Href}");
                 weapons.Add(GetWeaponDetails(anchorElement));
+            }
 
             return weapons;
         }

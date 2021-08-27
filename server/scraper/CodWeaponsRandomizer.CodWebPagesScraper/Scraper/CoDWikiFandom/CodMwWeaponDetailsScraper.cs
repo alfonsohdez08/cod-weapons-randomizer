@@ -2,7 +2,7 @@
 {
     class CodMwWeaponDetailsScraper : WebPageScraper<Weapon>
     {
-        public CodMwWeaponDetailsScraper(string weaponWikiPath): base(weaponWikiPath)
+        public CodMwWeaponDetailsScraper(string weaponWikiPage): base(weaponWikiPage)
         {
 
         }

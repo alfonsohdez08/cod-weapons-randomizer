@@ -2,6 +2,8 @@
 
 using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom;
 
+Console.ForegroundColor = ConsoleColor.Green;
+
 var weapons = new CodMwWeaponsScraper().Scrap();
 
 Console.ReadLine();

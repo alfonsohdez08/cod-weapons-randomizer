@@ -6,18 +6,11 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
 {
     abstract class WebPageScraper<T> where T: class
     {
-        private const string CodWikiFandomPage = "https://callofduty.fandom.com";
-
         protected readonly IHtmlDocument HtmlDocument;
 
-        protected WebPageScraper()
+        protected WebPageScraper(string webPageUrl)
         {
-            HtmlDocument = LoadWebPage(CodWikiFandomPage);
-        }
-
-        protected WebPageScraper(string path)
-        {
-            HtmlDocument = LoadWebPage(CodWikiFandomPage + $"/{path}");
+            HtmlDocument = LoadWebPage(webPageUrl);
         }
 
         private static IHtmlDocument LoadWebPage(string webPageUrl)
