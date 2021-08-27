@@ -4,11 +4,13 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
     class Weapon: ScrapedGameItem
     {
-        public string Category { get; set; }
-        public IEnumerable<AttachmentCategory> SupportedAttachments { get;  }
+        public string WeaponClass { get; set; }
+        public string WeaponImageUrl { get; set; }
+        public IEnumerable<AttachmentCategory> SupportedAttachments { get; set; }
 
-        public Weapon(string category, string name): base(name)
+        public Weapon(string weaponClass, string name): base(name)
         {
+            WeaponClass = weaponClass;
             SupportedAttachments = new List<AttachmentCategory>();
         }
     }

@@ -1,4 +1,5 @@
-﻿using AngleSharp.Html.Dom;
+﻿using AngleSharp.Dom;
+using AngleSharp.Html.Dom;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
@@ -13,17 +14,33 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 
         private IHtmlElement FindWeaponAsideElement()
         {
+            IElement asideElement = null;
             if (IsExclusiveMwWeapon())
-                return HtmlDocument.QuerySelector("aside") as IHtmlElement;
+                asideElement = HtmlDocument.QuerySelector("aside");
             else
-                return HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare").ParentElement.NextElementSibling.NextElementSibling as IHtmlElement;
+                asideElement = HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare").ParentElement.NextElementSibling.NextElementSibling;
+
+            return (IHtmlElement)asideElement;
+        }
+
+        private IEnumerable<AttachmentCategory> GetWeaponSupportedAttachments()
+        {
+            if (IsExclusiveMwWeapon())
+            {
+
+            }
+
+            throw new NotImplementedException();
         }
 
         public override Weapon Scrap()
         {
             IHtmlElement asideElement = FindWeaponAsideElement();
 
-            return new ModernWarfareWeaponContainerScraper(asideElement).Scrap();
+            var weapon = new ModernWarfareWeaponContainerScraper(asideElement).Scrap();
+            weapon.SupportedAttachments = GetWeaponSupportedAttachments();
+
+            return weapon;
         }
     }
 }
