@@ -5,19 +5,21 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
     class CodMwWeaponsScraper : WebPageScraper<IEnumerable<Weapon>>
     {
-        public CodMwWeaponsScraper() : base()
+        private const string CodMwWikiPagePath = "/Call_of_Duty:_Modern_Warfare_(2019)";
+
+        public CodMwWeaponsScraper() : base(CodMwWikiPagePath)
         {
         }
 
         private IHtmlTableElement FindWeaponTableElement()
         {
-            IHtmlHeadingElement weaponsHeading = FindWeaponsSectionHeadingElement();
+            IHtmlSpanElement weaponSpanElement = FindWeaponSectionSpanElement();
 
-            return weaponsHeading.ParentElement.NextElementSibling.QuerySelector<IHtmlTableElement>("table");
+            return weaponSpanElement.ParentElement.NextElementSibling.QuerySelector<IHtmlTableElement>("table");
         }
 
-        private IHtmlHeadingElement FindWeaponsSectionHeadingElement()
-            => HtmlDocument.QuerySelector<IHtmlHeadingElement>("#Weapons");
+        private IHtmlSpanElement FindWeaponSectionSpanElement()
+            => HtmlDocument.QuerySelector<IHtmlSpanElement>("#Weapons");
 
         private static IEnumerable<IHtmlTableDataCellElement> GetWeaponTableDataCellElements(IHtmlTableElement tableElement)
         {
