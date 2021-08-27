@@ -2,21 +2,21 @@
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
-    class ModernWarfareWeaponDetailsPageScraper : HtmlScraper<Weapon>
+    class ModernWarfareWeaponDetailsPageScraper : WebScraper<IHtmlDocument, Weapon>
     {
-        public ModernWarfareWeaponDetailsPageScraper(string weaponWikiPage): base(weaponWikiPage)
+        public ModernWarfareWeaponDetailsPageScraper(string weaponWikiPage): base(new Uri(weaponWikiPage))
         {
 
         }
 
-        private bool IsExclusiveMwWeapon() => HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare") == null;
+        private bool IsExclusiveMwWeapon() => ElementDom.GetElementById("Call_of_Duty:_Modern_Warfare") == null;
 
         private IHtmlElement FindWeaponAsideElement()
         {
             if (IsExclusiveMwWeapon())
-                return HtmlDocument.QuerySelector("aside") as IHtmlElement;
+                return ElementDom.QuerySelector("aside") as IHtmlElement;
             else
-                return HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare").ParentElement.NextElementSibling.NextElementSibling as IHtmlElement;
+                return ElementDom.GetElementById("Call_of_Duty:_Modern_Warfare").ParentElement.NextElementSibling.NextElementSibling as IHtmlElement;
         }
 
         public override Weapon Scrap()
