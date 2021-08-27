@@ -25,12 +25,13 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 
         private IEnumerable<AttachmentCategory> GetWeaponSupportedAttachments()
         {
+            IEnumerable<AttachmentCategory> supportedAttachments;
             if (IsExclusiveMwWeapon())
-            {
+                supportedAttachments = new ModernWarfareWeaponAttachmentsScraper((IHtmlSpanElement)HtmlDocument.GetElementById("Attachments")).Scrap();
+            else
+                supportedAttachments = null;
 
-            }
-
-            throw new NotImplementedException();
+            return supportedAttachments;
         }
 
         public override Weapon Scrap()

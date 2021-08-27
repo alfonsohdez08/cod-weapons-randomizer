@@ -6,4 +6,4 @@ Console.ForegroundColor = ConsoleColor.Green;
 
 var weapons = new ModernWarfareWeaponsHomePageScraper().Scrap();
 
-Console.ReadLine();
+return 0;
