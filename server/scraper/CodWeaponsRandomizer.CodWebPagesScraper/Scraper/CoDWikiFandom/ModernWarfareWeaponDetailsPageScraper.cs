@@ -14,22 +14,31 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 
         private IHtmlElement FindWeaponAsideElement()
         {
-            IElement asideElement = null;
-            if (IsExclusiveMwWeapon())
-                asideElement = HtmlDocument.QuerySelector("aside");
-            else
-                asideElement = HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare").ParentElement.NextElementSibling.NextElementSibling;
+            IElement asideElement = IsExclusiveMwWeapon() ? HtmlDocument.QuerySelector("aside") : FindAsideElementForNonExclusiveWeapon();
+
+            IElement FindAsideElementForNonExclusiveWeapon()
+            {
+                var element = HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare").ParentElement;
+                while (element.TagName.ToLower() != "aside")
+                    element = element.NextElementSibling;
+
+                return element;
+            }
 
             return (IHtmlElement)asideElement;
         }
 
         private IEnumerable<AttachmentCategory> GetWeaponSupportedAttachments()
         {
-            IEnumerable<AttachmentCategory> supportedAttachments;
+            IEnumerable<AttachmentCategory> supportedAttachments = new List<AttachmentCategory>();
             if (IsExclusiveMwWeapon())
-                supportedAttachments = new ModernWarfareWeaponAttachmentsScraper((IHtmlSpanElement)HtmlDocument.GetElementById("Attachments")).Scrap();
-            else
-                supportedAttachments = null;
+            {
+                IHtmlSpanElement? spanElement = (IHtmlSpanElement)HtmlDocument.GetElementById("Attachments");
+                if (spanElement != null)
+                    supportedAttachments = new ModernWarfareWeaponAttachmentsScraper(spanElement).Scrap();
+            }
+            //else
+            //    supportedAttachments = new List<AttachmentCategory>();
 
             return supportedAttachments;
         }

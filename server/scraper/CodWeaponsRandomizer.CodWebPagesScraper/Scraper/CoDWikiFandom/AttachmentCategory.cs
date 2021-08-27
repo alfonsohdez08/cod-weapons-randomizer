@@ -2,7 +2,7 @@
 {
     class AttachmentCategory : ScrapedGameItem
     {
-        public List<string> AttachmentVariants { get; }
+        public IEnumerable<string> AttachmentVariants { get; set; }
 
         public AttachmentCategory(string name) : base(name)
         {

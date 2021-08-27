@@ -1,9 +1,4 @@
 ﻿using AngleSharp.Html.Dom;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
@@ -15,20 +10,29 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 
         private IHtmlHeadingElement GetAttachmentsHeadingElement() => (IHtmlHeadingElement)HtmlElement.ParentElement;
 
+        private static IEnumerable<string> ParseAttachments(IHtmlUnorderedListElement unorderedListElement)
+            => unorderedListElement.Children.Select(c => c.Children[0].TextContent);
+
         public override IEnumerable<AttachmentCategory> Scrap()
         {
-            IHtmlHeadingElement headingElement = GetAttachmentsHeadingElement();
-            var attachmentCategoryHeadingElement = (IHtmlHeadingElement)headingElement.NextElementSibling;
+            var attachmentCategories = new List<AttachmentCategory>();
 
-            while (attachmentCategoryHeadingElement.NextElementSibling != null &&
+            IHtmlHeadingElement headingElement = GetAttachmentsHeadingElement();
+            
+            var attachmentCategoryHeadingElement = (IHtmlHeadingElement)headingElement.NextElementSibling;
+            while (attachmentCategoryHeadingElement != null && attachmentCategoryHeadingElement.NextElementSibling != null &&
                 attachmentCategoryHeadingElement.NextElementSibling is IHtmlUnorderedListElement){
 
-                var listElement = (IHtmlUnorderedListElement)attachmentCategoryHeadingElement.NextElementSibling;
+                var attachmentCategory = new AttachmentCategory(attachmentCategoryHeadingElement.Children[0].TextContent)
+                {
+                    AttachmentVariants = ParseAttachments((IHtmlUnorderedListElement)attachmentCategoryHeadingElement.NextElementSibling)
+                };
+                attachmentCategories.Add(attachmentCategory);
 
-                attachmentCategoryHeadingElement = (IHtmlHeadingElement)attachmentCategoryHeadingElement.NextElementSibling.NextElementSibling;
+                attachmentCategoryHeadingElement = attachmentCategoryHeadingElement.NextElementSibling.NextElementSibling as IHtmlHeadingElement;
             }
 
-            throw new NotImplementedException();
+            return attachmentCategories;
         }
     }
 }

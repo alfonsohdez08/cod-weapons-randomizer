@@ -23,18 +23,32 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
             return anchorElement.Text;
         }
 
-        private string GetWeaponImageUrl()
+        private string? GetWeaponImageUrl()
         {
             var imageElement = (IHtmlImageElement)HtmlElement.QuerySelector($"*[{ParseDataSourceAttribute("image")}] img");
-            return imageElement.Source!;
+            return imageElement?.Source ?? null;
+        }
+
+        private string? GetHUDIconUrl()
+        {
+            var imageElement = (IHtmlImageElement)HtmlElement.QuerySelector($"*[{ParseDataSourceAttribute("HUD")}] img");
+            return imageElement?.Source ?? null;
         }
 
         public override Weapon Scrap()
         {
-            var weapon = new Weapon(GetWeaponClass(), GetWeaponTitle())
-            {
-                WeaponImageUrl = GetWeaponImageUrl()
-            };
+            var weapon = new Weapon(GetWeaponClass(), GetWeaponTitle());
+            
+            string? weaponImageUrl = GetWeaponImageUrl();
+            string? hudIconUrl = GetHUDIconUrl();
+            string imageUrl = string.Empty;
+
+            if (!string.IsNullOrEmpty(weaponImageUrl))
+                imageUrl = weaponImageUrl;
+            else if (!string.IsNullOrEmpty(hudIconUrl))
+                imageUrl = hudIconUrl;
+
+            weapon.WeaponImageUrl = imageUrl;
 
             return weapon;
         }
