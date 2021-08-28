@@ -2,13 +2,11 @@
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 {
-    class ModernWarfareWeaponAttachmentsScraper : WebPageElementScraper<IHtmlSpanElement, IEnumerable<AttachmentCategory>>
+    class ModernWarfareWeaponAttachmentsScraper : WebPageElementScraper<IHtmlHeadingElement, IEnumerable<AttachmentCategory>>
     {
-        public ModernWarfareWeaponAttachmentsScraper(IHtmlSpanElement spanElement) : base(spanElement)
+        public ModernWarfareWeaponAttachmentsScraper(IHtmlHeadingElement headingElement) : base(headingElement)
         {
         }
-
-        private IHtmlHeadingElement GetAttachmentsHeadingElement() => (IHtmlHeadingElement)HtmlElement.ParentElement;
 
         private static IEnumerable<string> ParseAttachments(IHtmlUnorderedListElement unorderedListElement)
             => unorderedListElement.Children.Select(c => c.Children[0].TextContent);
@@ -16,10 +14,8 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
         public override IEnumerable<AttachmentCategory> Scrap()
         {
             var attachmentCategories = new List<AttachmentCategory>();
-
-            IHtmlHeadingElement headingElement = GetAttachmentsHeadingElement();
             
-            var attachmentCategoryHeadingElement = (IHtmlHeadingElement)headingElement.NextElementSibling;
+            var attachmentCategoryHeadingElement = (IHtmlHeadingElement)HtmlElement.NextElementSibling;
             while (attachmentCategoryHeadingElement != null && attachmentCategoryHeadingElement.NextElementSibling != null &&
                 attachmentCategoryHeadingElement.NextElementSibling is IHtmlUnorderedListElement){
 

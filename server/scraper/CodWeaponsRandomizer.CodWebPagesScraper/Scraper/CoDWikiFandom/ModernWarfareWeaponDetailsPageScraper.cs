@@ -28,19 +28,33 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
             return (IHtmlElement)asideElement;
         }
 
+        private IHtmlHeadingElement? FindWeaponAttachmentHeadings()
+        {
+            IHtmlHeadingElement? heading;
+            if (IsExclusiveMwWeapon())
+                heading = (IHtmlHeadingElement)HtmlDocument.GetElementById("Attachments")?.ParentElement;
+            else
+                heading = FindNonExclusiveWeaponAttachmentsHeading();
+
+            IHtmlHeadingElement? FindNonExclusiveWeaponAttachmentsHeading()
+            {
+                var element = HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare").ParentElement;
+
+                for (; element != null; element = element.NextElementSibling)
+                    if (element is IHtmlHeadingElement h && h.Children[0] is IHtmlSpanElement s
+                        && s.Text() == "Attachments")
+                        break;
+
+                return (IHtmlHeadingElement)element;
+            }
+
+            return heading;
+        }
+
         private IEnumerable<AttachmentCategory> GetWeaponSupportedAttachments()
         {
-            IEnumerable<AttachmentCategory> supportedAttachments = new List<AttachmentCategory>();
-            if (IsExclusiveMwWeapon())
-            {
-                IHtmlSpanElement? spanElement = (IHtmlSpanElement)HtmlDocument.GetElementById("Attachments");
-                if (spanElement != null)
-                    supportedAttachments = new ModernWarfareWeaponAttachmentsScraper(spanElement).Scrap();
-            }
-            //else
-            //    supportedAttachments = new List<AttachmentCategory>();
-
-            return supportedAttachments;
+            IHtmlHeadingElement element = FindWeaponAttachmentHeadings();
+            return element != null ? new ModernWarfareWeaponAttachmentsScraper(element).Scrap() : new List<AttachmentCategory>();
         }
 
         public override Weapon Scrap()
