@@ -32,7 +32,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
         private string? GetHUDIconUrl()
         {
             var imageElement = (IHtmlImageElement)HtmlElement.QuerySelector($"*[{ParseDataSourceAttribute("HUD")}] img");
-            return imageElement?.Source ?? null;
+            return imageElement?.GetAttribute("data-src") ?? null;
         }
 
         public override Weapon Scrap()
