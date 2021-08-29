@@ -7,6 +7,7 @@ Console.ForegroundColor = ConsoleColor.Green;
 
 var weapons = new WeaponsScraper().Scrap();
 var perkTiers = new PerksScraper().Scrap();
+var tacticals = new TacticalsScraper().Scrap();
 
 #if DEBUG
 var jsonSerializerOptions = new JsonSerializerOptions()
@@ -21,6 +22,10 @@ SaveFile("weapons.json", weaponsJson);
 Console.WriteLine($"Obtained {perkTiers.Count()} perk tiers from Cod MW 2019.");
 string perkTiersJson = JsonSerializer.Serialize(perkTiers, jsonSerializerOptions);
 SaveFile("perks.json", perkTiersJson);
+
+Console.WriteLine($"Obtained {tacticals.Count()} tacticals from Cod MW 2019.");
+string tacticalsJson = JsonSerializer.Serialize(tacticals, jsonSerializerOptions);
+SaveFile("tacticals.json", tacticalsJson);
 
 static void SaveFile(string filename, string fileContent)
 {
