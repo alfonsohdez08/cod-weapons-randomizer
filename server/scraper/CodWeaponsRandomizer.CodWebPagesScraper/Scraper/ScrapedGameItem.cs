@@ -1,6 +1,6 @@
 ﻿using AngleSharp.Dom;
 
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
+namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
 {
     class ScrapedGameItem
     {

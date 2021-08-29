@@ -1,11 +1,11 @@
 ﻿using AngleSharp.Dom;
 using AngleSharp.Html.Dom;
 
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
+namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class ModernWarfareWeaponDetailsPageScraper : WebPageScraper<Weapon>
+    class WeaponDetailsPageScraper : WebPageScraper<Weapon>
     {
-        public ModernWarfareWeaponDetailsPageScraper(string weaponWikiPage): base(weaponWikiPage)
+        public WeaponDetailsPageScraper(string weaponWikiPage): base(weaponWikiPage)
         {
 
         }
@@ -32,7 +32,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
         {
             IHtmlHeadingElement? heading;
             if (IsExclusiveMwWeapon())
-                heading = (IHtmlHeadingElement)HtmlDocument.GetElementById("Attachments")?.ParentElement;
+                heading = (IHtmlHeadingElement)HtmlDocument.QuerySelector("#Attachments")?.ParentElement;
             else
                 heading = FindNonExclusiveWeaponAttachmentsHeading();
 
@@ -54,14 +54,14 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
         private IEnumerable<AttachmentCategory> GetWeaponSupportedAttachments()
         {
             IHtmlHeadingElement element = FindWeaponAttachmentHeadings();
-            return element != null ? new ModernWarfareWeaponAttachmentsScraper(element).Scrap() : new List<AttachmentCategory>();
+            return element != null ? new WeaponAttachmentsScraper(element).Scrap() : new List<AttachmentCategory>();
         }
 
         public override Weapon Scrap()
         {
             IHtmlElement asideElement = FindWeaponAsideElement();
 
-            var weapon = new ModernWarfareWeaponContainerScraper(asideElement).Scrap();
+            var weapon = new WeaponContainerScraper(asideElement).Scrap();
             weapon.SupportedAttachments = GetWeaponSupportedAttachments();
 
             return weapon;

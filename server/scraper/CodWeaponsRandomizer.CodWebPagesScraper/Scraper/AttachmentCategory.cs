@@ -1,4 +1,4 @@
-﻿namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
+﻿namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
 {
     class AttachmentCategory : ScrapedGameItem
     {

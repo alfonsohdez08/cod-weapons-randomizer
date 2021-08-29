@@ -1,10 +1,11 @@
-﻿using AngleSharp.Html.Dom;
+﻿using AngleSharp.Dom;
+using AngleSharp.Html.Dom;
 
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
+namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class ModernWarfareWeaponContainerScraper : WebPageElementScraper<IHtmlElement, Weapon>
+    class WeaponContainerScraper : WebPageElementScraper<IHtmlElement, Weapon>
     {
-        public ModernWarfareWeaponContainerScraper(IHtmlElement htmlElement): base(htmlElement)
+        public WeaponContainerScraper(IHtmlElement htmlElement): base(htmlElement)
         {
 
         }
@@ -13,25 +14,25 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
 
         private string GetWeaponTitle()
         {
-            var headingElement = (IHtmlHeadingElement)HtmlElement.QuerySelector($"h2[{ParseDataSourceAttribute("title")}]");
+            var headingElement = HtmlElement.QuerySelector<IHtmlHeadingElement>($"h2[{ParseDataSourceAttribute("title")}]");
             return headingElement.TextContent;
         }
 
         private string GetWeaponClass()
         {
-            var anchorElement = (IHtmlAnchorElement)HtmlElement.QuerySelector($"div[{ParseDataSourceAttribute("class")}] a");
+            var anchorElement = HtmlElement.QuerySelector<IHtmlAnchorElement>($"div[{ParseDataSourceAttribute("class")}] a");
             return anchorElement.Text;
         }
 
         private string? GetWeaponImageUrl()
         {
-            var imageElement = (IHtmlImageElement)HtmlElement.QuerySelector($"*[{ParseDataSourceAttribute("image")}] img");
+            var imageElement = HtmlElement.QuerySelector<IHtmlImageElement>($"*[{ParseDataSourceAttribute("image")}] img");
             return imageElement?.Source ?? null;
         }
 
         private string? GetHUDIconUrl()
         {
-            var imageElement = (IHtmlImageElement)HtmlElement.QuerySelector($"*[{ParseDataSourceAttribute("HUD")}] img");
+            var imageElement = HtmlElement.QuerySelector<IHtmlImageElement>($"*[{ParseDataSourceAttribute("HUD")}] img");
             return imageElement?.GetAttribute("data-src") ?? null;
         }
 

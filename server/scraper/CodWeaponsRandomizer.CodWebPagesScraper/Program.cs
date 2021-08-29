@@ -1,11 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom;
+using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW;
 using System.Text.Json;
 
 Console.ForegroundColor = ConsoleColor.Green;
 
-var weapons = new ModernWarfareWeaponsHomePageScraper().Scrap();
+var weapons = new WeaponsScraper().Scrap();
 
 #if DEBUG
 Console.WriteLine($"Obtained {weapons.Count()} from Cod MW 2019.");

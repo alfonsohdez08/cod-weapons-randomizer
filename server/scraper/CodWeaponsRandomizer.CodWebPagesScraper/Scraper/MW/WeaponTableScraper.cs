@@ -1,10 +1,11 @@
-﻿using AngleSharp.Html.Dom;
+﻿using AngleSharp.Dom;
+using AngleSharp.Html.Dom;
 
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
+namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class ModernWarfareWeaponTableScraper : WebPageElementScraper<IHtmlTableElement, IEnumerable<string>>
+    class WeaponTableScraper : WebPageElementScraper<IHtmlTableElement, IEnumerable<string>>
     {
-        public ModernWarfareWeaponTableScraper(IHtmlTableElement tableElement) : base(tableElement)
+        public WeaponTableScraper(IHtmlTableElement tableElement) : base(tableElement)
         {
         }
 
@@ -18,17 +19,17 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
         }
 
         private static IEnumerable<string> GetWeaponHrefs(IHtmlTableDataCellElement weaponCategoryDataCell)
-            => weaponCategoryDataCell.NextElementSibling.QuerySelectorAll("a").Select(a => ((IHtmlAnchorElement)a).Href);
+            => weaponCategoryDataCell.NextElementSibling.QuerySelectorAll<IHtmlAnchorElement>("a").Select(a => a.Href);
 
         private IEnumerable<IHtmlTableDataCellElement> GetWeaponCategoryDataCellElements()
         {
-            foreach (var dataCell in HtmlElement.QuerySelectorAll("td.navbox-group"))
+            foreach (var dataCell in HtmlElement.QuerySelectorAll<IHtmlTableDataCellElement>("td.navbox-group"))
             {
-                IHtmlAnchorElement weaponCategoryAnchor = (IHtmlAnchorElement)dataCell.QuerySelector("a");
+                var weaponCategoryAnchor = dataCell.QuerySelector<IHtmlAnchorElement>("a");
                 if (weaponCategoryAnchor.Text == "Special")
                     yield break;
 
-                yield return (IHtmlTableDataCellElement)dataCell;
+                yield return dataCell;
             }
         }
     }

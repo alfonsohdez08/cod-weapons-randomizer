@@ -1,10 +1,10 @@
 ﻿using AngleSharp.Html.Dom;
 
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
+namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class ModernWarfareWeaponAttachmentsScraper : WebPageElementScraper<IHtmlHeadingElement, IEnumerable<AttachmentCategory>>
+    class WeaponAttachmentsScraper : WebPageElementScraper<IHtmlHeadingElement, IEnumerable<AttachmentCategory>>
     {
-        public ModernWarfareWeaponAttachmentsScraper(IHtmlHeadingElement headingElement) : base(headingElement)
+        public WeaponAttachmentsScraper(IHtmlHeadingElement headingElement) : base(headingElement)
         {
         }
 

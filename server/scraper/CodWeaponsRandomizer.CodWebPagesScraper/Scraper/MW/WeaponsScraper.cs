@@ -1,16 +1,10 @@
 ﻿using AngleSharp.Dom;
 using AngleSharp.Html.Dom;
 
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
+namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class ModernWarfareWeaponsHomePageScraper : WebPageScraper<IEnumerable<Weapon>>
+    class WeaponsScraper : HomePageScraper<IEnumerable<Weapon>>
     {
-        private const string CodMwWikiPagePath = "https://callofduty.fandom.com/Call_of_Duty:_Modern_Warfare_(2019)";
-
-        public ModernWarfareWeaponsHomePageScraper() : base(CodMwWikiPagePath)
-        {
-        }
-
         private IHtmlTableElement FindWeaponTableElement()
         {
             IHtmlSpanElement weaponSpanElement = FindWeaponSectionSpanElement();
@@ -21,12 +15,12 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.CoDWikiFandom
         private IHtmlSpanElement FindWeaponSectionSpanElement()
             => HtmlDocument.QuerySelector<IHtmlSpanElement>("#Weapons");
 
-        private static IEnumerable<string> ScrapWeaponHrefs(IHtmlTableElement tableElement) => new ModernWarfareWeaponTableScraper(tableElement).Scrap();
+        private static IEnumerable<string> ScrapWeaponHrefs(IHtmlTableElement tableElement) => new WeaponTableScraper(tableElement).Scrap();
 
-        private static Weapon ScrapWeapon(string weaponHref) => new ModernWarfareWeaponDetailsPageScraper(weaponHref).Scrap();
+        private static Weapon ScrapWeapon(string weaponHref) => new WeaponDetailsPageScraper(weaponHref).Scrap();
 
         public override IEnumerable<Weapon> Scrap()
-        {
+        {  
             var weapons = new List<Weapon>();
 
             IHtmlTableElement weaponTableElement = FindWeaponTableElement();
