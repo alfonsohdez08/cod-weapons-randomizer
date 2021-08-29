@@ -1,5 +1,4 @@
-﻿using AngleSharp.Dom;
-using AngleSharp.Html.Dom;
+﻿using AngleSharp.Html.Dom;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
@@ -19,13 +18,13 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
         }
 
         private static IEnumerable<string> GetWeaponHrefs(IHtmlTableDataCellElement weaponCategoryDataCell)
-            => weaponCategoryDataCell.NextElementSibling.QuerySelectorAll<IHtmlAnchorElement>("a").Select(a => a.Href);
+            => weaponCategoryDataCell!.NextElementSibling!.SelectAll<IHtmlAnchorElement>(Html.Tags.Anchor).Select(a => a.Href);
 
         private IEnumerable<IHtmlTableDataCellElement> GetWeaponCategoryDataCellElements()
         {
-            foreach (var dataCell in HtmlElement.QuerySelectorAll<IHtmlTableDataCellElement>("td.navbox-group"))
+            foreach (var dataCell in HtmlElement.SelectAll<IHtmlTableDataCellElement>($"{Html.Tags.TableDataCell}.navbox-group"))
             {
-                var weaponCategoryAnchor = dataCell.QuerySelector<IHtmlAnchorElement>("a");
+                var weaponCategoryAnchor = dataCell.SelectFirst<IHtmlAnchorElement>(Html.Tags.Anchor);
                 if (weaponCategoryAnchor.Text == "Special")
                     yield break;
 

@@ -1,6 +1,6 @@
 ﻿using AngleSharp.Dom;
 
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
+namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Data
 {
     class Weapon: ScrapedGameItem
     {
@@ -12,6 +12,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
         {
             WeaponClass = weaponClass;
             SupportedAttachments = new List<AttachmentCategory>();
+            WeaponImageUrl = "";
         }
     }
 }

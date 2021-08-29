@@ -1,5 +1,6 @@
 ﻿using AngleSharp.Dom;
 using AngleSharp.Html.Dom;
+using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Data;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
@@ -14,25 +15,25 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 
         private string GetWeaponTitle()
         {
-            var headingElement = HtmlElement.QuerySelector<IHtmlHeadingElement>($"h2[{ParseDataSourceAttribute("title")}]");
+            var headingElement = HtmlElement.SelectFirst<IHtmlHeadingElement>($"{Html.Tags.Heading2}[{ParseDataSourceAttribute("title")}]");
             return headingElement.TextContent;
         }
 
         private string GetWeaponClass()
         {
-            var anchorElement = HtmlElement.QuerySelector<IHtmlAnchorElement>($"div[{ParseDataSourceAttribute("class")}] a");
+            var anchorElement = HtmlElement.SelectFirst<IHtmlAnchorElement>($"{Html.Tags.Div}[{ParseDataSourceAttribute("class")}] {Html.Tags.Anchor}");
             return anchorElement.Text;
         }
 
         private string? GetWeaponImageUrl()
         {
-            var imageElement = HtmlElement.QuerySelector<IHtmlImageElement>($"*[{ParseDataSourceAttribute("image")}] img");
+            var imageElement = HtmlElement.QuerySelector<IHtmlImageElement>($"*[{ParseDataSourceAttribute("image")}] {Html.Tags.Image}");
             return imageElement?.Source ?? null;
         }
 
         private string? GetHUDIconUrl()
         {
-            var imageElement = HtmlElement.QuerySelector<IHtmlImageElement>($"*[{ParseDataSourceAttribute("HUD")}] img");
+            var imageElement = HtmlElement.QuerySelector<IHtmlImageElement>($"*[{ParseDataSourceAttribute("HUD")}] {Html.Tags.Image}");
             return imageElement?.GetAttribute("data-src") ?? null;
         }
 

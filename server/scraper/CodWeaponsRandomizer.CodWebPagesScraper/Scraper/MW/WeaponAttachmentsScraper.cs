@@ -1,4 +1,5 @@
 ﻿using AngleSharp.Html.Dom;
+using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Data;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
@@ -15,7 +16,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
         {
             var attachmentCategories = new List<AttachmentCategory>();
             
-            var attachmentCategoryHeadingElement = (IHtmlHeadingElement)HtmlElement.NextElementSibling;
+            var attachmentCategoryHeadingElement = (IHtmlHeadingElement)HtmlElement.NextElementSibling!;
             while (attachmentCategoryHeadingElement != null && attachmentCategoryHeadingElement.NextElementSibling != null &&
                 attachmentCategoryHeadingElement.NextElementSibling is IHtmlUnorderedListElement){
 

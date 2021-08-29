@@ -1,19 +1,17 @@
-﻿using AngleSharp.Dom;
-using AngleSharp.Html.Dom;
+﻿using AngleSharp.Html.Dom;
+using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Data;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class WeaponsScraper : HomePageScraper<IEnumerable<Weapon>>
+    class WeaponsScraper : WikiHomePage<IEnumerable<Weapon>>
     {
         private IHtmlTableElement FindWeaponTableElement()
         {
             IHtmlSpanElement weaponSpanElement = FindWeaponSectionSpanElement();
-
-            return weaponSpanElement.ParentElement.NextElementSibling.QuerySelector<IHtmlTableElement>("table");
+            return weaponSpanElement!.ParentElement!.NextElementSibling!.SelectFirst<IHtmlTableElement>(Html.Tags.Table);
         }
 
-        private IHtmlSpanElement FindWeaponSectionSpanElement()
-            => HtmlDocument.QuerySelector<IHtmlSpanElement>("#Weapons");
+        private IHtmlSpanElement FindWeaponSectionSpanElement() => HtmlDocument.SelectFirst<IHtmlSpanElement>("#Weapons");
 
         private static IEnumerable<string> ScrapWeaponHrefs(IHtmlTableElement tableElement) => new WeaponTableScraper(tableElement).Scrap();
 

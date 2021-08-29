@@ -15,4 +15,8 @@
     <Folder Include="Scraper\CW\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Html.Tags.cs" />
+  </ItemGroup>
+
 </Project>

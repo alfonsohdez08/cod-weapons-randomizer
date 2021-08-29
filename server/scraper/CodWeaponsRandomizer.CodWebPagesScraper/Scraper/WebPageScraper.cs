@@ -8,7 +8,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
 
         protected WebPageScraper(string webPageUrl)
         {
-            HtmlDocument = HtmlParser.ParseWebPage(webPageUrl);
+            HtmlDocument = Html.ParseWebPage(webPageUrl);
         }
     }
 }
