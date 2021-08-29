@@ -5,7 +5,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
     class TacticalsScraper : WikiHomePage<IEnumerable<string>>
     {
 
-        private IHtmlTableDataCellElement FindTacticalDataCell()
+        private IHtmlTableDataCellElement FindTacticalDataCellElement()
         {
             const string titleAttributeCondition = "title=\"Tactical\"";
             const string classAttributeCondition = "class=\"mw-disambig\"";
@@ -20,7 +20,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 
         public override IEnumerable<string> Scrap()
         {
-            IHtmlTableDataCellElement tacticalDataCellElement = FindTacticalDataCell();
+            IHtmlTableDataCellElement tacticalDataCellElement = FindTacticalDataCellElement();
 
             return ParseTacticals((IHtmlTableDataCellElement)tacticalDataCellElement.NextElementSibling!);
         }
