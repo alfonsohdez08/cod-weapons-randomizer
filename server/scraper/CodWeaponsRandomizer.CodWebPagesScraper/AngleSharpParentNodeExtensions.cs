@@ -25,16 +25,8 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 
     class HtmlElementNotFoundException: Exception
     {
-        public string Selector { get; }
-
-        public HtmlElementNotFoundException(string selector)
+        public HtmlElementNotFoundException(string selector): base($"Did not find any HTML element by using the selector: {selector}.")
         {
-            Selector = selector;
-        }
-
-        public override string ToString()
-        {
-            return $"Did not find any HTML element by using the selector: {Selector}.";
         }
     }
 }
