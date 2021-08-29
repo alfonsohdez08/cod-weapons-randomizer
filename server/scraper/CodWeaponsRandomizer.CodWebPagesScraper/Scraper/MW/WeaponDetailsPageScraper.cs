@@ -23,7 +23,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
                 string asideHtmlTag = Html.Tags.Aside.ToUpper();
                 var element = HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare")!.ParentElement;
 
-                while (element!.TagName.ToLower() != asideHtmlTag)
+                while (element!.TagName != asideHtmlTag)
                     element = element.NextElementSibling;
 
                 return element;
