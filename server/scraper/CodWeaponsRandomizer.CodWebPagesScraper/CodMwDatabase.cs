@@ -27,7 +27,8 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 
             _jsonSerializerOptions = new JsonSerializerOptions()
             {
-                WriteIndented = true
+                WriteIndented = true,
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
             };
         }
 
