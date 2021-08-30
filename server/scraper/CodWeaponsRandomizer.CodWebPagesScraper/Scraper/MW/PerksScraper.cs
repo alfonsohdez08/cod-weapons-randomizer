@@ -3,15 +3,12 @@ using CodWeaponsRandomizer.CodWebPagesScraper.Data;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class PerksScraper: WikiHomePage<IEnumerable<PerkTier>>
+    class PerksScraper: WebPageComponentScraper<IHtmlTableElement, IEnumerable<PerkTier>>
     {
-        private IHtmlHeadingElement FindPerksHeading()
-            => (IHtmlHeadingElement)HtmlDocument.SelectFirst<IHtmlSpanElement>("#Perks_and_Killstreaks").ParentElement!;
 
-        private IHtmlTableElement FindPerksTable()
+        public PerksScraper(IHtmlTableElement tableElement): base(tableElement)
         {
-            var perksHeadingElement = FindPerksHeading();
-            return perksHeadingElement.NextElementSibling!.SelectFirst<IHtmlTableElement>(Html.Tags.Table);
+
         }
 
         private static IEnumerable<string> ParsePerks(IHtmlTableDataCellElement dataCellElement)
@@ -21,9 +18,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
         {
             var perkTiers = new List<PerkTier>();
 
-            var perksTableElement = FindPerksTable();
-
-            var perkTierDataCells = perksTableElement.SelectAll<IHtmlTableDataCellElement>($"{Html.Tags.TableDataCell}.navbox-group").Take(3).ToList();
+            var perkTierDataCells = HtmlElement.SelectAll<IHtmlTableDataCellElement>($"{Html.Tags.TableDataCell}.navbox-group").Take(3).ToList();
             for (int index = 0; index < perkTierDataCells.Count; index++)
             {
                 int perkTier = index + 1;

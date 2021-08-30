@@ -4,9 +4,9 @@ using CodWeaponsRandomizer.CodWebPagesScraper.Data;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class WeaponDetailsPageScraper : WebPageScraper<Weapon>
+    class WeaponWikiPageScraper : WebPageScraper
     {
-        public WeaponDetailsPageScraper(string weaponWikiPage): base(weaponWikiPage)
+        public WeaponWikiPageScraper(string weaponWikiPage): base(weaponWikiPage)
         {
 
         }
@@ -61,11 +61,11 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
             return element != null ? new WeaponAttachmentsScraper(element).Scrap() : new List<AttachmentCategory>();
         }
 
-        public override Weapon Scrap()
+        public Weapon ScrapWeapon()
         {
             IHtmlElement asideElement = FindWeaponAsideElement();
 
-            Weapon weapon = new WeaponContainerScraper(asideElement).Scrap();
+            Weapon weapon = new WeaponCardScraper(asideElement).Scrap();
             weapon.SupportedAttachmentCategories = GetWeaponSupportedAttachments();
 
             return weapon;

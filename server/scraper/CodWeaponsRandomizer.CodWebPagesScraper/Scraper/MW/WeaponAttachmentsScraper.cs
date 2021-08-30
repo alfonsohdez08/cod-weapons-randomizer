@@ -3,7 +3,7 @@ using CodWeaponsRandomizer.CodWebPagesScraper.Data;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class WeaponAttachmentsScraper : WebPageElementScraper<IHtmlHeadingElement, IEnumerable<AttachmentCategory>>
+    class WeaponAttachmentsScraper : WebPageComponentScraper<IHtmlHeadingElement, IEnumerable<AttachmentCategory>>
     {
         public WeaponAttachmentsScraper(IHtmlHeadingElement headingElement) : base(headingElement)
         {

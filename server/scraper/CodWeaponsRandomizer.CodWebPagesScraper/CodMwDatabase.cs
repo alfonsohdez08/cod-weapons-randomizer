@@ -19,10 +19,11 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 
         public CodMwDatabase()
         {
-            _weapons = new WeaponsScraper().Scrap();
-            _perkTiers = new PerksScraper().Scrap();
-            _tacticals = new TacticalsScraper().Scrap();
-            _lethals = new LethalsScraper().Scrap();
+            var mwWikiHomePageScraper = new MwWikiHomePage();
+            _weapons = mwWikiHomePageScraper.ScrapWeapons();
+            _perkTiers = mwWikiHomePageScraper.ScrapPerkTiers();
+            _tacticals = mwWikiHomePageScraper.ScrapTacticals();
+            _lethals = mwWikiHomePageScraper.ScrapLethals();
 
             _jsonSerializerOptions = new JsonSerializerOptions()
             {

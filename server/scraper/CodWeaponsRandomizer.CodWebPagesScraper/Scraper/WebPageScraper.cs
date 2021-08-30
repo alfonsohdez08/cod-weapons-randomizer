@@ -2,7 +2,7 @@
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
 {
-    abstract class WebPageScraper<T>: WebScraper<T> where T: class
+    abstract class WebPageScraper
     {
         protected readonly IHtmlDocument HtmlDocument;
 

@@ -3,7 +3,7 @@
     class AttachmentCategory
     {
         public string Name { get;  }
-        public IEnumerable<string> AttachmentVariants { get; set;  }
+        public IEnumerable<string> AttachmentVariants { get; set; }
 
         public AttachmentCategory(string name)
         {

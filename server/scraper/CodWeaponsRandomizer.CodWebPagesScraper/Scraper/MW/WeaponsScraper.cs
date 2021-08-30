@@ -3,26 +3,21 @@ using CodWeaponsRandomizer.CodWebPagesScraper.Data;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class WeaponsScraper : WikiHomePage<IEnumerable<Weapon>>
+    class WeaponsScraper : WebPageComponentScraper<IHtmlTableElement, IEnumerable<Weapon>>
     {
-        private IHtmlTableElement FindWeaponTableElement()
+        public WeaponsScraper(IHtmlTableElement tableElement) : base(tableElement)
         {
-            IHtmlSpanElement weaponSpanElement = FindWeaponSectionSpanElement();
-            return weaponSpanElement!.ParentElement!.NextElementSibling!.SelectFirst<IHtmlTableElement>(Html.Tags.Table);
         }
 
-        private IHtmlSpanElement FindWeaponSectionSpanElement() => HtmlDocument.SelectFirst<IHtmlSpanElement>("#Weapons");
+        private IEnumerable<string> GetWeaponWikiLinks() => new WeaponLinksScraper(HtmlElement).Scrap();
 
-        private static IEnumerable<string> ScrapWeaponHrefs(IHtmlTableElement tableElement) => new WeaponLinksScraper(tableElement).Scrap();
-
-        private static Weapon ScrapWeapon(string weaponHref) => new WeaponDetailsPageScraper(weaponHref).Scrap();
+        private static Weapon ScrapWeapon(string weaponLink) => new WeaponWikiPageScraper(weaponLink).ScrapWeapon();
 
         public override IEnumerable<Weapon> Scrap()
         {  
             var weapons = new List<Weapon>();
 
-            IHtmlTableElement weaponTableElement = FindWeaponTableElement();
-            foreach (string weaponHref in ScrapWeaponHrefs(weaponTableElement))
+            foreach (string weaponHref in GetWeaponWikiLinks())
                 weapons.Add(ScrapWeapon(weaponHref));
 
             return weapons;

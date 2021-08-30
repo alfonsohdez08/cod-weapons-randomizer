@@ -2,7 +2,7 @@
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class WeaponLinksScraper : WebPageElementScraper<IHtmlTableElement, IEnumerable<string>>
+    class WeaponLinksScraper : WebPageComponentScraper<IHtmlTableElement, IEnumerable<string>>
     {
         public WeaponLinksScraper(IHtmlTableElement tableElement) : base(tableElement)
         {
@@ -10,14 +10,14 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 
         public override IEnumerable<string> Scrap()
         {
-            var weaponHrefs = new List<string>();
+            var weaponWikiLinks = new List<string>();
             foreach (var weaponCategoryDataCell in GetWeaponCategoryDataCellElements())
-                weaponHrefs.AddRange(GetWeaponHrefs(weaponCategoryDataCell));
+                weaponWikiLinks.AddRange(ParseWeaponLinks(weaponCategoryDataCell));
 
-            return weaponHrefs;
+            return weaponWikiLinks;
         }
 
-        private static IEnumerable<string> GetWeaponHrefs(IHtmlTableDataCellElement weaponCategoryDataCell)
+        private static IEnumerable<string> ParseWeaponLinks(IHtmlTableDataCellElement weaponCategoryDataCell)
             => weaponCategoryDataCell!.NextElementSibling!.SelectAll<IHtmlAnchorElement>(Html.Tags.Anchor).Select(a => a.Href);
 
         private IEnumerable<IHtmlTableDataCellElement> GetWeaponCategoryDataCellElements()
