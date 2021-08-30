@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Data
+namespace CodWeaponsRandomizer.CodWebPagesScraper.Data
 {
     class PerkTier
     {
