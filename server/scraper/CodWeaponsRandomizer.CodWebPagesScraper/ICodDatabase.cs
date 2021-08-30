@@ -1,4 +1,4 @@
-﻿namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
+﻿namespace CodWeaponsRandomizer.CodWebPagesScraper
 {
     interface ICodDatabase
     {
