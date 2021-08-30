@@ -1,18 +1,17 @@
-﻿using AngleSharp.Dom;
-
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Data
+﻿namespace CodWeaponsRandomizer.CodWebPagesScraper.Data
 {
-    class Weapon: ScrapedGameItem
+    class Weapon
     {
-        public string WeaponClass { get; set; }
-        public string WeaponImageUrl { get; set; }
-        public IEnumerable<AttachmentCategory> SupportedAttachments { get; set; }
+        public string Name { get; set; }
+        public string WeaponClass { get;}
+        public string? ImageUrl { get; set; }
+        public IEnumerable<AttachmentCategory> SupportedAttachmentCategories { get; set; }
 
-        public Weapon(string weaponClass, string name): base(name)
+        public Weapon(string weaponClass, string name)
         {
             WeaponClass = weaponClass;
-            SupportedAttachments = new List<AttachmentCategory>();
-            WeaponImageUrl = "";
+            Name = name;
+            SupportedAttachmentCategories = new List<AttachmentCategory>();
         }
     }
 }

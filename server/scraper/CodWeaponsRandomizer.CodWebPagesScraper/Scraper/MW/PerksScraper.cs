@@ -5,9 +5,6 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
     class PerksScraper: WikiHomePage<IEnumerable<PerkTier>>
     {
-        public int Tier { get; set; }
-        public IEnumerable<string> Perks { get; set; }
-
         private IHtmlHeadingElement FindPerksHeading()
             => (IHtmlHeadingElement)HtmlDocument.SelectFirst<IHtmlSpanElement>("#Perks_and_Killstreaks").ParentElement!;
 

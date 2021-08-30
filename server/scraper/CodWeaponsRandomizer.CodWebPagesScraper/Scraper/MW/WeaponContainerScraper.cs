@@ -50,7 +50,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
             else if (!string.IsNullOrEmpty(hudIconUrl))
                 imageUrl = hudIconUrl;
 
-            weapon.WeaponImageUrl = imageUrl;
+            weapon.ImageUrl = imageUrl;
 
             return weapon;
         }

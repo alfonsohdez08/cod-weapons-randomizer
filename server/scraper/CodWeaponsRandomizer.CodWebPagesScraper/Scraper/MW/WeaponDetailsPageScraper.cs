@@ -65,8 +65,8 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
         {
             IHtmlElement asideElement = FindWeaponAsideElement();
 
-            var weapon = new WeaponContainerScraper(asideElement).Scrap();
-            weapon.SupportedAttachments = GetWeaponSupportedAttachments();
+            Weapon weapon = new WeaponContainerScraper(asideElement).Scrap();
+            weapon.SupportedAttachmentCategories = GetWeaponSupportedAttachments();
 
             return weapon;
         }

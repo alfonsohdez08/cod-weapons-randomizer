@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Data
+﻿namespace CodWeaponsRandomizer.CodWebPagesScraper.Data
 {
     class PerkTier
     {
-        public int Tier { get; set; }
-        public IEnumerable<string> Perks { get; set; }
+        public int Tier { get; }
+        public IEnumerable<string> Perks { get;  }
 
         public PerkTier(int tier, IEnumerable<string> perks) => (Tier, Perks) = (tier, perks);
     }

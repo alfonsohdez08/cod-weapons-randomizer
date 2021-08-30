@@ -1,11 +1,13 @@
 ﻿namespace CodWeaponsRandomizer.CodWebPagesScraper.Data
 {
-    class AttachmentCategory : ScrapedGameItem
+    class AttachmentCategory
     {
-        public IEnumerable<string> AttachmentVariants { get; set; }
+        public string Name { get;  }
+        public IEnumerable<string> AttachmentVariants { get; set;  }
 
-        public AttachmentCategory(string name) : base(name)
+        public AttachmentCategory(string name)
         {
+            Name = name;
             AttachmentVariants = new List<string>();
         }
     }
