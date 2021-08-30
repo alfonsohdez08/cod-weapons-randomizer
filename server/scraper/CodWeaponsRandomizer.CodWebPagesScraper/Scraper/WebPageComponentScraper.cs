@@ -2,7 +2,7 @@
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
 {
-    abstract class WebPageComponentScraper<THtmlElementType, TResult>: WebScraper<TResult>
+    abstract class WebPageComponentScraper<THtmlElementType, TResult>
         where THtmlElementType: IHtmlElement
         where TResult: class
     {
@@ -12,5 +12,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper
         {
             HtmlElement = htmlElement;
         }
+
+        public abstract TResult Scrap();
     }
 }
