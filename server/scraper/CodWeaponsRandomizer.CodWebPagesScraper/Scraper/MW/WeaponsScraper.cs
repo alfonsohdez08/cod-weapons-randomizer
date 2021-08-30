@@ -13,7 +13,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 
         private IHtmlSpanElement FindWeaponSectionSpanElement() => HtmlDocument.SelectFirst<IHtmlSpanElement>("#Weapons");
 
-        private static IEnumerable<string> ScrapWeaponHrefs(IHtmlTableElement tableElement) => new WeaponTableScraper(tableElement).Scrap();
+        private static IEnumerable<string> ScrapWeaponHrefs(IHtmlTableElement tableElement) => new WeaponLinksScraper(tableElement).Scrap();
 
         private static Weapon ScrapWeapon(string weaponHref) => new WeaponDetailsPageScraper(weaponHref).Scrap();
 

@@ -2,9 +2,9 @@
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class WeaponTableScraper : WebPageElementScraper<IHtmlTableElement, IEnumerable<string>>
+    class WeaponLinksScraper : WebPageElementScraper<IHtmlTableElement, IEnumerable<string>>
     {
-        public WeaponTableScraper(IHtmlTableElement tableElement) : base(tableElement)
+        public WeaponLinksScraper(IHtmlTableElement tableElement) : base(tableElement)
         {
         }
 
