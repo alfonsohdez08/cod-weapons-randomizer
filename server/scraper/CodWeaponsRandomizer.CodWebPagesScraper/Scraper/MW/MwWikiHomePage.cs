@@ -17,7 +17,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
             return weaponSpanElement!.ParentElement!.NextElementSibling!.SelectFirst<IHtmlTableElement>(Html.Tags.Table);
         }
 
-        public IEnumerable<Weapon> ScrapWeapons()
+        public List<Weapon> ScrapWeapons()
         {
             var weaponsTableElement = FindWeaponsTableElement();
             return new WeaponsScraper(weaponsTableElement).Scrap();
@@ -38,7 +38,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
         private IHtmlTableDataCellElement FindTableDataCellElement(string attributeConditions) =>
             (IHtmlTableDataCellElement)HtmlDocument.SelectFirst<IHtmlAnchorElement>($"{Html.Tags.Anchor}{attributeConditions}").ParentElement!;
 
-        public IEnumerable<string> ScrapLethals()
+        public List<GameItem> ScrapLethals()
         {
             string attributeConditions = SelectorAttributeConditionsBuilder.Create().Class("mw-redirect").Title("Lethal").Build();
             var lethalsDataCellElement = FindTableDataCellElement(attributeConditions);
@@ -46,7 +46,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
             return new GenericAnchorsScraper(lethalsDataCellElement).Scrap();
         }
 
-        public IEnumerable<string> ScrapTacticals()
+        public List<GameItem> ScrapTacticals()
         {
             string attributeConditions = SelectorAttributeConditionsBuilder.Create().Class("mw-disambig").Title("Tactical").Build();
             var lethalsDataCellElement = FindTableDataCellElement(attributeConditions);

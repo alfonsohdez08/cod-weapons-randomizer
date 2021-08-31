@@ -6,10 +6,10 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 {
     class CodMwDatabase : ICodDatabase
     {
-        private readonly IEnumerable<Weapon> _weapons;
-        private readonly IEnumerable<PerkTier> _perkTiers;
-        private readonly IEnumerable<string> _tacticals;
-        private readonly IEnumerable<string> _lethals;
+        private readonly List<Weapon> _weapons;
+        private readonly List<PerkTier> _perkTiers;
+        private readonly List<GameItem> _tacticals;
+        private readonly List<GameItem> _lethals;
 
         private readonly JsonSerializerOptions _jsonSerializerOptions;
 
