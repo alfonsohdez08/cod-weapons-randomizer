@@ -4,9 +4,9 @@ using CodWeaponsRandomizer.CodWebPagesScraper.Data;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class WeaponCardScraper : WebPageComponentScraper<IHtmlElement, Weapon>
+    class WeaponScraper : WebPageComponentScraper<IHtmlElement, Weapon>
     {
-        public WeaponCardScraper(IHtmlElement htmlElement): base(htmlElement)
+        public WeaponScraper(IHtmlElement htmlElement): base(htmlElement)
         {
 
         }

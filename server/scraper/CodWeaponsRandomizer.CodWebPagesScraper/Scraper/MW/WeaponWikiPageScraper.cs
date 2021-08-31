@@ -65,7 +65,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
         {
             IHtmlElement asideElement = FindWeaponAsideElement();
 
-            Weapon weapon = new WeaponCardScraper(asideElement).Scrap();
+            Weapon weapon = new WeaponScraper(asideElement).Scrap();
             weapon.SupportedAttachmentCategories = GetWeaponSupportedAttachments();
 
             return weapon;

@@ -9,7 +9,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
         {
         }
 
-        private IEnumerable<string> GetWeaponWikiLinks() => new WeaponLinksScraper(HtmlElement).Scrap();
+        private IEnumerable<string> ScrapWeaponWikiLinks() => new WeaponWikiLinksScraper(HtmlElement).Scrap();
 
         private static Weapon ScrapWeapon(string weaponWikiLink) => new WeaponWikiPageScraper(weaponWikiLink).ScrapWeapon();
 
@@ -17,7 +17,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
         {  
             var weapons = new List<Weapon>();
 
-            foreach (string weaponWikiLink in GetWeaponWikiLinks())
+            foreach (string weaponWikiLink in ScrapWeaponWikiLinks())
                 weapons.Add(ScrapWeapon(weaponWikiLink));
 
             return weapons;
