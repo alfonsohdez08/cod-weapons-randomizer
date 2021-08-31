@@ -5,7 +5,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
     class GenericAnchorsScraper : WebPageComponentScraper<IHtmlTableDataCellElement, List<GameItem>>
     {
-        private readonly Set<GameItem> _set;
+        private Set<GameItem>? _set;
 
         public GenericAnchorsScraper(IHtmlTableDataCellElement htmlElement) : base(htmlElement)
         {
@@ -17,6 +17,8 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 
         public override List<GameItem> Scrap()
         {
+            _set = new Set<GameItem>();
+
             foreach (string textContent in StripTexts((IHtmlTableDataCellElement)HtmlElement.NextElementSibling!))
                 _set.Add(new GameItem(textContent));
 

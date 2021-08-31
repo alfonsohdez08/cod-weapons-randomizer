@@ -5,11 +5,10 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
     class WeaponAttachmentsScraper : WebPageComponentScraper<IHtmlHeadingElement, List<AttachmentType>>
     {
-        private readonly Set<AttachmentType> _attachmentTypeSet;
+        private Set<AttachmentType>? _attachmentTypeSet;
 
         public WeaponAttachmentsScraper(IHtmlHeadingElement headingElement) : base(headingElement)
         {
-            _attachmentTypeSet = new Set<AttachmentType>();
         }
 
         private static List<GameItem> ParseAttachments(IHtmlUnorderedListElement unorderedListElement)
@@ -24,18 +23,20 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
         }
 
         public override List<AttachmentType> Scrap()
-        {            
-            var attachmentCategoryHeadingElement = (IHtmlHeadingElement)HtmlElement.NextElementSibling!;
-            while (attachmentCategoryHeadingElement != null && attachmentCategoryHeadingElement.NextElementSibling != null &&
-                attachmentCategoryHeadingElement.NextElementSibling is IHtmlUnorderedListElement){
+        {
+            _attachmentTypeSet = new Set<AttachmentType>();
 
-                var attachmentType = new AttachmentType(attachmentCategoryHeadingElement.Children[0].TextContent)
+            var attachmentTypeHeadingElement = (IHtmlHeadingElement)HtmlElement.NextElementSibling!;
+            while (attachmentTypeHeadingElement != null && attachmentTypeHeadingElement.NextElementSibling != null &&
+                attachmentTypeHeadingElement.NextElementSibling is IHtmlUnorderedListElement){
+
+                var attachmentType = new AttachmentType(attachmentTypeHeadingElement.Children[0].TextContent)
                 {
-                    Attachments = ParseAttachments((IHtmlUnorderedListElement)attachmentCategoryHeadingElement.NextElementSibling)
+                    Attachments = ParseAttachments((IHtmlUnorderedListElement)attachmentTypeHeadingElement.NextElementSibling)
                 };
                 _attachmentTypeSet.Add(attachmentType);
 
-                attachmentCategoryHeadingElement = attachmentCategoryHeadingElement.NextElementSibling.NextElementSibling as IHtmlHeadingElement;
+                attachmentTypeHeadingElement = attachmentTypeHeadingElement.NextElementSibling.NextElementSibling as IHtmlHeadingElement;
             }
 
             return _attachmentTypeSet.ToList();
