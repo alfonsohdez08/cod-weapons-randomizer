@@ -11,7 +11,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 
         }
 
-        private static string ParseDataSourceAttribute(string value) => $"data-source=\"{value}\"";
+        private static string ParseDataSourceAttribute(string value) => SelectorAttributeConditionsBuilder.Create().DataSource(value).Build();
 
         private string GetWeaponTitle()
         {

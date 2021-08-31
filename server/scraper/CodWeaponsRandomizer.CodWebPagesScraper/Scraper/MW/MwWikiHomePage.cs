@@ -35,30 +35,22 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
             return new PerksScraper(perksTableElment).Scrap();
         }
 
-        private IHtmlTableDataCellElement FindTableDataCellElement(Dictionary<string, string> attributeConditions)
-        {
-            string selectorAttributeConditions = string.Join("", attributeConditions.Select(kv => $"[{kv.Key}=\"{kv.Value}\"]"));
-
-            return (IHtmlTableDataCellElement)HtmlDocument.SelectFirst<IHtmlAnchorElement>($"{Html.Tags.Anchor}{selectorAttributeConditions}").ParentElement!;
-        }
+        private IHtmlTableDataCellElement FindTableDataCellElement(string attributeConditions) =>
+            (IHtmlTableDataCellElement)HtmlDocument.SelectFirst<IHtmlAnchorElement>($"{Html.Tags.Anchor}{attributeConditions}").ParentElement!;
 
         public IEnumerable<string> ScrapLethals()
         {
-            var lethalsDataCellElement = FindTableDataCellElement(new Dictionary<string, string>()
-            {
-                {"class", "mw-redirect" },
-                {"title", "Lethal" },
-            });
+            string attributeConditions = SelectorAttributeConditionsBuilder.Create().Class("mw-redirect").Title("Lethal").Build();
+            var lethalsDataCellElement = FindTableDataCellElement(attributeConditions);
+
             return new GenericAnchorsScraper(lethalsDataCellElement).Scrap();
         }
 
         public IEnumerable<string> ScrapTacticals()
         {
-            var lethalsDataCellElement = FindTableDataCellElement(new Dictionary<string, string>()
-            {
-                {"class", "mw-disambig" },
-                {"title", "Tactical" },
-            });
+            string attributeConditions = SelectorAttributeConditionsBuilder.Create().Class("mw-disambig").Title("Tactical").Build();
+            var lethalsDataCellElement = FindTableDataCellElement(attributeConditions);
+
             return new GenericAnchorsScraper(lethalsDataCellElement).Scrap();
         }
     }
