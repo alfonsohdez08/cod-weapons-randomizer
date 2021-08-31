@@ -15,25 +15,25 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 
         private string GetWeaponTitle()
         {
-            var headingElement = HtmlElement.SelectFirst<IHtmlHeadingElement>($"{Html.Tags.Heading2}[{ParseDataSourceAttribute("title")}]");
+            var headingElement = HtmlElement.SelectFirst<IHtmlHeadingElement>($"{Html.Tags.Heading2}{ParseDataSourceAttribute("title")}");
             return headingElement.TextContent;
         }
 
         private string GetWeaponClass()
         {
-            var anchorElement = HtmlElement.SelectFirst<IHtmlAnchorElement>($"{Html.Tags.Div}[{ParseDataSourceAttribute("class")}] {Html.Tags.Anchor}");
+            var anchorElement = HtmlElement.SelectFirst<IHtmlAnchorElement>($"{Html.Tags.Div}{ParseDataSourceAttribute("class")} {Html.Tags.Anchor}");
             return anchorElement.Text;
         }
 
         private string? GetWeaponImageUrl()
         {
-            var imageElement = HtmlElement.QuerySelector<IHtmlImageElement>($"*[{ParseDataSourceAttribute("image")}] {Html.Tags.Image}");
+            var imageElement = HtmlElement.QuerySelector<IHtmlImageElement>($"*{ParseDataSourceAttribute("image")} {Html.Tags.Image}");
             return imageElement?.Source ?? null;
         }
 
         private string? GetHUDIconUrl()
         {
-            var imageElement = HtmlElement.QuerySelector<IHtmlImageElement>($"*[{ParseDataSourceAttribute("HUD")}] {Html.Tags.Image}");
+            var imageElement = HtmlElement.QuerySelector<IHtmlImageElement>($"*{ParseDataSourceAttribute("HUD")} {Html.Tags.Image}");
             return imageElement?.GetAttribute("data-src") ?? null;
         }
 

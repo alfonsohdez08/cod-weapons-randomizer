@@ -6,7 +6,8 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
     {
         public static int Main(string[] args)
         {
-            string mwDbPath = args.Length > 0 ? args[0] : ".";
+            string mwDbPath = args.Length > 0 ? args[0] : Environment.CurrentDirectory;
+            Console.WriteLine($"DB Path: {mwDbPath}.");
 
             try
             {
