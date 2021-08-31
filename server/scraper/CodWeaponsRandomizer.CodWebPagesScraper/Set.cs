@@ -20,10 +20,10 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 
         private void Add(int id, T item)
         {
-            item.Id = id;
+            item.SetId(id);
             _set.Add(item);
         }
 
-        public List<T> ToList() => _set;
+        public List<T> ToList() => new List<T>(_set);
     }
 }
