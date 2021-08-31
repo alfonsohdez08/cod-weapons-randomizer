@@ -1,5 +1,5 @@
-﻿using CodWeaponsRandomizer.CodWebPagesScraper.Data;
-using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW;
+﻿using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW;
+using CodWeaponsRandomizer.Core.Entities;
 using System.Text.Json;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper

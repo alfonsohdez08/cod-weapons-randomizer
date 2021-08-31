@@ -4,7 +4,7 @@
     {
         public List<GameItem> Attachments { get; set; }
 
-        public AttachmentType(int id, string name): base(id, name)
+        public AttachmentType(string name): base(name)
         {
             Attachments = new List<GameItem>();
         }

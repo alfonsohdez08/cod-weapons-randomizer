@@ -1,6 +1,6 @@
 ﻿using AngleSharp.Dom;
 using AngleSharp.Html.Dom;
-using CodWeaponsRandomizer.CodWebPagesScraper.Data;
+using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
@@ -55,10 +55,10 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
             return heading;
         }
 
-        private IEnumerable<AttachmentCategory> GetWeaponSupportedAttachments()
+        private List<AttachmentType>? GetWeaponSupportedAttachments()
         {
             IHtmlHeadingElement? element = FindWeaponAttachmentHeadings();
-            return element != null ? new WeaponAttachmentsScraper(element).Scrap() : new List<AttachmentCategory>();
+            return element != null ? new WeaponAttachmentsScraper(element).Scrap() : null;
         }
 
         public Weapon ScrapWeapon()
@@ -66,7 +66,9 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
             IHtmlElement asideElement = FindWeaponAsideElement();
 
             Weapon weapon = new WeaponScraper(asideElement).Scrap();
-            weapon.SupportedAttachmentCategories = GetWeaponSupportedAttachments();
+            var supportedAttachments = GetWeaponSupportedAttachments();
+            if (supportedAttachments != null)
+                weapon.SupportedAttachments = supportedAttachments;
 
             return weapon;
         }

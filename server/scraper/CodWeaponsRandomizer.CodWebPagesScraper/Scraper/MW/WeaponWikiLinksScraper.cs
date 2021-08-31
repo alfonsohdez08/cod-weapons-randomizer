@@ -2,13 +2,13 @@
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class WeaponWikiLinksScraper : WebPageComponentScraper<IHtmlTableElement, IEnumerable<string>>
+    class WeaponWikiLinksScraper : WebPageComponentScraper<IHtmlTableElement, List<string>>
     {
         public WeaponWikiLinksScraper(IHtmlTableElement tableElement) : base(tableElement)
         {
         }
 
-        public override IEnumerable<string> Scrap()
+        public override List<string> Scrap()
         {
             var weaponWikiLinks = new List<string>();
             foreach (var weaponCategoryDataCell in GetWeaponCategoryDataCellElements())

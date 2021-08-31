@@ -1,5 +1,5 @@
 ﻿using AngleSharp.Html.Dom;
-using CodWeaponsRandomizer.CodWebPagesScraper.Data;
+using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
@@ -29,7 +29,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
             return perksHeadingElement.NextElementSibling!.SelectFirst<IHtmlTableElement>(Html.Tags.Table);
         }
 
-        public IEnumerable<PerkTier> ScrapPerkTiers()
+        public List<PerkTier> ScrapPerkTiers()
         {
             IHtmlTableElement perksTableElment = FindPerksTable();
             return new PerksScraper(perksTableElment).Scrap();

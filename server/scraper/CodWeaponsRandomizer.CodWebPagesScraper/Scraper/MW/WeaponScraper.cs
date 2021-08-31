@@ -1,6 +1,6 @@
 ﻿using AngleSharp.Dom;
 using AngleSharp.Html.Dom;
-using CodWeaponsRandomizer.CodWebPagesScraper.Data;
+using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
@@ -39,19 +39,10 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 
         public override Weapon Scrap()
         {
-            var weapon = new Weapon(GetWeaponClass(), GetWeaponTitle());
-            
-            string? weaponImageUrl = GetWeaponImageUrl();
-            string? hudIconUrl = GetHUDIconUrl();
-            string imageUrl = string.Empty;
-
-            if (!string.IsNullOrEmpty(weaponImageUrl))
-                imageUrl = weaponImageUrl;
-            else if (!string.IsNullOrEmpty(hudIconUrl))
-                imageUrl = hudIconUrl;
-
-            weapon.ImageUrl = imageUrl;
-
+            var weapon = new Weapon(GetWeaponClass(), GetWeaponTitle())
+            {
+                ImageUrl = GetWeaponImageUrl() ?? GetHUDIconUrl()
+            };
             return weapon;
         }
     }

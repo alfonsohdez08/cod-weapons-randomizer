@@ -1,26 +1,27 @@
 ﻿using AngleSharp.Html.Dom;
-using CodWeaponsRandomizer.CodWebPagesScraper.Data;
+using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class WeaponsScraper : WebPageComponentScraper<IHtmlTableElement, IEnumerable<Weapon>>
+    class WeaponsScraper : WebPageComponentScraper<IHtmlTableElement, List<Weapon>>
     {
+        private readonly Set<Weapon> _weaponSet;
+
         public WeaponsScraper(IHtmlTableElement tableElement) : base(tableElement)
         {
+            _weaponSet = new Set<Weapon>();
         }
 
         private IEnumerable<string> ScrapWeaponWikiLinks() => new WeaponWikiLinksScraper(HtmlElement).Scrap();
 
         private static Weapon ScrapWeapon(string weaponWikiLink) => new WeaponWikiPageScraper(weaponWikiLink).ScrapWeapon();
 
-        public override IEnumerable<Weapon> Scrap()
+        public override List<Weapon> Scrap()
         {  
-            var weapons = new List<Weapon>();
-
             foreach (string weaponWikiLink in ScrapWeaponWikiLinks())
-                weapons.Add(ScrapWeapon(weaponWikiLink));
+                _weaponSet.Add(ScrapWeapon(weaponWikiLink));
 
-            return weapons;
+            return _weaponSet.ToList();
         }
     }
 }

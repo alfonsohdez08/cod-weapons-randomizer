@@ -1,30 +1,37 @@
 ﻿using AngleSharp.Html.Dom;
-using CodWeaponsRandomizer.CodWebPagesScraper.Data;
+using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class PerksScraper: WebPageComponentScraper<IHtmlTableElement, IEnumerable<PerkTier>>
+    class PerksScraper: WebPageComponentScraper<IHtmlTableElement, List<PerkTier>>
     {
-
         public PerksScraper(IHtmlTableElement tableElement): base(tableElement)
         {
 
         }
 
-        private static IEnumerable<string> ParsePerks(IHtmlTableDataCellElement dataCellElement)
-            => dataCellElement.SelectAll<IHtmlAnchorElement>(Html.Tags.Anchor).Select(a => a.Text);
+        private static List<GameItem> ParsePerks(IHtmlTableDataCellElement dataCellElement)
+        {
+            var perkSet = new Set<GameItem>();
 
-        public override IEnumerable<PerkTier> Scrap()
+            IEnumerable<GameItem> perks = dataCellElement.SelectAll<IHtmlAnchorElement>(Html.Tags.Anchor).Select(a => new GameItem(a.Text));
+            foreach (GameItem perk in perks)
+                perkSet.Add(perk);
+
+            return perkSet.ToList();
+        }
+
+        public override List<PerkTier> Scrap()
         {
             var perkTiers = new List<PerkTier>();
 
             var perkTierDataCells = HtmlElement.SelectAll<IHtmlTableDataCellElement>($"{Html.Tags.TableDataCell}.navbox-group").Take(3).ToList();
-            for (int index = 0; index < perkTierDataCells.Count; index++)
+            for (var index = 0; index < perkTierDataCells.Count; index++)
             {
-                int perkTier = index + 1;
-                IEnumerable<string> perks = ParsePerks((IHtmlTableDataCellElement)perkTierDataCells[index].NextElementSibling!);
+                var perkTier = index + 1;
+                List<GameItem> perks = ParsePerks((IHtmlTableDataCellElement)perkTierDataCells[index].NextElementSibling!);
 
-                perkTiers.Add(new PerkTier(perkTier, perks));
+                perkTiers.Add(new PerkTier(perkTier) { Perks = perks});
             }
 
             return perkTiers;
