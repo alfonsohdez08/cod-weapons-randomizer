@@ -26,14 +26,19 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
             _tableElement = tableElement;
         }
 
-        private List<GameItem> GetRowAnchorContents(int rowNumberToLastRow)
+        private List<IHtmlAnchorElement> GetRowAnchors(int rowNumberToLastRow)
         {
             var sb = new StringBuilder()
                 .Append($"tr:nth-last-child({rowNumberToLastRow})")
                 .Append(" > ")
                 .Append(AnchorSelector);
 
-            var items = _tableElement.SelectAll<IHtmlAnchorElement>(sb.ToString()).Select(a => new GameItem(a.Text));
+            return _tableElement.SelectAll<IHtmlAnchorElement>(sb.ToString()).ToList();
+        }
+
+        private List<GameItem> GetGameItems(int rowNumberToLastRow)
+        {
+            List<IHtmlAnchorElement> items = GetRowAnchors(rowNumberToLastRow);
 
             var set = new Set<GameItem>();
             foreach (GameItem item in items)
@@ -53,8 +58,8 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
             return _tableElement.SelectAll<IHtmlAnchorElement>(sb.ToString()).Select(a => a.Href).ToList();
         }
 
-        public List<GameItem> ScrapLethals() => GetRowAnchorContents(7);
+        public List<GameItem> ScrapLethals() => GetGameItems(7);
 
-        public List<GameItem> ScrapTacticals() => GetRowAnchorContents(5);
+        public List<GameItem> ScrapTacticals() => GetGameItems(5);
     }
 }
