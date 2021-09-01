@@ -8,6 +8,18 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
     {
         private readonly IHtmlTableElement _tableElement;
 
+        private static readonly string AnchorSelector;
+
+        static WeaponTableScraper()
+        {
+            string attributeConditions = new SelectorAttributesBuilder().Class("navbox-list", AttributeSearchCriteria.Contains).Build();
+            var sb = new StringBuilder($"{Html.Tags.TableDataCell}")
+                .Append($"{attributeConditions} ")
+                .Append(Html.Tags.Anchor);
+
+            AnchorSelector = sb.ToString();
+        }
+
         public WeaponTableScraper(IHtmlTableElement tableElement)
         {
             _tableElement = tableElement;
@@ -18,7 +30,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
             var sb = new StringBuilder()
                 .Append($"tr:nth-last-child({rowNumberToLastRow})")
                 .Append(" > ")
-                .Append(Selectors.TableAnchors);
+                .Append(AnchorSelector);
 
             var items = _tableElement.SelectAll<IHtmlAnchorElement>(sb.ToString()).Select(a => new GameItem(a.Text));
 
@@ -35,7 +47,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 
             var sb = new StringBuilder(first19TableRowsSelector)
                 .Append(" > ")
-                .Append(Selectors.TableAnchors);
+                .Append(AnchorSelector);
 
             return _tableElement.SelectAll<IHtmlAnchorElement>(sb.ToString()).Select(a => a.Href).ToList();
         }
