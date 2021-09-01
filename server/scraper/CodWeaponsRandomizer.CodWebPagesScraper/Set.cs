@@ -18,6 +18,12 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
             return item;
         }
 
+        public void AddRange(IEnumerable<T> items)
+        {
+            foreach (T item in items)
+                Add(GenerateId(), item);
+        }
+
         private void Add(int id, T item)
         {
             item.SetId(id);
