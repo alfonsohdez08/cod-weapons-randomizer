@@ -16,9 +16,8 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
             string attributeConditions = new SelectorAttributesBuilder().Class("navbox-list", AttributeSearchCriteria.Contains).Build();
 
             var sb = new StringBuilder();
-            //sb.Append(Html.Tags.TableRow)
-            //    .Append(" >")
-                sb.Append($"{Html.Tags.TableDataCell}")
+
+            sb.Append($"{Html.Tags.TableDataCell}")
                 .Append($"{attributeConditions}")
                 .Append(" ")
                 .Append(Html.Tags.Anchor);

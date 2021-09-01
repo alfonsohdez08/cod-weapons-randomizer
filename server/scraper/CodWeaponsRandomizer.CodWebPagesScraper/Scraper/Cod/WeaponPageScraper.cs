@@ -2,7 +2,7 @@
 using AngleSharp.Html.Dom;
 using CodWeaponsRandomizer.Core.Entities;
 
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
+namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 {
     class WeaponPageScraper : WebPageScraper
     {

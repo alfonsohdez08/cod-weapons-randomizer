@@ -1,7 +1,5 @@
 ﻿using AngleSharp.Html.Dom;
-using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW;
 using CodWeaponsRandomizer.Core.Entities;
-using System.Text;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 {

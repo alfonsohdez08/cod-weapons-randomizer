@@ -2,7 +2,7 @@
 using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod;
 using CodWeaponsRandomizer.Core.Entities;
 
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
+namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 {
     class WeaponsScraper : WebPageComponentScraper<IHtmlTableElement, List<Weapon>>
     {
