@@ -6,15 +6,16 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 {
     class WeaponTableScraper
     {
-        private readonly IHtmlTableElement _tableElement;
-
         private static readonly string AnchorSelector;
+
+        private readonly IHtmlTableElement _tableElement;
 
         static WeaponTableScraper()
         {
             string attributeConditions = new SelectorAttributesBuilder().Class("navbox-list", AttributeSearchCriteria.Contains).Build();
             var sb = new StringBuilder($"{Html.Tags.TableDataCell}")
-                .Append($"{attributeConditions} ")
+                .Append($"{attributeConditions}")
+                .Append(' ')
                 .Append(Html.Tags.Anchor);
 
             AnchorSelector = sb.ToString();
