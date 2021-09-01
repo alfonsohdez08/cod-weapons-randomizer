@@ -7,43 +7,29 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
     abstract class CodWikiHomePageScraper: WebPageScraper
     {
         private readonly MwWeaponTableScraper _weaponTableScraper;
+        private readonly MwPerkTableScraper _perkTableScraper;
 
         public CodWikiHomePageScraper(string codWikiHomePageUrl) : base(codWikiHomePageUrl)
         {
             _weaponTableScraper = new MwWeaponTableScraper(GetWeaponsTableElement());
+            _perkTableScraper = new MwPerkTableScraper(GetPerksTable());
 
             IHtmlTableElement GetWeaponsTableElement()
             {
                 IHtmlSpanElement weaponSpanElement = HtmlDocument.SelectFirst<IHtmlSpanElement>("#Weapons");
                 return weaponSpanElement!.ParentElement!.NextElementSibling!.SelectFirst<IHtmlTableElement>(Html.Tags.Table);
             }
-        }
-
-        public List<Weapon> ScrapWeapons()
-        {
-            var weaponSet = new Set<Weapon>();
-            foreach (string weaponWikiHref in _weaponTableScraper.ScrapWeaponHrefs())
-            {
-                var weaponScraper = new WeaponPageScraper(weaponWikiHref);
-                
-                weaponSet.Add(weaponScraper.ScrapWeapon());
-            }
-
-            return weaponSet.ToList();
-        }
-
-        public List<PerkTier> ScrapPerkTiers()
-        {
-            IHtmlTableElement perksTableElment = GetPerksTable();
 
             IHtmlTableElement GetPerksTable()
             {
                 var perksHeadingElement = (IHtmlHeadingElement)HtmlDocument.SelectFirst<IHtmlSpanElement>("#Perks_and_Killstreaks").ParentElement!;
                 return perksHeadingElement.NextElementSibling!.SelectFirst<IHtmlTableElement>(Html.Tags.Table);
             }
-
-            return new PerksScraper(perksTableElment).Scrap();
         }
+
+        public List<Weapon> ScrapWeapons() => _weaponTableScraper.ScrapWeapons();
+
+        public List<PerkTier> ScrapPerkTiers() => _perkTableScraper.ScrapPerks();
 
         public List<GameItem> ScrapLethals() => _weaponTableScraper.ScrapLethals();
 

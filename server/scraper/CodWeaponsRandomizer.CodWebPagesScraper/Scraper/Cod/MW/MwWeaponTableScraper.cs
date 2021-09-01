@@ -9,8 +9,19 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.MW
         {
 
         }
+        private List<string> ScrapWeaponHrefs() => TakeFirstRowsAnchors(19).Select(a => a.Href).ToList();
 
-        public List<string> ScrapWeaponHrefs() => TakeFirstRowsAnchors(19).Select(a => a.Href).ToList();
+        public List<Weapon> ScrapWeapons()
+        {
+            var weaponSet = new Set<Weapon>();
+            foreach (string weaponWikiHref in ScrapWeaponHrefs())
+            {
+                var weaponScraper = new WeaponPageScraper(weaponWikiHref);
+                weaponSet.Add(weaponScraper.ScrapWeapon());
+            }
+
+            return weaponSet.ToList();
+        }
 
         public List<GameItem> ScrapLethals() => ParseAnchors(GetSingleRowAnchors(29));
 

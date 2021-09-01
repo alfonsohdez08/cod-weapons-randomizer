@@ -13,11 +13,10 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 
         private static List<GameItem> ParseAttachments(IHtmlUnorderedListElement unorderedListElement)
         {
-            var attachmentSet = new Set<GameItem>();
-
             IEnumerable<GameItem> attachments = unorderedListElement.Children.Select(c => new GameItem(c.Children[0].TextContent));
-            foreach (GameItem attachment in attachments)
-                attachmentSet.Add(attachment);
+
+            var attachmentSet = new Set<GameItem>();
+            attachmentSet.AddRange(attachments);
 
             return attachmentSet.ToList();
         }

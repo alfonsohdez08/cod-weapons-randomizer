@@ -19,7 +19,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 
         public CodMwDatabase()
         {
-            var mwWikiHomePageScraper = new CodMwWikiHomePageScraper();
+            var mwWikiHomePageScraper = new MwWikiHomePageScraper();
             _weapons = mwWikiHomePageScraper.ScrapWeapons();
             _perkTiers = mwWikiHomePageScraper.ScrapPerkTiers();
             _tacticals = mwWikiHomePageScraper.ScrapTacticals();

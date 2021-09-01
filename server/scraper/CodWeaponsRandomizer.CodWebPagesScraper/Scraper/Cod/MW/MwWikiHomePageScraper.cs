@@ -1,10 +1,10 @@
 ﻿namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.MW
 {
-    class CodMwWikiHomePageScraper : CodWikiHomePageScraper
+    class MwWikiHomePageScraper : CodWikiHomePageScraper
     {
         private const string MwWikiHomePageUrl = "https://callofduty.fandom.com/wiki/Call_of_Duty:_Modern_Warfare_(2019)";
 
-        public CodMwWikiHomePageScraper() : base(MwWikiHomePageUrl)
+        public MwWikiHomePageScraper() : base(MwWikiHomePageUrl)
         {
         }
     }
