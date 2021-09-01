@@ -7,22 +7,22 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 {
     abstract class CodWikiHomePageScraper: WebPageScraper
     {
+        private readonly WeaponTableScraper _weaponTableScraper;
+        private readonly IHtmlTableElement _weaponTableElement;
 
         public CodWikiHomePageScraper(string codWikiHomePageUrl) : base(codWikiHomePageUrl)
         {
+            _weaponTableElement = GetWeaponsTableElement();
+            _weaponTableScraper = new WeaponTableScraper(_weaponTableElement);
+
+            IHtmlTableElement GetWeaponsTableElement()
+            {
+                IHtmlSpanElement weaponSpanElement = HtmlDocument.SelectFirst<IHtmlSpanElement>("#Weapons");
+                return weaponSpanElement!.ParentElement!.NextElementSibling!.SelectFirst<IHtmlTableElement>(Html.Tags.Table);
+            }
         }
 
-        private IHtmlTableElement GetWeaponsTableElement()
-        {
-            IHtmlSpanElement weaponSpanElement = HtmlDocument.SelectFirst<IHtmlSpanElement>("#Weapons");
-            return weaponSpanElement!.ParentElement!.NextElementSibling!.SelectFirst<IHtmlTableElement>(Html.Tags.Table);
-        }
-
-        public List<Weapon> ScrapWeapons()
-        {
-            var weaponsTableElement = GetWeaponsTableElement();
-            return new WeaponsScraper(weaponsTableElement).Scrap();
-        }
+        public List<Weapon> ScrapWeapons() => new WeaponsScraper(_weaponTableElement).Scrap();
 
         public List<PerkTier> ScrapPerkTiers()
         {
@@ -37,38 +37,8 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
             return new PerksScraper(perksTableElment).Scrap();
         }
 
-        public List<GameItem> ScrapLethals()
-        {
-            var sb = new StringBuilder()
-                .Append("tr:nth-last-child(7)")
-                .Append(" > ")
-                .Append(Selectors.TableAnchors);
+        public List<GameItem> ScrapLethals() => _weaponTableScraper.ScrapLethals();
 
-            IHtmlTableElement weaponsTableElement = GetWeaponsTableElement();
-
-            var tacticals = weaponsTableElement.SelectAll<IHtmlAnchorElement>(sb.ToString()).Select(a => new GameItem(a.Text));
-            var set = new Set<GameItem>();
-            foreach (GameItem tactical in tacticals)
-                set.Add(tactical);
-
-            return set.ToList();
-        }
-
-        public List<GameItem> ScrapTacticals()
-        {
-            var sb = new StringBuilder()
-                .Append("tr:nth-last-child(5)")
-                .Append(" > ")
-                .Append(Selectors.TableAnchors);
-
-            IHtmlTableElement weaponsTableElement = GetWeaponsTableElement();
-
-            var tacticals = weaponsTableElement.SelectAll<IHtmlAnchorElement>(sb.ToString()).Select(a => new GameItem(a.Text));
-            var set = new Set<GameItem>();
-            foreach (GameItem tactical in tacticals)
-                set.Add(tactical);
-
-            return set.ToList();
-        }
+        public List<GameItem> ScrapTacticals() => _weaponTableScraper.ScrapTacticals();
     }
 }
