@@ -11,15 +11,15 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
         {
         }
 
-        private IEnumerable<string> ScrapWeaponWikiLinks() => new WeaponWikiLinksScraper(HtmlElement).Scrap();
+        private List<string> ScrapWeaponHrefs() => new WeaponHrefsScraper(HtmlElement).Scrap();
 
-        private static Weapon ScrapWeapon(string weaponWikiLink) => new WeaponWikiPageScraper(weaponWikiLink).ScrapWeapon();
+        private static Weapon ScrapWeapon(string weaponWikiLink) => new WeaponPageScraper(weaponWikiLink).ScrapWeapon();
 
         public override List<Weapon> Scrap()
         {
             _weaponSet = new Set<Weapon>();
-            foreach (string weaponWikiLink in ScrapWeaponWikiLinks())
-                _weaponSet.Add(ScrapWeapon(weaponWikiLink));
+            foreach (string weaponHref in ScrapWeaponHrefs())
+                _weaponSet.Add(ScrapWeapon(weaponHref));
 
             return _weaponSet.ToList();
         }

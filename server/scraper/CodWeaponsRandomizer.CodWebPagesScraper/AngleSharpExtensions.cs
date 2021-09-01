@@ -1,8 +1,9 @@
 ﻿using AngleSharp.Dom;
+using AngleSharp.Html.Dom;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper
 {
-    static class AngleSharpParentNodeExtensions
+    static class AngleSharpExtensions
     {
         public static T SelectFirst<T>(this IParentNode parentNode, string selector) where T: class, IElement
         {
@@ -21,12 +22,17 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 
             return elements;
         }
-    }
 
-    class HtmlElementNotFoundException: Exception
-    {
-        public HtmlElementNotFoundException(string selector): base($"Did not find any HTML element by using the selector: {selector}.")
-        {
-        }
+        //public static IEnumerable<IHtmlTableRowElement> FirstRows(this IHtmlTableElement tableElement, int count)
+        //{
+        //    tableElement.Rows
+
+        //    throw new NotImplementedException();
+        //}
+
+        //public static IEnumerable<IHtmlTableRowElement> GetRow(this IHtmlTableElement tableElment, int index)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

@@ -1,4 +1,5 @@
-﻿using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW;
+﻿using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.MW;
+using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW;
 using CodWeaponsRandomizer.Core.Entities;
 using System.Text.Json;
 
@@ -19,7 +20,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 
         public CodMwDatabase()
         {
-            var mwWikiHomePageScraper = new MwWikiHomePage();
+            var mwWikiHomePageScraper = new CodMwWikiHomePageScraper();
             _weapons = mwWikiHomePageScraper.ScrapWeapons();
             _perkTiers = mwWikiHomePageScraper.ScrapPerkTiers();
             _tacticals = mwWikiHomePageScraper.ScrapTacticals();

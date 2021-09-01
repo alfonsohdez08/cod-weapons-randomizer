@@ -16,5 +16,6 @@
         public readonly string Anchor = "a";
         public readonly string TableDataCell = "td";
         public readonly string Image = "img";
+        public readonly string TableRow = "tr";
     }
 }

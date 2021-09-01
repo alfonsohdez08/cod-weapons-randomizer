@@ -4,21 +4,21 @@ using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 {
-    class WeaponWikiPageScraper : WebPageScraper
+    class WeaponPageScraper : WebPageScraper
     {
-        public WeaponWikiPageScraper(string weaponWikiPage): base(weaponWikiPage)
+        public WeaponPageScraper(string weaponWikiPage): base(weaponWikiPage)
         {
 
         }
 
         private bool IsExclusiveMwWeapon() => HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare") == null;
 
-        private IHtmlElement FindWeaponAsideElement()
+        private IHtmlElement GetWeaponCardElement()
         {
             IElement asideElement = IsExclusiveMwWeapon() ?
-                HtmlDocument.SelectFirst<IElement>(Html.Tags.Aside) : FindAsideElementForNonExclusiveWeapon();
+                HtmlDocument.SelectFirst<IElement>(Html.Tags.Aside) : GetAsideForNonExclusiveMwWeapon();
 
-            IElement FindAsideElementForNonExclusiveWeapon()
+            IElement GetAsideForNonExclusiveMwWeapon()
             {
                 string asideHtmlTag = Html.Tags.Aside.ToUpper();
                 var element = HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare")!.ParentElement;
@@ -63,7 +63,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.MW
 
         public Weapon ScrapWeapon()
         {
-            IHtmlElement asideElement = FindWeaponAsideElement();
+            IHtmlElement asideElement = GetWeaponCardElement();
 
             Weapon weapon = new WeaponScraper(asideElement).Scrap();
             var supportedAttachments = GetWeaponSupportedAttachments();
