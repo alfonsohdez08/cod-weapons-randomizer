@@ -4,24 +4,24 @@ using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 {
-    class WeaponPageScraper : WebPageScraper
+    abstract class WeaponPageScraper : WebPageScraper
     {
         public WeaponPageScraper(string weaponWikiPage): base(weaponWikiPage)
         {
 
         }
 
-        private bool IsExclusiveMwWeapon() => HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare") == null;
+        private bool IsExclusiveWeapon() => HtmlDocument.GetElementById(CodGameElementId) == null;
 
-        private IHtmlElement GetWeaponCardElement()
+        private IHtmlElement GetWeaponAsideElement()
         {
-            IElement asideElement = IsExclusiveMwWeapon() ?
-                HtmlDocument.SelectFirst<IElement>(Html.Tags.Aside) : GetAsideForNonExclusiveMwWeapon();
+            IElement asideElement = IsExclusiveWeapon() ?
+                HtmlDocument.SelectFirst<IElement>(Html.Tags.Aside) : GetAsideElementForNonExclusiveWeapon();
 
-            IElement GetAsideForNonExclusiveMwWeapon()
+            IElement GetAsideElementForNonExclusiveWeapon()
             {
                 string asideHtmlTag = Html.Tags.Aside.ToUpper();
-                var element = HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare")!.ParentElement;
+                var element = HtmlDocument.GetElementById(CodGameElementId)!.ParentElement;
 
                 while (element!.TagName != asideHtmlTag)
                     element = element.NextElementSibling;
@@ -35,14 +35,14 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
         private IHtmlHeadingElement? FindWeaponAttachmentHeadings()
         {
             IHtmlHeadingElement? heading;
-            if (IsExclusiveMwWeapon())
+            if (IsExclusiveWeapon())
                 heading = HtmlDocument.QuerySelector("#Attachments")?.ParentElement as IHtmlHeadingElement;
             else
                 heading = FindNonExclusiveWeaponAttachmentsHeading();
 
             IHtmlHeadingElement? FindNonExclusiveWeaponAttachmentsHeading()
             {
-                var element = HtmlDocument.GetElementById("Call_of_Duty:_Modern_Warfare")?.ParentElement;
+                var element = HtmlDocument.GetElementById(CodGameElementId)?.ParentElement;
 
                 for (; element != null; element = element.NextElementSibling)
                     if (element is IHtmlHeadingElement h && h.Children[0] is IHtmlSpanElement s
@@ -63,7 +63,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 
         public Weapon ScrapWeapon()
         {
-            IHtmlElement asideElement = GetWeaponCardElement();
+            IHtmlElement asideElement = GetWeaponAsideElement();
 
             Weapon weapon = new WeaponScraper(asideElement).Scrap();
             var supportedAttachments = GetWeaponSupportedAttachments();
@@ -72,5 +72,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 
             return weapon;
         }
+
+        public abstract string CodGameElementId { get; }
     }
 }

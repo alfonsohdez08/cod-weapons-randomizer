@@ -13,9 +13,6 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.MW
 
         }
 
-        protected override WeaponPageScraper GetWeaponPageScraper(string weaponHref)
-        {
-            throw new NotImplementedException();
-        }
+        protected override WeaponPageScraper GetWeaponPageScraper(string weaponHref) => new MwWeaponPageScraper(weaponHref);
     }
 }

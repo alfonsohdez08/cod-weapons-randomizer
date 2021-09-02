@@ -17,7 +17,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
             var weaponSet = new Set<Weapon>();
             foreach (string weaponWikiHref in ScrapWeaponHrefs())
             {
-                var weaponScraper = new WeaponPageScraper(weaponWikiHref);
+                WeaponPageScraper weaponScraper = GetWeaponPageScraper(weaponWikiHref);
                 weaponSet.Add(weaponScraper.ScrapWeapon());
             }
 

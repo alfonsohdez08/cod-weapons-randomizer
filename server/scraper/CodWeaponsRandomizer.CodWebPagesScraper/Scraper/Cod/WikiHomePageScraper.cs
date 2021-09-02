@@ -4,12 +4,12 @@ using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 {
-    abstract class CodWikiHomePageScraper: WebPageScraper
+    abstract class WikiHomePageScraper: WebPageScraper
     {
         private readonly MwPerkTableScraper _perkTableScraper;
         private readonly WeaponTableScraper _weaponTableScraper;
 
-        public CodWikiHomePageScraper(string codWikiHomePageUrl) : base(codWikiHomePageUrl)
+        public WikiHomePageScraper(string codWikiHomePageUrl) : base(codWikiHomePageUrl)
         {
             _perkTableScraper = new MwPerkTableScraper(GetPerksTable());
             _weaponTableScraper = GetWeaponTableScraper(GetWeaponsTableElement());
