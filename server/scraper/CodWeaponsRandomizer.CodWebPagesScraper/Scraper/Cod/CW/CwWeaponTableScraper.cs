@@ -14,9 +14,6 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.CW
 
         public override int TacticalRowNumber => throw new NotImplementedException();
 
-        protected override WeaponPageScraper GetWeaponPageScraper(string weaponHref)
-        {
-            throw new NotImplementedException();
-        }
+        protected override WeaponPageScraper GetWeaponPageScraper(string weaponHref) => new CwWeaponPageScraper(weaponHref);
     }
 }
