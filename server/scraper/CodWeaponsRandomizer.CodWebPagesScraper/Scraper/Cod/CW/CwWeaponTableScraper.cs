@@ -8,11 +8,11 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.CW
         {
         }
 
-        public override int WeaponRowCount => throw new NotImplementedException();
+        public override int WeaponRowCount => 21;
 
-        public override int LethalRowNumber => throw new NotImplementedException();
+        public override int LethalRowNumber => 27;
 
-        public override int TacticalRowNumber => throw new NotImplementedException();
+        public override int TacticalRowNumber => 29;
 
         protected override WeaponPageScraper GetWeaponPageScraper(string weaponHref) => new CwWeaponPageScraper(weaponHref);
     }
