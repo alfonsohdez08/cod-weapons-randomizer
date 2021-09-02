@@ -10,7 +10,9 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 
         }
 
-        private List<string> ScrapWeaponHrefs() => TakeFirstRowsAnchors(WeaponRowCount).Select(a => a.Href).ToList();
+        private List<string> ScrapWeaponHrefs() => TakeFirstRowsAnchors(WeaponRowCount)
+                .Where(a => a.NextSibling != null && !a.NextSibling.TextContent.Contains("SP"))
+                .Select(a => a.Href).ToList();
 
         public List<Weapon> ScrapWeapons()
         {
