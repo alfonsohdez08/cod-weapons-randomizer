@@ -4,21 +4,13 @@ using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 {
-    abstract class CodWikiHomePageScraper: WebPageScraper
+    abstract class CodWikiHomePageScraper<TWeaponScraper>: WebPageScraper where TWeaponScraper: WeaponTableScraper
     {
-        private readonly MwWeaponTableScraper _weaponTableScraper;
         private readonly MwPerkTableScraper _perkTableScraper;
 
         public CodWikiHomePageScraper(string codWikiHomePageUrl) : base(codWikiHomePageUrl)
         {
-            _weaponTableScraper = new MwWeaponTableScraper(GetWeaponsTableElement());
             _perkTableScraper = new MwPerkTableScraper(GetPerksTable());
-
-            IHtmlTableElement GetWeaponsTableElement()
-            {
-                IHtmlSpanElement weaponSpanElement = HtmlDocument.SelectFirst<IHtmlSpanElement>("#Weapons");
-                return weaponSpanElement!.ParentElement!.NextElementSibling!.SelectFirst<IHtmlTableElement>(Html.Tags.Table);
-            }
 
             IHtmlTableElement GetPerksTable()
             {
@@ -27,12 +19,20 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
             }
         }
 
-        public List<Weapon> ScrapWeapons() => _weaponTableScraper.ScrapWeapons();
+        protected IHtmlTableElement GetWeaponsTableElement()
+        {
+            IHtmlSpanElement weaponSpanElement = HtmlDocument.SelectFirst<IHtmlSpanElement>("#Weapons");
+            return weaponSpanElement!.ParentElement!.NextElementSibling!.SelectFirst<IHtmlTableElement>(Html.Tags.Table);
+        }
+
+        public List<Weapon> ScrapWeapons() => WeaponScraper.ScrapWeapons();
 
         public List<PerkTier> ScrapPerkTiers() => _perkTableScraper.ScrapPerks();
 
-        public List<GameItem> ScrapLethals() => _weaponTableScraper.ScrapLethals();
+        public List<GameItem> ScrapLethals() => WeaponScraper.ScrapLethals();
 
-        public List<GameItem> ScrapTacticals() => _weaponTableScraper.ScrapTacticals();
+        public List<GameItem> ScrapTacticals() => WeaponScraper.ScrapTacticals();
+
+        protected abstract TWeaponScraper WeaponScraper { get; }
     }
 }
