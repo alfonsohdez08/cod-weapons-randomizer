@@ -8,7 +8,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.CW
         {
         }
 
-        public override int WeaponRowCount => 21;
+        public override int WeaponRowCount => 19;
 
         public override int LethalRowNumber => 27;
 
