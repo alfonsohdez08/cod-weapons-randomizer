@@ -31,5 +31,6 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
         public abstract int WeaponRowCount { get; }
         public abstract int LethalRowNumber { get; }
         public abstract int TacticalRowNumber { get; }
+        protected abstract WeaponPageScraper GetWeaponPageScraper(string weaponHref);
     }
 }
