@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper
 {
-    class CodMwDatabase : ICodDatabase
+    class MwDatabase : ICodDatabase
     {
         private readonly List<Weapon> _weapons;
         private readonly List<PerkTier> _perkTiers;
@@ -17,7 +17,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 
         public string FolderName => "mw";
 
-        public CodMwDatabase()
+        public MwDatabase()
         {
             var mwWikiHomePageScraper = new MwWikiHomePageScraper();
             _weapons = mwWikiHomePageScraper.ScrapWeapons();

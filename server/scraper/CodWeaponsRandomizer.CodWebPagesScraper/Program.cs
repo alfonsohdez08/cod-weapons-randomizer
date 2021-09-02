@@ -6,14 +6,14 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
     {
         public static int Main(string[] args)
         {
-            string mwDbPath = args.Length > 0 ? args[0] : Environment.CurrentDirectory;
-            Console.WriteLine($"DB Path: {mwDbPath}.");
+            string dbPath = args.Length > 0 ? args[0] : Environment.CurrentDirectory;
+            Console.WriteLine($"DB Path: {dbPath}.");
 
             try
             {
-                var mwDb = new CodMwDatabase();
+                var mwDb = new MwDatabase();
 
-                mwDb.Export(mwDbPath);
+                mwDb.Export(dbPath);
             }
             catch (Exception)
             {
