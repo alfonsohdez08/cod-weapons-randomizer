@@ -1,4 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.CW;
+using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.MW;
+using System.Text;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper
 {
@@ -11,14 +13,21 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 
             try
             {
-                var mwDb = new MwDatabase();
+                var mwWikiHomePageScraper = new MwWikiHomePageScraper();
+                var mwDb = new MwDatabase(mwWikiHomePageScraper);
                 mwDb.Export(dbPath);
 
-                var cwDb = new CwDatabase();
+                var cwWikiHomePageScraper = new CwWikiHomePageScraper();
+                var cwDb = new CwDatabase(cwWikiHomePageScraper);
                 cwDb.Export(dbPath);
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                var sb = new StringBuilder("An error has ocurred. ")
+                    .AppendLine("Please see below to see the exception/error details:")
+                    .AppendLine(e.ToString());
+                Console.Error.WriteLine(sb.ToString());
+                
                 return -1;
             }
 
