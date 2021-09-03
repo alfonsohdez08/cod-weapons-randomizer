@@ -9,15 +9,15 @@ public class WeaponBuildRandomizer: CodRandomizer
     private WeaponCategory _weaponCategory;
     private Weapon _weapon;
     private List<Attachment> _attachments;
-    private bool _useAllAttachmentSlots;
+    private bool _useAllWeaponAttachments;
     private bool _primaryWeapon;
     private Weapon _excludedWeapon;
 
     public WeaponBuildRandomizer(MwDb mwDb) => _weaponCategories = mwDb.WeaponCategories;
 
-    public CustomWeaponBuild Build(bool forceUseAllAttachmentSlots, bool primaryWeapon, Weapon excludedWeapon = null)
+    public CustomWeaponBuild Randomize(bool forceUseAllWeaponAttachments, bool primaryWeapon, Weapon excludedWeapon = null)
     {
-        _useAllAttachmentSlots = forceUseAllAttachmentSlots;
+        _useAllWeaponAttachments = forceUseAllWeaponAttachments;
         _primaryWeapon = primaryWeapon;
         _excludedWeapon = excludedWeapon;
 
@@ -34,7 +34,7 @@ public class WeaponBuildRandomizer: CodRandomizer
             _weaponCategory = null;
             _weapon = null;
             _attachments = null;
-            _useAllAttachmentSlots = false;
+            _useAllWeaponAttachments = false;
             _primaryWeapon = false;
             _excludedWeapon = null;
         }
@@ -73,7 +73,7 @@ public class WeaponBuildRandomizer: CodRandomizer
         }
 
         int maxAttachmentSlots = _weapon.Gunsmith.Count < gameMaxAttachmentSlots ? _weapon.Gunsmith.Count : gameMaxAttachmentSlots;
-        int attachmentSlots = _useAllAttachmentSlots ? gameMaxAttachmentSlots : GenerateRandomNumber(1, maxAttachmentSlots + 1);
+        int attachmentSlots = _useAllWeaponAttachments ? gameMaxAttachmentSlots : GenerateRandomNumber(1, maxAttachmentSlots + 1);
         _attachments = new List<Attachment>(attachmentSlots);
 
         var attachmentCategories = new List<AttachmentCategory>(_weapon.Gunsmith);

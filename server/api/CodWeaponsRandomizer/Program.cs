@@ -36,9 +36,13 @@ app.UseCors(CorsPolicyName);
 
 app.MapPost("/loadouts", RandomizeLoadout);
 
-static LoadoutDto RandomizeLoadout([FromServices]LoadoutRandomizer loadoutRandomizer, [FromBody]LoadoutHints hints)
+static LoadoutDto RandomizeLoadout([FromServices]LoadoutRandomizer loadoutRandomizer, [FromBody]LoadoutHintsDto hints)
 {
-    var loadout = loadoutRandomizer.Build(hints);
+    var loadout = loadoutRandomizer.Randomize(new LoadoutHints()
+    {
+        EnforceUseAllWeaponAttachments = hints.EnforceUseAllWeaponAttachments,
+        EnforceUseOverkillPerk = hints.EnforceUseOverkillPerk
+    });
 
     static WeaponDto MapWeapon(CustomWeaponBuild weaponBuild) => new WeaponDto()
     {
