@@ -12,6 +12,8 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
         private readonly List<GameItem> _tacticals;
         private readonly List<GameItem> _lethals;
         private readonly List<PerkTier> _perks;
+        private readonly List<GameItem> _wildcards;
+
         private readonly JsonSerializerOptions _jsonSerializerOptions;
 
         private string _dbExportPath = string.Empty;
@@ -23,6 +25,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
             _tacticals = cwWikiHomePageScraper.ScrapTacticals();
             _lethals = cwWikiHomePageScraper.ScrapLethals();
             _perks = cwWikiHomePageScraper.ScrapPerkTiers();
+            _wildcards = cwWikiHomePageScraper.ScrapWildcards();
 
             _jsonSerializerOptions = new JsonSerializerOptions()
             {
@@ -42,6 +45,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
                 Export("tacticals.json", _tacticals);
                 Export("lethals.json", _lethals);
                 Export("perks.json", _perks);
+                Export("wildcards.json", _wildcards);
 
             }
             finally

@@ -10,7 +10,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.MW
         {
         }
 
-        protected override string PerksSectionId => "Perks_and_Killstreaks";
+        protected override string PerksScorestreaksSectionId => "Perks_and_Killstreaks";
 
         protected override WeaponTableScraper GetWeaponTableScraper(IHtmlTableElement tableElement) => new MwWeaponTableScraper(tableElement);
     }

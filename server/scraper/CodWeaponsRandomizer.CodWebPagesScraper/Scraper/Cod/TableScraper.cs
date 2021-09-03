@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 {
-    class TableScraper
+    abstract class TableScraper
     {
         private static readonly string AnchorSelector;
 
