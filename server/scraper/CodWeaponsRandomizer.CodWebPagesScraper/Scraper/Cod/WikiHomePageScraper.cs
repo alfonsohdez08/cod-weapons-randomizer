@@ -1,22 +1,21 @@
 ﻿using AngleSharp.Html.Dom;
-using CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.MW;
 using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 {
     abstract class WikiHomePageScraper: WebPageScraper
     {
-        private readonly MwPerkTableScraper _perkTableScraper;
+        private readonly PerkTableScraper _perkTableScraper;
         private readonly WeaponTableScraper _weaponTableScraper;
 
         public WikiHomePageScraper(string codWikiHomePageUrl) : base(codWikiHomePageUrl)
         {
-            _perkTableScraper = new MwPerkTableScraper(GetPerksTable());
+            _perkTableScraper = new PerkTableScraper(GetPerksTable());
             _weaponTableScraper = GetWeaponTableScraper(GetWeaponsTableElement());
 
             IHtmlTableElement GetPerksTable()
             {
-                var perksHeadingElement = (IHtmlHeadingElement)HtmlDocument.SelectFirst<IHtmlSpanElement>("#Perks_and_Killstreaks").ParentElement!;
+                var perksHeadingElement = (IHtmlHeadingElement)HtmlDocument.SelectFirst<IHtmlSpanElement>($"#{PerksSectionId}").ParentElement!;
                 return perksHeadingElement.NextElementSibling!.SelectFirst<IHtmlTableElement>(Html.Tags.Table);
             }
 
@@ -36,5 +35,6 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
         public List<GameItem> ScrapTacticals() => _weaponTableScraper.ScrapTacticals();
 
         protected abstract WeaponTableScraper GetWeaponTableScraper(IHtmlTableElement tableElement);
+        protected abstract string PerksSectionId { get; }
     }
 }

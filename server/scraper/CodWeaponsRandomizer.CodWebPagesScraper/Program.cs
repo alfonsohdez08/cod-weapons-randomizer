@@ -12,8 +12,10 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
             try
             {
                 var mwDb = new MwDatabase();
-
                 mwDb.Export(dbPath);
+
+                var cwDb = new CwDatabase();
+                cwDb.Export(dbPath);
             }
             catch (Exception)
             {

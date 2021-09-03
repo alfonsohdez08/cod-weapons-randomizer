@@ -1,9 +1,9 @@
 ﻿using AngleSharp.Html.Dom;
 using CodWeaponsRandomizer.Core.Entities;
 
-namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.MW
+namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
 {
-    class MwPerkTableScraper: TableScraper
+    class PerkTableScraper: TableScraper
     {
         private static readonly Dictionary<int, int> _perkTierRowNumber = new Dictionary<int, int>()
         {
@@ -12,7 +12,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod.MW
             {3, 7 },
         };
 
-        public MwPerkTableScraper(IHtmlTableElement tableElement) : base(tableElement)
+        public PerkTableScraper(IHtmlTableElement tableElement) : base(tableElement)
         {
 
         }

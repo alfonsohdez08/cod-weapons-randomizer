@@ -22,17 +22,5 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 
             return elements;
         }
-
-        //public static IEnumerable<IHtmlTableRowElement> FirstRows(this IHtmlTableElement tableElement, int count)
-        //{
-        //    tableElement.Rows
-
-        //    throw new NotImplementedException();
-        //}
-
-        //public static IEnumerable<IHtmlTableRowElement> GetRow(this IHtmlTableElement tableElment, int index)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
