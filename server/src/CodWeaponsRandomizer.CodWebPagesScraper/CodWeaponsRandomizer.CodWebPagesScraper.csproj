@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CodWeaponsRandomizer.Core\CodWeaponsRandomizer.Core.csproj" />
+    <ProjectReference Include="..\CodWeaponsRandomizer.Core\CodWeaponsRandomizer.Core.csproj" />
   </ItemGroup>
 
 </Project>
