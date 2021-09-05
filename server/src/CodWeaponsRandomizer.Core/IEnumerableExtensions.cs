@@ -2,10 +2,10 @@
 {
     internal static class IEnumerableExtensions
     {
-        public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> collection)
+        public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> enumerable)
         {
             var random = new Random();
-            return collection.OrderBy(i => random.Next());
+            return enumerable.OrderBy(i => random.Next());
         }
     }
 }
