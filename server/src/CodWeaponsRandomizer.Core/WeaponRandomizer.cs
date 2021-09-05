@@ -30,9 +30,21 @@ namespace CodWeaponsRandomizer.Core
             return weapons[index];
         }
 
-        private void PickAttachments(Weapon weapon)
+        private List<AttachmentType> PickAttachments(Weapon weapon)
         {
+            int attachmentSlots = _hints!.EnforceUseAllAttachmentSlots ?
+                _hints.MaxAttachmentSlots : GenerateRandomNumber(1, _hints.MaxAttachmentSlots + 1);
 
+            var attachmentTypes = new List<AttachmentType>(attachmentSlots);
+            foreach (AttachmentType attachmentType in weapon.SupportedAttachments.Shuffle())
+            {
+                var attachmentTypeCopy = (AttachmentType)attachmentType.Clone();
+                attachmentTypeCopy.Attachments.Add(attachmentType.Attachments[GenerateRandomIndex(attachmentType.Attachments.Count)]);
+
+                attachmentTypes.Add(attachmentTypeCopy);
+            }
+
+            return attachmentTypes;
         }
 
         public override WeaponBuild Randomize(WeaponHints? hints)
@@ -42,14 +54,14 @@ namespace CodWeaponsRandomizer.Core
             {
                 string weaponType = PickWeaponType();
                 Weapon weapon = PickWeapon(weaponType);
-                PickAttachments(weapon);
+                List<AttachmentType> attachments = PickAttachments(weapon);
+
+                return new WeaponBuild(weapon, attachments);
             }
             finally
             {
                 _hints = null;
             }
-
-            throw new NotImplementedException();
         }
     }
 }
