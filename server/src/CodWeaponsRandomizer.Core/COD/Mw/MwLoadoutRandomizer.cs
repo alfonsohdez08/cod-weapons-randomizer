@@ -11,23 +11,31 @@ namespace CodWeaponsRandomizer.Core.COD.Mw
             _db = db;
         }
 
-        public override GameItem PickLethal()
+        public override GameItem PickLethal() => _db.Lethals[GenerateRandomIndex(_db.Lethals.Count)];
+
+        public override List<GameItem> PickPerks()
         {
-            throw new NotImplementedException();
+            var perks = new List<GameItem>(3);
+
+            for (var index = 0; index < perks.Capacity; index++)
+            {
+                PerkTier perkTier = _db.PerkTiers[index];
+
+                GameItem perk =
+                    perkTier.Tier == 2 && Hints!.EnforceUseOverkillPerk ? perkTier.Perks.Single(p => p.Name == "Overkill") :
+                    perkTier.Perks[GenerateRandomIndex(perkTier.Perks.Count)];
+
+                perks.Add(perk);
+            }
+
+            return perks;
         }
 
-        public override List<PerkTier> PickPerks()
-        {
-            throw new NotImplementedException();
-        }
+        public override GameItem PickTactical() => _db.Tacticals[GenerateRandomIndex(_db.Tacticals.Count)];
 
-        public override GameItem PickTactical()
+        public override (WeaponBuild primaryWeapon, WeaponBuild secondaryWeapon) PickWeapons(List<GameItem> selectedPerks)
         {
-            throw new NotImplementedException();
-        }
 
-        public override (WeaponBuild primaryWeapon, WeaponBuild secondaryWeapon) PickWeapons(List<PerkTier> selectedPerks)
-        {
             throw new NotImplementedException();
         }
     }

@@ -12,7 +12,7 @@ namespace CodWeaponsRandomizer.Core.COD
             Hints = hints;
             try
             {
-                List<PerkTier> perks = PickPerks();
+                List<GameItem> perks = PickPerks();
                 (WeaponBuild primaryWeapon, WeaponBuild secondaryWeapon) = PickWeapons(perks);
                 GameItem tactical = PickTactical();
                 GameItem lethal = PickLethal();
@@ -26,8 +26,8 @@ namespace CodWeaponsRandomizer.Core.COD
         }
 
 
-        public abstract List<PerkTier> PickPerks();
-        public abstract (WeaponBuild primaryWeapon, WeaponBuild secondaryWeapon) PickWeapons(List<PerkTier> selectedPerks);
+        public abstract List<GameItem> PickPerks();
+        public abstract (WeaponBuild primaryWeapon, WeaponBuild secondaryWeapon) PickWeapons(List<GameItem> selectedPerks);
         public abstract GameItem PickLethal();
         public abstract GameItem PickTactical();
     }

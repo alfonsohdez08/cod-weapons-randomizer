@@ -20,7 +20,7 @@ namespace CodWeaponsRandomizer.Core.COD.Wz
             throw new NotImplementedException();
         }
 
-        public override List<PerkTier> PickPerks()
+        public override List<GameItem> PickPerks()
         {
             throw new NotImplementedException();
         }
@@ -30,7 +30,7 @@ namespace CodWeaponsRandomizer.Core.COD.Wz
             throw new NotImplementedException();
         }
 
-        public override (WeaponBuild primaryWeapon, WeaponBuild secondaryWeapon) PickWeapons(List<PerkTier> selectedPerks)
+        public override (WeaponBuild primaryWeapon, WeaponBuild secondaryWeapon) PickWeapons(List<GameItem> selectedPerks)
         {
             throw new NotImplementedException();
         }
