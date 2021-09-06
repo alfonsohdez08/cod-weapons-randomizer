@@ -1,6 +1,6 @@
 ﻿using CodWeaponsRandomizer.Core.Entities;
 
-namespace CodWeaponsRandomizer.Core
+namespace CodWeaponsRandomizer.Core.COD
 {
     class WeaponRandomizer: Randomizer<WeaponHints, WeaponBuild>
     {

@@ -2,5 +2,6 @@
 {
     public class LoadoutHints
     {
+        public bool EnforceUseAllWeaponAttachmentSlots { get; set; }
     }
 }

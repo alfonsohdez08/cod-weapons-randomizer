@@ -1,6 +1,6 @@
 ﻿using CodWeaponsRandomizer.Core.Entities;
 
-namespace CodWeaponsRandomizer.Core
+namespace CodWeaponsRandomizer.Core.COD.Cw
 {
     public class CwDb : CodDb
     {

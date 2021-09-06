@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text.Json;
 
-namespace CodWeaponsRandomizer.Core
+namespace CodWeaponsRandomizer.Core.COD
 {
     public abstract class CodDb
     {

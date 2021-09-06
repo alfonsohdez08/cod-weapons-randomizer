@@ -1,4 +1,4 @@
-﻿namespace CodWeaponsRandomizer.Core
+﻿namespace CodWeaponsRandomizer.Core.COD.Mw
 {
     public class MwDb : CodDb
     {
