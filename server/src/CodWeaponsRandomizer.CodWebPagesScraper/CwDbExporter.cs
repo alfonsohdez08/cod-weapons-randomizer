@@ -3,11 +3,11 @@ using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper
 {
-    class CwDatabase : CodDatabase
+    class CwDbExporter : CodDbExporter
     {
         private readonly List<GameItem> _wildcards;
 
-        public CwDatabase(CwWikiHomePageScraper cwWikiHomePageScraper) : base(cwWikiHomePageScraper)
+        public CwDbExporter(CwWikiHomePageScraper cwWikiHomePageScraper) : base(cwWikiHomePageScraper)
         {
             _wildcards = cwWikiHomePageScraper.ScrapWildcards();
         }

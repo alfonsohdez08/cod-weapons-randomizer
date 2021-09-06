@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper
 {
-    abstract class CodDatabase
+    abstract class CodDbExporter
     {
         private readonly JsonSerializerOptions _jsonSerializerOptions;
         private readonly List<Weapon> _weapons;
@@ -14,7 +14,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 
         private string _dbExportPath = string.Empty;
 
-        public CodDatabase(WikiHomePageScraper codWikiHomePageScraper)
+        public CodDbExporter(WikiHomePageScraper codWikiHomePageScraper)
         {
             _jsonSerializerOptions = new JsonSerializerOptions()
             {

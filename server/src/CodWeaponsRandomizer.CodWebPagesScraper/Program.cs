@@ -14,12 +14,12 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
             try
             {
                 var mwWikiHomePageScraper = new MwWikiHomePageScraper();
-                var mwDb = new MwDatabase(mwWikiHomePageScraper);
-                mwDb.Export(dbPath);
+                var mwDbExporter = new MwDbExporter(mwWikiHomePageScraper);
+                mwDbExporter.Export(dbPath);
 
                 var cwWikiHomePageScraper = new CwWikiHomePageScraper();
-                var cwDb = new CwDatabase(cwWikiHomePageScraper);
-                cwDb.Export(dbPath);
+                var cwDbExporter = new CwDbExporter(cwWikiHomePageScraper);
+                cwDbExporter.Export(dbPath);
             }
             catch (Exception e)
             {

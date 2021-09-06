@@ -2,10 +2,10 @@
 
 namespace CodWeaponsRandomizer.CodWebPagesScraper
 {
-    class MwDatabase : CodDatabase
+    class MwDbExporter : CodDbExporter
     {
 
-        public MwDatabase(MwWikiHomePageScraper mwWikiHomePageScraper): base(mwWikiHomePageScraper)
+        public MwDbExporter(MwWikiHomePageScraper mwWikiHomePageScraper): base(mwWikiHomePageScraper)
         {
 
         }
