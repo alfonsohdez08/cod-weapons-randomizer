@@ -1,12 +1,19 @@
-﻿namespace CodWeaponsRandomizer.Core.Entities
+﻿using System.Text.Json.Serialization;
+
+namespace CodWeaponsRandomizer.Core.Entities
 {
     public class AttachmentType: GameItem, ICloneable
     {
-        public List<GameItem> Attachments { get; set; }
+        public List<GameItem> Attachments { get; set; } = new List<GameItem>();
 
         public AttachmentType(string name): base(name)
         {
-            Attachments = new List<GameItem>();
+        }
+
+        [JsonConstructor]
+        public AttachmentType(int id, string name, List<GameItem> attachments) : base(id, name)
+        {
+            Attachments = attachments;
         }
 
         public object Clone()

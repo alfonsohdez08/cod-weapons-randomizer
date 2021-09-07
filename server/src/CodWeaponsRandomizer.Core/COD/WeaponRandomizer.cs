@@ -30,12 +30,19 @@ namespace CodWeaponsRandomizer.Core.COD
 
         private List<AttachmentType> PickAttachments(Weapon weapon)
         {
+            if (!weapon.SupportedAttachments.Any())
+                return new List<AttachmentType>();
+
             int attachmentSlots = _hints!.EnforceUseAllAttachmentSlots ?
                 _hints.MaxAttachmentSlots : GenerateRandomNumber(1, _hints.MaxAttachmentSlots + 1);
 
             var attachmentTypes = new List<AttachmentType>(attachmentSlots);
-            foreach (AttachmentType attachmentType in weapon.SupportedAttachments.Shuffle())
+
+            List<AttachmentType> weaponAttachments = weapon.SupportedAttachments.Shuffle().ToList();
+            for (int i = 0; i < attachmentTypes.Capacity; i++)
             {
+                AttachmentType attachmentType = weaponAttachments[i];
+
                 var attachmentTypeCopy = (AttachmentType)attachmentType.Clone();
                 attachmentTypeCopy.Attachments.Add(attachmentType.Attachments[GenerateRandomIndex(attachmentType.Attachments.Count)]);
 

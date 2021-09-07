@@ -6,6 +6,7 @@ namespace CodWeaponsRandomizer.Core.COD
     public abstract class CodDb
     {
         private readonly string _dbPath;
+        private readonly JsonSerializerOptions _deserializerOptions;
 
         public List<Weapon> Weapons { get; }
         public List<GameItem> Lethals { get; }
@@ -15,6 +16,10 @@ namespace CodWeaponsRandomizer.Core.COD
         public CodDb(string path)
         {
             _dbPath = path;
+            _deserializerOptions = new JsonSerializerOptions()
+            {
+                PropertyNameCaseInsensitive = true
+            };
 
             Weapons = Load<List<Weapon>>("weapons.json");
             Lethals = Load<List<GameItem>>("lethals.json");
@@ -27,7 +32,7 @@ namespace CodWeaponsRandomizer.Core.COD
             string jsonFilePath = Path.Combine(_dbPath, filename);
             string json = File.ReadAllText(jsonFilePath);
 
-            return JsonSerializer.Deserialize<T>(json)!;
+            return JsonSerializer.Deserialize<T>(json, _deserializerOptions)!;
         }
     }
 }

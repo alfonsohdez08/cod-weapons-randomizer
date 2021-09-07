@@ -5,8 +5,8 @@ using CodWeaponsRandomizer.Core.COD.Wz;
 using CodWeaponsRandomizer.Core.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-const string MwDbFolderPath = @".\mw";
-const string CwDbFolderPath = @".\cw";
+const string MwDbFolderPath = @"..\..\dbs\mw";
+const string CwDbFolderPath = @"..\..\dbs\cw";
 
 const string CorsPolicyName = "RND_COD_LDT";
 
