@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Claymore"
+  },
+  {
+    "id": 2,
+    "name": "Frag Grenade"
+  },
+  {
+    "id": 3,
+    "name": "Molotov Cocktail"
+  },
+  {
+    "id": 4,
+    "name": "C4"
+  },
+  {
+    "id": 5,
+    "name": "Semtex"
+  },
+  {
+    "id": 6,
+    "name": "Throwing Knife"
+  },
+  {
+    "id": 7,
+    "name": "Proximity Mine"
+  },
+  {
+    "id": 8,
+    "name": "Thermite"
+  },
+  {
+    "id": 9,
+    "name": "Rock"
+  },
+  {
+    "id": 10,
+    "name": "WZ"
+  }
+]

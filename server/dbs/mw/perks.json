@@ -1,0 +1,89 @@
+[
+  {
+    "tier": 1,
+    "perks": [
+      {
+        "id": 1,
+        "name": "Cold-Blooded"
+      },
+      {
+        "id": 2,
+        "name": "Double Time"
+      },
+      {
+        "id": 3,
+        "name": "E.O.D."
+      },
+      {
+        "id": 4,
+        "name": "Kill Chain"
+      },
+      {
+        "id": 5,
+        "name": "Quick Fix"
+      },
+      {
+        "id": 6,
+        "name": "Scavenger"
+      }
+    ]
+  },
+  {
+    "tier": 2,
+    "perks": [
+      {
+        "id": 1,
+        "name": "Ghost"
+      },
+      {
+        "id": 2,
+        "name": "Hardline"
+      },
+      {
+        "id": 3,
+        "name": "High Alert"
+      },
+      {
+        "id": 4,
+        "name": "Overkill"
+      },
+      {
+        "id": 5,
+        "name": "Pointman"
+      },
+      {
+        "id": 6,
+        "name": "Restock"
+      }
+    ]
+  },
+  {
+    "tier": 3,
+    "perks": [
+      {
+        "id": 1,
+        "name": "Amped"
+      },
+      {
+        "id": 2,
+        "name": "Battle Hardened"
+      },
+      {
+        "id": 3,
+        "name": "Shrapnel"
+      },
+      {
+        "id": 4,
+        "name": "Spotter"
+      },
+      {
+        "id": 5,
+        "name": "Tracker"
+      },
+      {
+        "id": 6,
+        "name": "Tune Up"
+      }
+    ]
+  }
+]
