@@ -4,14 +4,10 @@ namespace CodWeaponsRandomizer.Core.Entities
 {
     public class AttachmentType: GameItem, ICloneable
     {
-        public List<GameItem> Attachments { get; set; } = new List<GameItem>();
+        [JsonInclude]
+        public List<GameItem> Attachments { get; private set; }
 
-        public AttachmentType(string name): base(name)
-        {
-        }
-
-        [JsonConstructor]
-        public AttachmentType(int id, string name, List<GameItem> attachments) : base(id, name)
+        public AttachmentType(string name, List<GameItem> attachments): base(name)
         {
             Attachments = attachments;
         }

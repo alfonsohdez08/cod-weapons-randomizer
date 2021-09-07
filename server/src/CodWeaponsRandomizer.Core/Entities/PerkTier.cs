@@ -4,17 +4,12 @@ namespace CodWeaponsRandomizer.Core.Entities
 {
     public class PerkTier
     {
-        public int Tier { get; set; }
-        public List<GameItem> Perks { get; set; } = new List<GameItem>();
+        public int Tier { get; private set; }
+        public List<GameItem> Perks { get; private set; }
 
-        public PerkTier(int tier)
+        public PerkTier(int tier, List<GameItem> perks)
         {
             Tier = tier;
-        }
-
-        [JsonConstructor]
-        public PerkTier(int tier, List<GameItem> perks): this(tier)
-        {
             Perks = perks;
         }
     }

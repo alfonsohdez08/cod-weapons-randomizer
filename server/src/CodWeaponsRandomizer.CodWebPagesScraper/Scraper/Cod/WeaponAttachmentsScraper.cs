@@ -29,10 +29,8 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
             while (attachmentTypeHeadingElement != null && attachmentTypeHeadingElement.NextElementSibling != null &&
                 attachmentTypeHeadingElement.NextElementSibling is IHtmlUnorderedListElement){
 
-                var attachmentType = new AttachmentType(attachmentTypeHeadingElement.Children[0].TextContent)
-                {
-                    Attachments = ParseAttachments((IHtmlUnorderedListElement)attachmentTypeHeadingElement.NextElementSibling)
-                };
+                List<GameItem> attachments = ParseAttachments((IHtmlUnorderedListElement)attachmentTypeHeadingElement.NextElementSibling);
+                var attachmentType = new AttachmentType(attachmentTypeHeadingElement.Children[0].TextContent, attachments);
                 _attachmentTypeSet.Add(attachmentType);
 
                 attachmentTypeHeadingElement = attachmentTypeHeadingElement.NextElementSibling.NextElementSibling as IHtmlHeadingElement;
