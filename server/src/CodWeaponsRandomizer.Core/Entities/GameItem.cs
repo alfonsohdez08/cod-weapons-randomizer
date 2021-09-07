@@ -6,12 +6,11 @@ namespace CodWeaponsRandomizer.Core.Entities
     {
         [JsonInclude]
         public int Id { get; private set; }
+
+        [JsonInclude]
         public string Name { get; private set; }
 
         public GameItem(string name) => (Name) = (name);
-
-        //[JsonConstructor]
-        //public GameItem(int id, string name): this(name) => Id = id;
 
         public void SetId(int id) => Id = id;
     }

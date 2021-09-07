@@ -4,6 +4,7 @@ namespace CodWeaponsRandomizer.Core.Entities
 {
     public class Weapon: GameItem
     {
+        [JsonInclude]
         public string WeaponType { get; private set; }
         public string? ImageUrl { get; set; }
         public List<AttachmentType> SupportedAttachments { get; set; } = new List<AttachmentType>();
@@ -12,13 +13,5 @@ namespace CodWeaponsRandomizer.Core.Entities
         {
             WeaponType = weaponType;
         }
-
-        //[JsonConstructor]
-        //public Weapon(int id, string name, string weaponType, string? imageUrl, List<AttachmentType> supportedAttachments) : base(id, name)
-        //{
-        //    WeaponType = weaponType;
-        //    ImageUrl = imageUrl;
-        //    SupportedAttachments = supportedAttachments;
-        //}
     }
 }
