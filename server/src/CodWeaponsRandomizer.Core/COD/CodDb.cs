@@ -25,7 +25,9 @@ namespace CodWeaponsRandomizer.Core.COD
         protected T Load<T>(string filename) where T: class
         {
             string jsonFilePath = Path.Combine(_dbPath, filename);
-            return JsonSerializer.Deserialize<T>(jsonFilePath)!;
+            string json = File.ReadAllText(jsonFilePath);
+
+            return JsonSerializer.Deserialize<T>(json)!;
         }
     }
 }
