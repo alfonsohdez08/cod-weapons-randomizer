@@ -23,8 +23,6 @@ namespace CodWeaponsRandomizer.Core.COD
         private Weapon PickWeapon(string weaponType)
         {
             List<Weapon> weapons = _weaponTypes[weaponType];
-            if (_hints?.ExcludedWeapon != null && _hints.ExcludedWeapon.WeaponType == weaponType)// TODO: I should lift this up (it is a loadout thing)
-                weapons = weapons.Where(w => w != _hints.ExcludedWeapon).ToList();
 
             int index = GenerateRandomIndex(weapons.Count);
             return weapons[index];

@@ -4,35 +4,21 @@ using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.Core.COD.Wz
 {
-    class WzLoadoutRandomizer : LoadoutRandomizer<WzLoadoutHints>
+
+    public class WzLoadoutRandomizer : MwLoadoutRandomizer
     {
-        private readonly MwDb _mwDb;
-        private readonly CwDb _cwDb;
+        private readonly List<Weapon> _primaryWeapons;
+        private readonly List<Weapon> _secondaryWeapons;
 
-        public WzLoadoutRandomizer(MwDb mwDb, CwDb cwDb)
-        {
-            _mwDb = mwDb;
-            _cwDb = cwDb;
-        }
+        protected override List<Weapon> PrimaryWeapons => _primaryWeapons;
+        protected override List<Weapon> SecondaryWeapons => _secondaryWeapons;
 
-        public override GameItem PickLethal()
+        public WzLoadoutRandomizer(MwDb mwDb, CwDb cwDb) : base(mwDb)
         {
-            throw new NotImplementedException();
-        }
+            _primaryWeapons = new List<Weapon>(MwPrimaryWeapons);
 
-        public override List<GameItem> PickPerks()
-        {
-            throw new NotImplementedException();
-        }
+            _secondaryWeapons = new List<Weapon>(MwSecondaryWeapons);
 
-        public override GameItem PickTactical()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override (WeaponBuild primaryWeapon, WeaponBuild secondaryWeapon) PickWeapons(List<GameItem> selectedPerks)
-        {
-            throw new NotImplementedException();
         }
     }
 }
