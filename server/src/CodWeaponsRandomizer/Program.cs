@@ -1,15 +1,22 @@
+using CodWeaponsRandomizer;
+using CodWeaponsRandomizer.Core.COD.Cw;
+using CodWeaponsRandomizer.Core.COD.Mw;
+using CodWeaponsRandomizer.Core.COD.Wz;
+using CodWeaponsRandomizer.Core.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-const string MwDbFolderPath = @".\db";
+const string MwDbFolderPath = @".\mw";
+const string CwDbFolderPath = @".\cw";
+
 const string CorsPolicyName = "RND_COD_LDT";
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddSingleton(typeof(MwDb), new MwDb(MwDbFolderPath));
+builder.Services.AddSingleton(typeof(CwDb), new CwDb(CwDbFolderPath));
 
-
-//builder.Services.AddSingleton(typeof(MwDb), MwDb.Load(MwDbFolderPath));
-//builder.Services.AddTransient<WeaponBuildRandomizer>();
-//builder.Services.AddTransient<LoadoutRandomizer>();
+builder.Services.AddTransient<MwLoadoutRandomizer>();
+builder.Services.AddTransient<WzLoadoutRandomizer>();
 
 builder.Services.AddCors((corsOptions) =>
 {
@@ -30,39 +37,58 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors(CorsPolicyName);
 
-//app.MapPost("/loadouts", RandomizeLoadout);
+app.MapPost("/mw-loadouts", RandomizeLoadout);
 
-//static LoadoutDto RandomizeLoadout([FromServices]LoadoutRandomizer loadoutRandomizer, [FromBody]LoadoutHintsDto hints)
-//{
-//    var loadout = loadoutRandomizer.Randomize(new LoadoutHints()
-//    {
-//        EnforceUseAllWeaponAttachments = hints.EnforceUseAllWeaponAttachments,
-//        EnforceUseOverkillPerk = hints.EnforceUseOverkillPerk
-//    });
+static LoadoutDto RandomizeLoadout([FromServices] MwLoadoutRandomizer loadoutRandomizer, [FromBody] LoadoutHintsDto hints)
+{
+    MwLoadoutHints MapLoadoutHints() => new MwLoadoutHints()
+    {
+        EnforceUseAllWeaponAttachmentSlots = hints.EnforceUseAllWeaponAttachmentSlots
+    };
 
-//    static WeaponDto MapWeapon(CustomWeaponBuild weaponBuild) => new WeaponDto()
-//    {
-//        Name = weaponBuild.Weapon.Name,
-//        Category = weaponBuild.Weapon.Category.Name,
-//        Attachments = weaponBuild.Attachments.Select(a => new AttachmentDto()
-//        {
-//            Name = a.Name,
-//            AttachmentCategory = a.Category.Name
-//        })
-//    };
+    static LoadoutDto MapLoadout(Loadout loadout) => new LoadoutDto()
+    {
+        PrimaryWeapon = MapWeaponBuild(loadout.PrimaryWeapon),
+        SecondaryWeapon = MapWeaponBuild(loadout.SecondaryWeapon),
+        Perks = loadout.Perks.Select(MapIdName).ToList(),
+        Lethal = MapIdName(loadout.Lethal),
+        Tactical = MapIdName(loadout.Tactical),
+    };
 
-//    return new LoadoutDto()
-//    {
-//        PrimaryWeapon = MapWeapon(loadout.PrimaryWeapon),
-//        SecondaryWeapon = MapWeapon(loadout.SecondaryWeapon),
-//        Perks = loadout.Perks.Select(p => new PerkDto()
-//        {
-//            Slot = p.Slot.Slot,
-//            Name = p.Name
-//        }),
-//        Lethal = loadout.Lethal.Name,
-//        Tactical = loadout.Tactical.Name
-//    };
-//}
+    static WeaponBuildDto MapWeaponBuild(WeaponBuild weaponBuild) => new WeaponBuildDto()
+    {
+        Id = weaponBuild.Weapon.Id,
+        Name = weaponBuild.Weapon.Name,
+        ImageUrl = weaponBuild.Weapon.ImageUrl,
+        WeaponType = weaponBuild.Weapon.WeaponType,
+        Attachments = weaponBuild.Attachments.Select(MapAttachment).ToList()
+    };
+
+    static AttachmentDto MapAttachment(AttachmentType attachmentType)
+    {
+        GameItem attachmentVariant = attachmentType.Attachments.Single();
+
+        return new AttachmentDto()
+        {
+            Id = attachmentType.Id,
+            Name = attachmentType.Name,
+            Variant = new IdNameDto()
+            {
+                Id = attachmentVariant.Id,
+                Name = attachmentVariant.Name
+            }
+        };
+    }
+
+    static IdNameDto MapIdName(GameItem gameItem) => new IdNameDto()
+    {
+        Id = gameItem.Id,
+        Name = gameItem.Name
+    };
+
+    Loadout loadout = loadoutRandomizer.Randomize(MapLoadoutHints());
+
+    return MapLoadout(loadout);
+}
 
 app.Run();
