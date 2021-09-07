@@ -24,10 +24,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
             int rowNumber = GetRowNumberByPerkTier(perkTier);
             List<GameItem> perks = ParseAnchors(GetSingleRowAnchors(rowNumber));
 
-            return new PerkTier(perkTier)
-            {
-                Perks = perks
-            };
+            return new PerkTier(perkTier, perks);
         }
 
         public List<PerkTier> ScrapPerks()

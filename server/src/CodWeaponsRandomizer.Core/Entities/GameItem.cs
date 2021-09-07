@@ -1,9 +1,14 @@
-﻿namespace CodWeaponsRandomizer.Core.Entities
+﻿using System.Text.Json.Serialization;
+
+namespace CodWeaponsRandomizer.Core.Entities
 {
     public class GameItem
     {
+        [JsonInclude]
         public int Id { get; private set; }
-        public string Name { get; set; }
+
+        [JsonInclude]
+        public string Name { get; private set; }
 
         public GameItem(string name) => (Name) = (name);
 
