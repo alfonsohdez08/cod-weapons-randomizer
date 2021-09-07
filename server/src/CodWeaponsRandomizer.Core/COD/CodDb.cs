@@ -1,12 +1,11 @@
 ﻿using CodWeaponsRandomizer.Core.Entities;
-using System.IO;
 using System.Text.Json;
 
 namespace CodWeaponsRandomizer.Core.COD
 {
     public abstract class CodDb
     {
-        protected string DbPath { get; }
+        private readonly string _dbPath;
 
         public List<Weapon> Weapons { get; }
         public List<GameItem> Lethals { get; }
@@ -15,7 +14,7 @@ namespace CodWeaponsRandomizer.Core.COD
 
         public CodDb(string path)
         {
-            DbPath = path;
+            _dbPath = path;
 
             Weapons = Load<List<Weapon>>("weapons.json");
             Lethals = Load<List<GameItem>>("lethals.json");
@@ -23,9 +22,9 @@ namespace CodWeaponsRandomizer.Core.COD
             PerkTiers = Load<List<PerkTier>>("perks.json");
         }
 
-        protected T Load<T>(string filename) where T:class
+        protected T Load<T>(string filename) where T: class
         {
-            string jsonFilePath = Path.Combine(DbPath, filename);
+            string jsonFilePath = Path.Combine(_dbPath, filename);
             return JsonSerializer.Deserialize<T>(jsonFilePath)!;
         }
     }
