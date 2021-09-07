@@ -11,7 +11,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
         }
 
         private List<string> ScrapWeaponHrefs() => TakeFirstRowsAnchors(WeaponRowCount)
-                .Where(a => a.NextSibling is null || !a.NextSibling.TextContent.Contains("SP"))
+                .Where(a => a.NextSibling is null || a.NextSibling.TextContent.Contains("SP"))
                 .Select(a => a.Href).ToList();
 
         public List<Weapon> ScrapWeapons()
