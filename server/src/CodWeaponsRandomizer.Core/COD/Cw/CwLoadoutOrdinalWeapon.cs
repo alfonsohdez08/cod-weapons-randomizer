@@ -12,7 +12,7 @@
         public CwLoadoutOrdinalWeapon()
         {
             _primaryWeaponTypes = ParseWeaponTypes("Assault Rifle", "Submachine Gun", "Sniper Rifle", "Tactical Rifle", "Shotgun", "Light Machine Gun");
-            _secondaryWeaponTypes = ParseWeaponTypes("Handgun", "Launcher", "Melee");
+            _secondaryWeaponTypes = ParseWeaponTypes("Pistol", "Launcher", "Melee");
         }
     }
 }
