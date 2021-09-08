@@ -8,10 +8,4 @@
   <ItemGroup>
     <ProjectReference Include="..\CodWeaponsRandomizer.Core\CodWeaponsRandomizer.Core.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="..\..\dbs\**" >
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
 </Project>
