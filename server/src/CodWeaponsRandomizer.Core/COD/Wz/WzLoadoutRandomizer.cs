@@ -5,27 +5,21 @@ using CodWeaponsRandomizer.Core.Entities;
 namespace CodWeaponsRandomizer.Core.COD.Wz
 {
 
-    public class WzLoadoutRandomizer : IwLoadoutRandomizer<WzLoadoutHints>
+    public class WzLoadoutRandomizer : MwBaseLoadoutRandomizer<WzLoadoutHints>
     {
         private readonly CwDb _cwDb;
-
-        private readonly string[] _primaryWeaponTypes = new string[] { "Assault Rifle", "Submachine Gun", "Sniper Rifle", "Tactical Rifle", "Shotgun", "Light Machine Gun" };
-        private readonly string[] _secondaryWeaponTypes = new string[] { "Handgun", "Launcher", "Melee" };
-
-        private readonly HashSet<string> _primaryWeaponTypeSet;
-        private readonly HashSet<string> _secondaryWeaponTypeSet;
+        private readonly CwLoadoutOrdinalWeapon _cwLoadoutOrdinalWeapon;
 
         public WzLoadoutRandomizer(MwDb mwDb, CwDb cwDb) : base(mwDb)
         {
             _cwDb = cwDb;
-            _primaryWeaponTypeSet = new HashSet<string>(_primaryWeaponTypes);
-            _secondaryWeaponTypeSet = new HashSet<string>(_secondaryWeaponTypes);
+            _cwLoadoutOrdinalWeapon = new CwLoadoutOrdinalWeapon();
         }
 
         protected override List<Weapon> GetPrimaryWeapons()
         {
             List<Weapon> mwPrimaryWeapons = base.GetPrimaryWeapons();
-            List<Weapon> cwPrimaryWeapons = _cwDb.Weapons.Where(w => _primaryWeaponTypeSet.Contains(w.WeaponType)).ToList();
+            List<Weapon> cwPrimaryWeapons = _cwDb.Weapons.Where(w => _cwLoadoutOrdinalWeapon.PrimaryWeaponTypes.Contains(w.WeaponType)).ToList();
 
             return mwPrimaryWeapons.Concat(cwPrimaryWeapons).ToList();
         }
@@ -33,7 +27,7 @@ namespace CodWeaponsRandomizer.Core.COD.Wz
         protected override List<Weapon> GetSecondaryWeapons()
         {
             List<Weapon> mwSecondaryWeapons = base.GetSecondaryWeapons();
-            List<Weapon> cwSecondaryWeapons = _cwDb.Weapons.Where(w => _secondaryWeaponTypeSet.Contains(w.WeaponType)).ToList();
+            List<Weapon> cwSecondaryWeapons = _cwDb.Weapons.Where(w => _cwLoadoutOrdinalWeapon.SecondaryWeaponTypes.Contains(w.WeaponType)).ToList();
 
             return mwSecondaryWeapons.Concat(cwSecondaryWeapons).ToList();
         }

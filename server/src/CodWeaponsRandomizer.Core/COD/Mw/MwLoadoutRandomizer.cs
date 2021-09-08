@@ -2,7 +2,7 @@
 
 namespace CodWeaponsRandomizer.Core.COD.Mw
 {
-    public class MwLoadoutRandomizer : IwLoadoutRandomizer<MwLoadoutHints>
+    public class MwLoadoutRandomizer : MwBaseLoadoutRandomizer<MwLoadoutHints>
     {
         public MwLoadoutRandomizer(MwDb db) : base(db)
         {

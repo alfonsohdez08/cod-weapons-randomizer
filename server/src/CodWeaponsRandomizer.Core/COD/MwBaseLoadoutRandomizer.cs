@@ -1,28 +1,21 @@
-﻿using CodWeaponsRandomizer.Core.Entities;
+﻿using CodWeaponsRandomizer.Core.COD.Mw;
+using CodWeaponsRandomizer.Core.Entities;
 
 namespace CodWeaponsRandomizer.Core.COD
 {
-    public class IwLoadoutRandomizer<THints> : Randomizer<THints, Loadout> where THints : MwLoadoutHints
+    public class MwBaseLoadoutRandomizer<THints> : Randomizer<THints, Loadout> where THints : MwLoadoutHints
     {
-        private readonly Func<GameItem, bool> _filterInOverkillPerk = (g) => g.Name == "Overkill";
-        private readonly Func<Weapon, bool> _filterInRiotShield = (w) => w.Name == "Riot Shield";
-        
-        private readonly string[] _primaryWeaponTypes = new string[] { "Assault Rifle", "Submachine Gun", "Sniper Rifle", "Marksman Rifle", "Shotgun", "Light Machine Gun" };
-        private readonly string[] _secondaryWeaponTypes = new string[] { "Handgun", "Launcher", "Melee" };
-
-        private readonly HashSet<string> _primaryWeaponTypeSet;
-        private readonly HashSet<string> _secondaryWeaponTypeSet;
-
+        private readonly Predicate<GameItem> _isOverkillPerk = (g) => g.Name == "Overkill";
+        private readonly Predicate<Weapon> _isRiotShield = (w) => w.Name == "Riot Shield";
         private readonly CodDb _db;
+        private readonly MwLoadoutOrdinalWeapon _mwLoadoutOrdinalWeapon;
 
         protected THints? Hints;
 
-        public IwLoadoutRandomizer(CodDb db)
+        public MwBaseLoadoutRandomizer(CodDb db)
         {
             _db = db;
-
-            _primaryWeaponTypeSet = new HashSet<string>(_primaryWeaponTypes);
-            _secondaryWeaponTypeSet = new HashSet<string>(_secondaryWeaponTypes);
+            _mwLoadoutOrdinalWeapon = new MwLoadoutOrdinalWeapon();
         }
 
         public override Loadout Randomize(THints hints)
@@ -32,7 +25,7 @@ namespace CodWeaponsRandomizer.Core.COD
             {
                 List<GameItem> perks = PickPerks();
                 WeaponBuild primaryWeapon = PickPrimaryWeapon();
-                WeaponBuild secondaryWeapon = perks.Any(_filterInOverkillPerk) ? PickPrimaryWeapon(primaryWeapon.Weapon) : PickSecondaryWeapon();
+                WeaponBuild secondaryWeapon = perks.Any(p => _isOverkillPerk(p)) ? PickPrimaryWeapon(primaryWeapon.Weapon) : PickSecondaryWeapon();
                 GameItem lethal = PickLethal();
                 GameItem tactical = PickTactical();
 
@@ -56,7 +49,7 @@ namespace CodWeaponsRandomizer.Core.COD
             {
                 GameItem perk;
                 if (perkTier.Tier == 2 && Hints != null && Hints.EnforceUseOverkillPerk)
-                    perk = perkTier.Perks.Single(_filterInOverkillPerk);
+                    perk = perkTier.Perks.Single(p => _isOverkillPerk(p));
                 else
                     perk = perkTier.Perks[GenerateRandomIndex(perkTier.Perks.Count)];
 
@@ -95,16 +88,16 @@ namespace CodWeaponsRandomizer.Core.COD
 
         protected virtual List<Weapon> GetPrimaryWeapons()
         {
-            List<Weapon> primaryWeapons = _db.Weapons.Where(w => _primaryWeaponTypeSet.Contains(w.WeaponType)).ToList();
-            primaryWeapons.Add(_db.Weapons.Single(_filterInRiotShield));
+            List<Weapon> primaryWeapons = _db.Weapons.Where(w => _mwLoadoutOrdinalWeapon.PrimaryWeaponTypes.Contains(w.WeaponType)).ToList();
+            primaryWeapons.RemoveAll(w => w.WeaponType == "Melee" && !_isRiotShield(w)); // removes all melee weapons except riot shield
 
             return primaryWeapons;
         }
 
         protected virtual List<Weapon> GetSecondaryWeapons()
         {
-            List<Weapon> secondaryWeapons = _db.Weapons.Where(w => _secondaryWeaponTypeSet.Contains(w.WeaponType)).ToList();
-            secondaryWeapons.Remove(_db.Weapons.Single(_filterInRiotShield));
+            List<Weapon> secondaryWeapons = _db.Weapons.Where(w => _mwLoadoutOrdinalWeapon.PrimaryWeaponTypes.Contains(w.WeaponType)).ToList();
+            secondaryWeapons.RemoveAll(_isRiotShield);
 
             return secondaryWeapons;
         }
