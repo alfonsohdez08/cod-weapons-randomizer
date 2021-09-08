@@ -21,8 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="test-dbs\mw\" />
-    <Folder Include="test-dbs\cw\" />
+    <Content Include=".\test-dbs\**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

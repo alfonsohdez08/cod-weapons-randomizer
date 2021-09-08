@@ -23,7 +23,7 @@ public class MwLoadoutRandomizerTests: IClassFixture<MwLoadoutRandomizerFixture>
 
         Loadout loadout = _fixture.MwLoadoutRandomizer.Randomize(mwLoadoutHints);
 
-        loadout.AssertIsValid();
+        LoadoutAssert.IsValidMwLoadout(loadout, _fixture.MwDb, assertOverkill: false);
     }
 
     [Fact]
@@ -37,7 +37,7 @@ public class MwLoadoutRandomizerTests: IClassFixture<MwLoadoutRandomizerFixture>
 
         Loadout loadout = _fixture.MwLoadoutRandomizer.Randomize(mwLoadoutHints);
 
-        loadout.AssertIsValid();
+        LoadoutAssert.IsValidMwLoadout(loadout, _fixture.MwDb, assertOverkill: true);
     }
 
     [Fact]
@@ -47,16 +47,18 @@ public class MwLoadoutRandomizerTests: IClassFixture<MwLoadoutRandomizerFixture>
 
         Loadout loadout = _fixture.MwLoadoutRandomizer.Randomize(mwLoadoutHints);
 
-        loadout.AssertIsValid();
+        LoadoutAssert.IsValidMwLoadout(loadout, _fixture.MwDb, assertOverkill: false);
     }
 }
 
 public class MwLoadoutRandomizerFixture
 {
     public MwLoadoutRandomizer MwLoadoutRandomizer { get; }
+    public MwDb MwDb { get; }
 
     public MwLoadoutRandomizerFixture()
     {
-        MwLoadoutRandomizer = new MwLoadoutRandomizer(new MwDb(""));
+        MwDb = new MwDb(@"test-dbs\mw");
+        MwLoadoutRandomizer = new MwLoadoutRandomizer(MwDb);
     }
 }

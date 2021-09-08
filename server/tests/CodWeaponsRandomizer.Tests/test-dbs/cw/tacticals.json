@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Stun Grenade"
+  },
+  {
+    "id": 2,
+    "name": "Stimshot"
+  },
+  {
+    "id": 3,
+    "name": "Smoke Grenade"
+  },
+  {
+    "id": 4,
+    "name": "Flashbang"
+  },
+  {
+    "id": 5,
+    "name": "Decoy"
+  },
+  {
+    "id": 6,
+    "name": "Cymbal Monkey"
+  },
+  {
+    "id": 7,
+    "name": "Essence Trap"
+  },
+  {
+    "id": 8,
+    "name": "Grapple Gun"
+  },
+  {
+    "id": 9,
+    "name": "Outbreak"
+  }
+]

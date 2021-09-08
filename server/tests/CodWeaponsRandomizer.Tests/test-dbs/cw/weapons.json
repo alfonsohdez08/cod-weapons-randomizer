@@ -1,0 +1,1584 @@
+[
+  {
+    "weaponType": "Assault Rifle",
+    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/7/73/XM4_Gunsmith_Preview_BOCW.png/revision/latest/scale-to-width-down/350?cb=20201121064155",
+    "supportedAttachments": [
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Millstop Reflex"
+          },
+          {
+            "id": 2,
+            "name": "Visiontech 2x"
+          },
+          {
+            "id": 3,
+            "name": "Kobra Red Dot"
+          },
+          {
+            "id": 4,
+            "name": "Quickdot LED"
+          },
+          {
+            "id": 5,
+            "name": "Axial Arms 3x"
+          },
+          {
+            "id": 6,
+            "name": "Sillix Holoscout"
+          },
+          {
+            "id": 7,
+            "name": "Microflex LED"
+          },
+          {
+            "id": 8,
+            "name": "Hawksmoor"
+          },
+          {
+            "id": 9,
+            "name": "Royal \u0026 Kross 4x"
+          },
+          {
+            "id": 10,
+            "name": "SUSAT Multizoom"
+          },
+          {
+            "id": 11,
+            "name": "Diamondback Reflex"
+          },
+          {
+            "id": 12,
+            "name": "AN/PVS-4 Thermal"
+          }
+        ],
+        "id": 1,
+        "name": "Optic"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Muzzle Brake 5.56"
+          },
+          {
+            "id": 2,
+            "name": "Flashguard 5.56"
+          },
+          {
+            "id": 3,
+            "name": "Suppressor"
+          },
+          {
+            "id": 4,
+            "name": "Infantry Compensator"
+          },
+          {
+            "id": 5,
+            "name": "SOCOM Eliminator"
+          },
+          {
+            "id": 6,
+            "name": "Agency Suppressor"
+          }
+        ],
+        "id": 2,
+        "name": "Muzzle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "11.8\u0022 Extended"
+          },
+          {
+            "id": 2,
+            "name": "12.5\u0022 Cavalry Lancer"
+          },
+          {
+            "id": 3,
+            "name": "13.5\u0022 Reinforced Heavy"
+          },
+          {
+            "id": 4,
+            "name": "13.7\u0022 Ranger"
+          },
+          {
+            "id": 5,
+            "name": "13.7\u0022 Takedown"
+          },
+          {
+            "id": 6,
+            "name": "13.5\u0022 Task Force"
+          }
+        ],
+        "id": 3,
+        "name": "Barrel"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Steady Aim Laser"
+          },
+          {
+            "id": 2,
+            "name": "Mounted Flashlight"
+          },
+          {
+            "id": 3,
+            "name": "SOF Target Designator"
+          },
+          {
+            "id": 4,
+            "name": "SWAT 5mw Laser Sight"
+          },
+          {
+            "id": 5,
+            "name": "Tiger Team Spotlight"
+          },
+          {
+            "id": 6,
+            "name": "Ember Sighting Point"
+          }
+        ],
+        "id": 4,
+        "name": "Body"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Foregrip"
+          },
+          {
+            "id": 2,
+            "name": "Infiltrator Grip"
+          },
+          {
+            "id": 3,
+            "name": "Patrol Grip"
+          },
+          {
+            "id": 4,
+            "name": "Bruiser Grip"
+          },
+          {
+            "id": 5,
+            "name": "Field Agent Grip"
+          },
+          {
+            "id": 6,
+            "name": "SFOD Speedgrip"
+          }
+        ],
+        "id": 5,
+        "name": "Underbarrel"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "40 Rnd"
+          },
+          {
+            "id": 2,
+            "name": "Jungle-Style Mag"
+          },
+          {
+            "id": 3,
+            "name": "35 Rnd Speed Mag"
+          },
+          {
+            "id": 4,
+            "name": "STANAG 50 Rnd"
+          },
+          {
+            "id": 5,
+            "name": "B-Ops Mini Clamp"
+          },
+          {
+            "id": 6,
+            "name": "Salvo 45 Rnd Fast Mag"
+          }
+        ],
+        "id": 6,
+        "name": "Magazine"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Speed Tape"
+          },
+          {
+            "id": 2,
+            "name": "Dropshot Wrap"
+          },
+          {
+            "id": 3,
+            "name": "Field Tape"
+          },
+          {
+            "id": 4,
+            "name": "SASR Jungle Grip"
+          },
+          {
+            "id": 5,
+            "name": "Serpent Wrap"
+          },
+          {
+            "id": 6,
+            "name": "Airborne Elastic Wrap"
+          }
+        ],
+        "id": 7,
+        "name": "Handle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Tactical Stock"
+          },
+          {
+            "id": 2,
+            "name": "Wire Stock"
+          },
+          {
+            "id": 3,
+            "name": "Duster Stock"
+          },
+          {
+            "id": 4,
+            "name": "Buffer Tube"
+          },
+          {
+            "id": 5,
+            "name": "SAS Combat Stock"
+          },
+          {
+            "id": 6,
+            "name": "Raider Pad"
+          }
+        ],
+        "id": 8,
+        "name": "Stock"
+      }
+    ],
+    "id": 1,
+    "name": "XM4"
+  },
+  {
+    "weaponType": "Assault Rifle",
+    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/8/84/AK-47_Gunsmith_BOCW.png/revision/latest/scale-to-width-down/350?cb=20210403084208",
+    "supportedAttachments": [
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Millstop Reflex"
+          },
+          {
+            "id": 2,
+            "name": "Visiontech 2x"
+          },
+          {
+            "id": 3,
+            "name": "Kobra Red Dot"
+          },
+          {
+            "id": 4,
+            "name": "Quickdot LED"
+          },
+          {
+            "id": 5,
+            "name": "Axial Arms 3x"
+          },
+          {
+            "id": 6,
+            "name": "Sillix Holoscout"
+          },
+          {
+            "id": 7,
+            "name": "Microflex LED"
+          },
+          {
+            "id": 8,
+            "name": "Hawksmoor"
+          },
+          {
+            "id": 9,
+            "name": "Royal \u0026 Kross 4x"
+          },
+          {
+            "id": 10,
+            "name": "SUSAT Multizoom"
+          },
+          {
+            "id": 11,
+            "name": "Diamondback Reflex"
+          },
+          {
+            "id": 12,
+            "name": "Noch Sova Thermal"
+          }
+        ],
+        "id": 1,
+        "name": "Optic"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Muzzle Brake 7.62"
+          },
+          {
+            "id": 2,
+            "name": "Flashguard 7.62"
+          },
+          {
+            "id": 3,
+            "name": "Suppressor"
+          },
+          {
+            "id": 4,
+            "name": "Spetsnaz Compensator"
+          },
+          {
+            "id": 5,
+            "name": "KGB Eliminator"
+          },
+          {
+            "id": 6,
+            "name": "GRU Suppressor"
+          }
+        ],
+        "id": 2,
+        "name": "Muzzle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "15.5\u0022 Ultralight"
+          },
+          {
+            "id": 2,
+            "name": "16.5\u0022 Cavalry Lancer"
+          },
+          {
+            "id": 3,
+            "name": "18.2\u0022 VDV Reinforced"
+          },
+          {
+            "id": 4,
+            "name": "20\u0022 Liberator"
+          },
+          {
+            "id": 5,
+            "name": "18.2\u0022 Takedown"
+          },
+          {
+            "id": 6,
+            "name": "20\u0022 Spetsnaz RPK Barrel"
+          }
+        ],
+        "id": 3,
+        "name": "Barrel"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Steady Aim Laser"
+          },
+          {
+            "id": 2,
+            "name": "Mounted Flashlight"
+          },
+          {
+            "id": 3,
+            "name": "KGB Target Designator"
+          },
+          {
+            "id": 4,
+            "name": "GRU 5mw Laser Sight"
+          },
+          {
+            "id": 5,
+            "name": "Tiger Team Spotlight"
+          },
+          {
+            "id": 6,
+            "name": "Ember Sighting Point"
+          }
+        ],
+        "id": 4,
+        "name": "Body"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Foregrip"
+          },
+          {
+            "id": 2,
+            "name": "Infiltrator Grip"
+          },
+          {
+            "id": 3,
+            "name": "Patrol Grip"
+          },
+          {
+            "id": 4,
+            "name": "Bruiser Grip"
+          },
+          {
+            "id": 5,
+            "name": "Spetsnaz Grip"
+          },
+          {
+            "id": 6,
+            "name": "Spetsnaz Speedgrip"
+          }
+        ],
+        "id": 5,
+        "name": "Underbarrel"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "40 Rnd"
+          },
+          {
+            "id": 2,
+            "name": "Taped Mags"
+          },
+          {
+            "id": 3,
+            "name": "40 Rnd Speed Mag"
+          },
+          {
+            "id": 4,
+            "name": "Bakelite 50 Rnd"
+          },
+          {
+            "id": 5,
+            "name": "GRU Mag Clamp"
+          },
+          {
+            "id": 6,
+            "name": "VDV 50 Rnd Fast Mag"
+          }
+        ],
+        "id": 6,
+        "name": "Magazine"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Speed Tape"
+          },
+          {
+            "id": 2,
+            "name": "Dropshot Wrap"
+          },
+          {
+            "id": 3,
+            "name": "Field Tape"
+          },
+          {
+            "id": 4,
+            "name": "Spetsnaz Field Grip"
+          },
+          {
+            "id": 5,
+            "name": "Serpent Wrap"
+          },
+          {
+            "id": 6,
+            "name": "GRU Elastic Wrap"
+          }
+        ],
+        "id": 7,
+        "name": "Handle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Tactical Stock"
+          },
+          {
+            "id": 2,
+            "name": "Wire Stock"
+          },
+          {
+            "id": 3,
+            "name": "Duster Stock"
+          },
+          {
+            "id": 4,
+            "name": "No Stock"
+          },
+          {
+            "id": 5,
+            "name": "Spetsnaz PKM Stock"
+          },
+          {
+            "id": 6,
+            "name": "KGB Skeletal Stock"
+          }
+        ],
+        "id": 8,
+        "name": "Stock"
+      }
+    ],
+    "id": 2,
+    "name": "AK-47"
+  },
+  {
+    "weaponType": "Assault Rifle",
+    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/5/56/Krig_6_BOCW.png/revision/latest/scale-to-width-down/350?cb=20200919005345",
+    "supportedAttachments": [
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Millstop Reflex"
+          },
+          {
+            "id": 2,
+            "name": "Visiontech 2x"
+          },
+          {
+            "id": 3,
+            "name": "Kobra Red Dot"
+          },
+          {
+            "id": 4,
+            "name": "Quickdot LED"
+          },
+          {
+            "id": 5,
+            "name": "Axial Arms 3x"
+          },
+          {
+            "id": 6,
+            "name": "Sillix Holoscout"
+          },
+          {
+            "id": 7,
+            "name": "Microflex LED"
+          },
+          {
+            "id": 8,
+            "name": "Hawksmoor"
+          },
+          {
+            "id": 9,
+            "name": "Royal \u0026 Kross 4x"
+          },
+          {
+            "id": 10,
+            "name": "SUSAT Multizoom"
+          },
+          {
+            "id": 11,
+            "name": "Diamondback Reflex"
+          },
+          {
+            "id": 12,
+            "name": "AN/PVS-4 Thermal"
+          }
+        ],
+        "id": 1,
+        "name": "Optic"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Muzzle Brake 5.56"
+          },
+          {
+            "id": 2,
+            "name": "Flashguard 5.56"
+          },
+          {
+            "id": 3,
+            "name": "Suppressor"
+          },
+          {
+            "id": 4,
+            "name": "Infantry Compensator"
+          },
+          {
+            "id": 5,
+            "name": "SOCOM Eliminator"
+          },
+          {
+            "id": 6,
+            "name": "Agency Suppressor"
+          }
+        ],
+        "id": 2,
+        "name": "Muzzle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "16.5\u0022 Ultralight"
+          },
+          {
+            "id": 2,
+            "name": "17.7\u0022 Cavalry Lancer"
+          },
+          {
+            "id": 3,
+            "name": "15.5\u0022 Contour"
+          },
+          {
+            "id": 4,
+            "name": "19.7\u0022 Ranger"
+          },
+          {
+            "id": 5,
+            "name": "19.7\u0022 Takedown"
+          },
+          {
+            "id": 6,
+            "name": "15\u0022 CMV Mil-Spec"
+          }
+        ],
+        "id": 3,
+        "name": "Barrel"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Steady Aim Laser"
+          },
+          {
+            "id": 2,
+            "name": "Mounted Flashlight"
+          },
+          {
+            "id": 3,
+            "name": "SOF Target Designator"
+          },
+          {
+            "id": 4,
+            "name": "SWAT 5mw Laser Sight"
+          },
+          {
+            "id": 5,
+            "name": "Tiger Team Spotlight"
+          },
+          {
+            "id": 6,
+            "name": "Ember Sighting Point"
+          }
+        ],
+        "id": 4,
+        "name": "Body"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Foregrip"
+          },
+          {
+            "id": 2,
+            "name": "Infiltrator Grip"
+          },
+          {
+            "id": 3,
+            "name": "Patrol Grip"
+          },
+          {
+            "id": 4,
+            "name": "Bruiser Grip"
+          },
+          {
+            "id": 5,
+            "name": "Field Agent Grip"
+          },
+          {
+            "id": 6,
+            "name": "SFOD Speedgrip"
+          }
+        ],
+        "id": 5,
+        "name": "Underbarrel"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "40 Rnd"
+          },
+          {
+            "id": 2,
+            "name": "Jungle-Style Mag"
+          },
+          {
+            "id": 3,
+            "name": "40 Rnd Speed Mag"
+          },
+          {
+            "id": 4,
+            "name": "STANAG 50 Rnd"
+          },
+          {
+            "id": 5,
+            "name": "SAS Mag Clamp"
+          },
+          {
+            "id": 6,
+            "name": "Salvo 50 Rnd Fast Mag"
+          }
+        ],
+        "id": 6,
+        "name": "Magazine"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Speed Tape"
+          },
+          {
+            "id": 2,
+            "name": "Dropshot Wrap"
+          },
+          {
+            "id": 3,
+            "name": "Field Tape"
+          },
+          {
+            "id": 4,
+            "name": "SASR Jungle Grip"
+          },
+          {
+            "id": 5,
+            "name": "Serpent Wrap"
+          },
+          {
+            "id": 6,
+            "name": "Airborne Elastic Wrap"
+          }
+        ],
+        "id": 7,
+        "name": "Handle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Tactical Stock"
+          },
+          {
+            "id": 2,
+            "name": "Wire Stock"
+          },
+          {
+            "id": 3,
+            "name": "Duster Stock"
+          },
+          {
+            "id": 4,
+            "name": "No Stock"
+          },
+          {
+            "id": 5,
+            "name": "SAS Combat Stock"
+          },
+          {
+            "id": 6,
+            "name": "Raider Stock"
+          }
+        ],
+        "id": 8,
+        "name": "Stock"
+      }
+    ],
+    "id": 3,
+    "name": "Krig 6"
+  },
+  {
+    "weaponType": "Melee",
+    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/a/af/Knife_Gunsmith_Model_BOCW.png/revision/latest/scale-to-width-down/322?cb=20201201224120",
+    "supportedAttachments": [],
+    "id": 44,
+    "name": "Knife"
+  },
+  {
+    "weaponType": "Melee",
+    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/3/30/Sledgehammer_Gunsmith_BOCW.png/revision/latest/scale-to-width-down/350?cb=20210322035757",
+    "supportedAttachments": [],
+    "id": 45,
+    "name": "Sledgehammer"
+  },
+  {
+    "weaponType": "Shotgun",
+    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/b/b2/Gallo_SA12_Gunsmith_Model_BOCW.png/revision/latest/scale-to-width-down/350?cb=20200919015902",
+    "supportedAttachments": [
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Millstop Reflex"
+          },
+          {
+            "id": 2,
+            "name": "Quickdot LED"
+          },
+          {
+            "id": 3,
+            "name": "Microflex LED"
+          }
+        ],
+        "id": 1,
+        "name": "Optic"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Duckbill Choke"
+          },
+          {
+            "id": 2,
+            "name": "Flash Cone 12 GA"
+          },
+          {
+            "id": 3,
+            "name": "Sound Suppressor"
+          },
+          {
+            "id": 4,
+            "name": "Infantry V-Choke"
+          },
+          {
+            "id": 5,
+            "name": "SOCOM Blast Mitigator"
+          },
+          {
+            "id": 6,
+            "name": "Agency Choke"
+          }
+        ],
+        "id": 2,
+        "name": "Muzzle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "22.7\u0022 Extended"
+          },
+          {
+            "id": 2,
+            "name": "23.5\u0022 Cavalry Lancer"
+          },
+          {
+            "id": 3,
+            "name": "21.4\u0022 Reinforced Heavy"
+          },
+          {
+            "id": 4,
+            "name": "24.6\u0022 Ranger"
+          },
+          {
+            "id": 5,
+            "name": "20.3\u0022 Hammer Forged"
+          },
+          {
+            "id": 6,
+            "name": "24.8\u0022 Task Force"
+          }
+        ],
+        "id": 3,
+        "name": "Barrel"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Steady Aim Laser"
+          },
+          {
+            "id": 2,
+            "name": "Mounted Flashlight"
+          },
+          {
+            "id": 3,
+            "name": "SOF Target Designator"
+          },
+          {
+            "id": 4,
+            "name": "SWAT 5mw Laser Sight"
+          },
+          {
+            "id": 5,
+            "name": "Tiger Team Spotlight"
+          },
+          {
+            "id": 6,
+            "name": "Ember Sighting Point"
+          }
+        ],
+        "id": 4,
+        "name": "Body"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "9 Rnd Tube"
+          },
+          {
+            "id": 2,
+            "name": "STANAG 12 Rnd Tube"
+          }
+        ],
+        "id": 5,
+        "name": "Magazine"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Speed Tape"
+          },
+          {
+            "id": 2,
+            "name": "Dropshot Wrap"
+          },
+          {
+            "id": 3,
+            "name": "Field Tape"
+          },
+          {
+            "id": 4,
+            "name": "SASR Jungle Grip"
+          },
+          {
+            "id": 5,
+            "name": "Serpent Wrap"
+          },
+          {
+            "id": 6,
+            "name": "Airborne Elastic Wrap"
+          }
+        ],
+        "id": 6,
+        "name": "Handle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Tactical Stock"
+          },
+          {
+            "id": 2,
+            "name": "Wire Stock"
+          },
+          {
+            "id": 3,
+            "name": "Duster Stock"
+          },
+          {
+            "id": 4,
+            "name": "No Stock"
+          },
+          {
+            "id": 5,
+            "name": "SAS Combat Stock"
+          },
+          {
+            "id": 6,
+            "name": "Marathon Stock"
+          }
+        ],
+        "id": 7,
+        "name": "Stock"
+      }
+    ],
+    "id": 40,
+    "name": "Gallo SA12"
+  },
+  {
+    "weaponType": "Shotgun",
+    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/d/d2/Streetsweeper_Gunsmith_Model_BOCW.png/revision/latest/scale-to-width-down/350?cb=20210108020929",
+    "supportedAttachments": [
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Millstop Reflex"
+          },
+          {
+            "id": 2,
+            "name": "Quickdot LED"
+          },
+          {
+            "id": 3,
+            "name": "Microflex LED"
+          }
+        ],
+        "id": 1,
+        "name": "Optic"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Duckbill Choke"
+          },
+          {
+            "id": 2,
+            "name": "Flash Cone 12 Ga"
+          },
+          {
+            "id": 3,
+            "name": "Sound Suppressor"
+          },
+          {
+            "id": 4,
+            "name": "Infantry V-Choke"
+          },
+          {
+            "id": 5,
+            "name": "SOCOM Blast Mitigator"
+          },
+          {
+            "id": 6,
+            "name": "Agency Choke"
+          }
+        ],
+        "id": 2,
+        "name": "Muzzle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "13.7\u0022 Extended"
+          },
+          {
+            "id": 2,
+            "name": "14.6\u0022 Cavalry Lancer"
+          },
+          {
+            "id": 3,
+            "name": "13\u0022 Reinforced Heavy"
+          },
+          {
+            "id": 4,
+            "name": "14.6\u0022 Ranger"
+          },
+          {
+            "id": 5,
+            "name": "13.3\u0022 Hammer Forged"
+          },
+          {
+            "id": 6,
+            "name": "14.4\u0022 Task Force"
+          }
+        ],
+        "id": 3,
+        "name": "Barrel"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Steady Aim Laser"
+          },
+          {
+            "id": 2,
+            "name": "Mounted Flashlight"
+          },
+          {
+            "id": 3,
+            "name": "SOF Target Designator"
+          },
+          {
+            "id": 4,
+            "name": "SWAT 5mw Laser Sight"
+          },
+          {
+            "id": 5,
+            "name": "Tiger Team Spotlight"
+          },
+          {
+            "id": 6,
+            "name": "Ember Sighting Point"
+          }
+        ],
+        "id": 4,
+        "name": "Body"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "15 Rnd Drum"
+          },
+          {
+            "id": 2,
+            "name": "STANAG 18 Rnd Drum"
+          }
+        ],
+        "id": 5,
+        "name": "Magazine"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Speed Tape"
+          },
+          {
+            "id": 2,
+            "name": "Dropshot Wrap"
+          },
+          {
+            "id": 3,
+            "name": "Field Tape"
+          },
+          {
+            "id": 4,
+            "name": "SASR Jungle Grip"
+          },
+          {
+            "id": 5,
+            "name": "Serpent Wrap"
+          },
+          {
+            "id": 6,
+            "name": "Airborne Elastic Wrap"
+          }
+        ],
+        "id": 6,
+        "name": "Handle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Tactical Stock"
+          },
+          {
+            "id": 2,
+            "name": "Wire Stock"
+          },
+          {
+            "id": 3,
+            "name": "Duster Stock"
+          },
+          {
+            "id": 4,
+            "name": "No Stock"
+          },
+          {
+            "id": 5,
+            "name": "SAS Combat Stock"
+          },
+          {
+            "id": 6,
+            "name": "Marathon Stock"
+          }
+        ],
+        "id": 7,
+        "name": "Stock"
+      }
+    ],
+    "id": 41,
+    "name": "Streetsweeper"
+  },
+  {
+    "weaponType": "Pistol",
+    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/6/69/Diamatti_Gunsmith_Preview_BOCW.png/revision/latest/scale-to-width-down/350?cb=20201121082733",
+    "supportedAttachments": [
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Quickdot LED"
+          },
+          {
+            "id": 2,
+            "name": "Otero Mini Reflex"
+          },
+          {
+            "id": 3,
+            "name": "Microflex LED"
+          }
+        ],
+        "id": 1,
+        "name": "Optic"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Muzzle Brake 9"
+          },
+          {
+            "id": 2,
+            "name": "Flashguard 9"
+          },
+          {
+            "id": 3,
+            "name": "Sound Suppressor"
+          },
+          {
+            "id": 4,
+            "name": "Infantry Compensator"
+          },
+          {
+            "id": 5,
+            "name": "SOCOM Eliminator"
+          },
+          {
+            "id": 6,
+            "name": "Agency Suppressor"
+          }
+        ],
+        "id": 2,
+        "name": "Muzzle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "7.8\u0022 Extended"
+          },
+          {
+            "id": 2,
+            "name": "6.5\u0022 Cavalry Lancer"
+          },
+          {
+            "id": 3,
+            "name": "7.2\u0022 Reinforced Heavy"
+          },
+          {
+            "id": 4,
+            "name": "7.8\u0022 Chrome Lined"
+          },
+          {
+            "id": 5,
+            "name": "6.5\u0022 Takedown"
+          },
+          {
+            "id": 6,
+            "name": "7.2\u0022 Task Force"
+          }
+        ],
+        "id": 3,
+        "name": "Barrel"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Steady Aim Laser"
+          },
+          {
+            "id": 2,
+            "name": "Mounted Flashlight"
+          },
+          {
+            "id": 3,
+            "name": "SOF Target Designator"
+          },
+          {
+            "id": 4,
+            "name": "SWAT 5mw Laser Sight"
+          },
+          {
+            "id": 5,
+            "name": "Tiger Team Spotlight"
+          },
+          {
+            "id": 6,
+            "name": "Ember Sighting Point"
+          }
+        ],
+        "id": 4,
+        "name": "Body"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "24 Rnd"
+          },
+          {
+            "id": 2,
+            "name": "Fast Mag"
+          },
+          {
+            "id": 3,
+            "name": "24 Rd Speed Mag"
+          },
+          {
+            "id": 4,
+            "name": "STANAG 30 Rnd"
+          },
+          {
+            "id": 5,
+            "name": "Vandal Speed Loader"
+          },
+          {
+            "id": 6,
+            "name": "Salvo 30 Rnd Fast Mag"
+          }
+        ],
+        "id": 5,
+        "name": "Magazine"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Speed Tape"
+          },
+          {
+            "id": 2,
+            "name": "Dropshot Wrap"
+          },
+          {
+            "id": 3,
+            "name": "Field Tape"
+          },
+          {
+            "id": 4,
+            "name": "SASR Jungle Grip"
+          },
+          {
+            "id": 5,
+            "name": "Serpent Wrap"
+          },
+          {
+            "id": 6,
+            "name": "Airborne Elastic Wrap"
+          }
+        ],
+        "id": 6,
+        "name": "Handle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Dual Wield"
+          }
+        ],
+        "id": 7,
+        "name": "Stock"
+      }
+    ],
+    "id": 36,
+    "name": "Diamatti"
+  },
+  {
+    "weaponType": "Pistol",
+    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/1/14/AMP63_Gunsmith_BOCW.png/revision/latest/scale-to-width-down/349?cb=20210601180828",
+    "supportedAttachments": [
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Quickdot LED"
+          },
+          {
+            "id": 2,
+            "name": "Otero Mini Reflex"
+          },
+          {
+            "id": 3,
+            "name": "Microflex LED"
+          }
+        ],
+        "id": 1,
+        "name": "Optic"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Muzzle Brake 9"
+          },
+          {
+            "id": 2,
+            "name": "Flashguard 9"
+          },
+          {
+            "id": 3,
+            "name": "Sound Suppressor"
+          },
+          {
+            "id": 4,
+            "name": "Infantry Compensator"
+          },
+          {
+            "id": 5,
+            "name": "SOCOM Eliminator"
+          },
+          {
+            "id": 6,
+            "name": "Agency Suppressor"
+          }
+        ],
+        "id": 2,
+        "name": "Muzzle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "6.1\u0022 Extended"
+          },
+          {
+            "id": 2,
+            "name": "5.9\u0022 Cavalry Lancer"
+          },
+          {
+            "id": 3,
+            "name": "6.1\u0022 Reinforced Heavy"
+          },
+          {
+            "id": 4,
+            "name": "6.8\u0022 Chrome Lined"
+          },
+          {
+            "id": 5,
+            "name": "6.4\u0022 Takedown"
+          },
+          {
+            "id": 6,
+            "name": "6.4\u0022 Task Force"
+          }
+        ],
+        "id": 3,
+        "name": "Barrel"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Steady Aim Laser"
+          },
+          {
+            "id": 2,
+            "name": "Mounted Flashlight"
+          },
+          {
+            "id": 3,
+            "name": "SOF Target Designator"
+          },
+          {
+            "id": 4,
+            "name": "SWAT 5mw Laser Sight"
+          },
+          {
+            "id": 5,
+            "name": "Tiger Team Spotlight"
+          },
+          {
+            "id": 6,
+            "name": "Ember Sighting Point"
+          }
+        ],
+        "id": 4,
+        "name": "Body"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "20 Rnd"
+          },
+          {
+            "id": 2,
+            "name": "Fast Mag"
+          },
+          {
+            "id": 3,
+            "name": "20 Rd Speed Mag"
+          },
+          {
+            "id": 4,
+            "name": "STANAG 25 Rnd"
+          },
+          {
+            "id": 5,
+            "name": "Vandal Speed Loader"
+          },
+          {
+            "id": 6,
+            "name": "Salvo 22 Rnd Fast Mag"
+          }
+        ],
+        "id": 5,
+        "name": "Magazine"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Speed Tape"
+          },
+          {
+            "id": 2,
+            "name": "Dropshot Wrap"
+          },
+          {
+            "id": 3,
+            "name": "Field Tape"
+          },
+          {
+            "id": 4,
+            "name": "SASR Jungle Grip"
+          },
+          {
+            "id": 5,
+            "name": "Serpent Wrap"
+          },
+          {
+            "id": 6,
+            "name": "Airborne Elastic Wrap"
+          }
+        ],
+        "id": 6,
+        "name": "Handle"
+      },
+      {
+        "attachments": [
+          {
+            "id": 1,
+            "name": "Dual Wield"
+          }
+        ],
+        "id": 7,
+        "name": "Stock"
+      }
+    ],
+    "id": 37,
+    "name": "AMP63"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "tier": 1,
+    "perks": [
+      {
+        "id": 1,
+        "name": "Engineer"
+      },
+      {
+        "id": 2,
+        "name": "Paranoia"
+      },
+      {
+        "id": 3,
+        "name": "Flak Jacket"
+      },
+      {
+        "id": 4,
+        "name": "Tactical Mask"
+      },
+      {
+        "id": 5,
+        "name": "Forward Intel"
+      }
+    ]
+  },
+  {
+    "tier": 2,
+    "perks": [
+      {
+        "id": 1,
+        "name": "Assassin"
+      },
+      {
+        "id": 2,
+        "name": "Gearhead"
+      },
+      {
+        "id": 3,
+        "name": "Scavenger"
+      },
+      {
+        "id": 4,
+        "name": "Quartermaster"
+      },
+      {
+        "id": 5,
+        "name": "Tracker"
+      }
+    ]
+  },
+  {
+    "tier": 3,
+    "perks": [
+      {
+        "id": 1,
+        "name": "Gung-Ho"
+      },
+      {
+        "id": 2,
+        "name": "Ghost"
+      },
+      {
+        "id": 3,
+        "name": "Cold Blooded"
+      },
+      {
+        "id": 4,
+        "name": "Ninja"
+      },
+      {
+        "id": 5,
+        "name": "Spycraft"
+      }
+    ]
+  }
+]
