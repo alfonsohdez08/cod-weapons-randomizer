@@ -10,6 +10,6 @@
 
         protected int GenerateRandomIndex(int exclusiveEnd) => GenerateRandomNumber(0, exclusiveEnd);
 
-        public abstract TRandomType Randomize(THints? hints);
+        public abstract TRandomType Randomize(THints hints);
     }
 }

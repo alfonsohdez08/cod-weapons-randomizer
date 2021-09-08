@@ -25,7 +25,7 @@ namespace CodWeaponsRandomizer.Core.COD
             _secondaryWeaponTypeSet = new HashSet<string>(_secondaryWeaponTypes);
         }
 
-        public override Loadout Randomize(THints? hints)
+        public override Loadout Randomize(THints hints)
         {
             Hints = hints;
             try

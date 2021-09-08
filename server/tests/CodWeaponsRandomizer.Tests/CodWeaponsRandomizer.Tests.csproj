@@ -20,4 +20,13 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="test-dbs\mw\" />
+    <Folder Include="test-dbs\cw\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CodWeaponsRandomizer.Core\CodWeaponsRandomizer.Core.csproj" />
+  </ItemGroup>
+
 </Project>
