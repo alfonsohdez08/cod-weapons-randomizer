@@ -8,4 +8,8 @@
   <ItemGroup>
     <ProjectReference Include="..\CodWeaponsRandomizer.Core\CodWeaponsRandomizer.Core.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
 </Project>

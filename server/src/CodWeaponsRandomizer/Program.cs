@@ -37,10 +37,16 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
+app.UseStaticFiles();
+
 app.UseCors(CorsPolicyName);
 
-app.MapPost("/mw-loadouts", ([FromServices] LoadoutRandomizer loadoutRandomizer, [FromBody] MwLoadoutHintsDto hints) => RandomizeLoadout(loadoutRandomizer, MapMwLoadoutHints(hints)));
-app.MapPost("/wz-loadouts", ([FromServices] LoadoutRandomizer loadoutRandomizer, [FromBody] WzLoadoutHintsDto hints) => RandomizeLoadout(loadoutRandomizer, MapWzLoadoutHints(hints)));
+app.MapPost("/mw-loadouts",
+    ([FromServices] LoadoutRandomizer loadoutRandomizer, [FromBody] MwLoadoutHintsDto hints) => RandomizeLoadout(loadoutRandomizer, MapMwLoadoutHints(hints))
+    );
+app.MapPost("/wz-loadouts",
+    ([FromServices] LoadoutRandomizer loadoutRandomizer, [FromBody] WzLoadoutHintsDto hints) => RandomizeLoadout(loadoutRandomizer, MapWzLoadoutHints(hints))
+    );
 
 static MwLoadoutHints MapMwLoadoutHints(MwLoadoutHintsDto hints) => new MwLoadoutHints()
 {
@@ -69,7 +75,7 @@ static LoadoutDto RandomizeLoadout(LoadoutRandomizer loadoutRandomizer, LoadoutH
     {
         Id = weaponBuild.Weapon.Id,
         Name = weaponBuild.Weapon.Name,
-        ImageUrl = weaponBuild.Weapon.ImageUrl,
+        ImageServerPath = weaponBuild.Weapon.ImageRelativePath,
         WeaponType = weaponBuild.Weapon.WeaponType,
         Attachments = weaponBuild.Attachments.Select(MapAttachment).ToList()
     };

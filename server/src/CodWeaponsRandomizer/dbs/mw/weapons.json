@@ -1,7 +1,7 @@
 [
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/6/6c/Kilo_141_model_MW.png/revision/latest/scale-to-width-down/350?cb=20200205144946",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_1.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -335,7 +335,7 @@
   },
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/3/31/FAL_model_MW.png/revision/latest/scale-to-width-down/349?cb=20210412235229",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_2.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -661,7 +661,7 @@
   },
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/1/19/M4A1_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210412235330",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_3.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -1003,7 +1003,7 @@
   },
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/b/b5/FR_5.56_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413000100",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_4.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -1321,7 +1321,7 @@
   },
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/e/e9/Oden_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413000102",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_5.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -1643,7 +1643,7 @@
   },
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/2/23/M13_model_MW.png/revision/latest/scale-to-width-down/350?cb=20200529112013",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_6.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -1981,7 +1981,7 @@
   },
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/6/69/FN_Scar_17_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413000059",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_7.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -2299,7 +2299,7 @@
   },
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/7/77/AK-47_model_MW.png/revision/latest/scale-to-width-down/350?cb=20201026192449",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_8.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -2633,7 +2633,7 @@
   },
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/9/95/RAM-7_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413000103",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_9.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -2947,7 +2947,7 @@
   },
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/9/9a/Grau_5.56_Gunsmith_MW.png/revision/latest/scale-to-width-down/350?cb=20201005025356",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_10.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -3273,7 +3273,7 @@
   },
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/3/33/CR-56_AMAX_model_MW.png/revision/latest/scale-to-width-down/350?cb=20200611101913",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_11.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -3603,7 +3603,7 @@
   },
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/d/d6/AN-94_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413000058",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_12.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -3933,7 +3933,7 @@
   },
   {
     "weaponType": "Assault Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/4/43/AS_VAL_Gunsmith_MW.png/revision/latest/scale-to-width-down/350?cb=20201005025631",
+    "imageRelativePath": "mw_weapon_images/wt_assaultrifle_wid_13.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -4197,7 +4197,7 @@
   },
   {
     "weaponType": "Submachine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/6/64/AUG_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20191119015709",
+    "imageRelativePath": "mw_weapon_images/wt_submachinegun_wid_14.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -4483,7 +4483,7 @@
   },
   {
     "weaponType": "Submachine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/8/8f/P90_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20210413001012",
+    "imageRelativePath": "mw_weapon_images/wt_submachinegun_wid_15.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -4735,7 +4735,7 @@
   },
   {
     "weaponType": "Submachine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/e/e6/MP5_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/349?cb=20210413001230",
+    "imageRelativePath": "mw_weapon_images/wt_submachinegun_wid_16.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -5021,7 +5021,7 @@
   },
   {
     "weaponType": "Submachine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/0/0b/Uzi_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/349?cb=20210413001410",
+    "imageRelativePath": "mw_weapon_images/wt_submachinegun_wid_17.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -5311,7 +5311,7 @@
   },
   {
     "weaponType": "Submachine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/3/31/PP19_Bizon_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/349?cb=20210413001656",
+    "imageRelativePath": "mw_weapon_images/wt_submachinegun_wid_18.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -5563,7 +5563,7 @@
   },
   {
     "weaponType": "Submachine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/4/4c/MP7_Gunsmith_MW.png/revision/latest/scale-to-width-down/350?cb=20200418111222",
+    "imageRelativePath": "mw_weapon_images/wt_submachinegun_wid_19.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -5841,7 +5841,7 @@
   },
   {
     "weaponType": "Submachine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/a/ae/Striker_45_model_MW.png/revision/latest/scale-to-width-down/350?cb=20210413001829",
+    "imageRelativePath": "mw_weapon_images/wt_submachinegun_wid_20.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -6119,7 +6119,7 @@
   },
   {
     "weaponType": "Submachine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/8/89/Fennec_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20210413001956",
+    "imageRelativePath": "mw_weapon_images/wt_submachinegun_wid_21.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -6393,7 +6393,7 @@
   },
   {
     "weaponType": "Submachine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/7/72/ISO_Gunsmith_MW.png/revision/latest/scale-to-width-down/350?cb=20200808040448",
+    "imageRelativePath": "mw_weapon_images/wt_submachinegun_wid_22.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -6671,7 +6671,7 @@
   },
   {
     "weaponType": "Submachine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/5/54/CX-9_HUD_Icon_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413050303",
+    "imageRelativePath": "mw_weapon_images/wt_submachinegun_wid_23.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -6957,7 +6957,7 @@
   },
   {
     "weaponType": "Shotgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/a/ac/Model_680_Gunsmith_MW.png/revision/latest/scale-to-width-down/349?cb=20190922183606",
+    "imageRelativePath": "mw_weapon_images/wt_shotgun_wid_24.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -7229,7 +7229,7 @@
   },
   {
     "weaponType": "Shotgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/9/9d/R9-0_Shotgun_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413002747",
+    "imageRelativePath": "mw_weapon_images/wt_shotgun_wid_25.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -7483,7 +7483,7 @@
   },
   {
     "weaponType": "Shotgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/9/94/725_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/349?cb=20210413002746",
+    "imageRelativePath": "mw_weapon_images/wt_shotgun_wid_26.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -7749,7 +7749,7 @@
   },
   {
     "weaponType": "Shotgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/3/36/Origin_12_Shotgun_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20191119014350",
+    "imageRelativePath": "mw_weapon_images/wt_shotgun_wid_27.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -8007,7 +8007,7 @@
   },
   {
     "weaponType": "Shotgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/3/32/VLK_Rogue_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/349?cb=20210413004146",
+    "imageRelativePath": "mw_weapon_images/wt_shotgun_wid_28.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -8273,7 +8273,7 @@
   },
   {
     "weaponType": "Shotgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/c/c7/JAK-12_Gunsmith_MW.png/revision/latest/scale-to-width-down/350?cb=20201015204317",
+    "imageRelativePath": "mw_weapon_images/wt_shotgun_wid_29.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -8547,7 +8547,7 @@
   },
   {
     "weaponType": "Light Machine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/4/4a/PKM_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20210413004601",
+    "imageRelativePath": "mw_weapon_images/wt_lightmachinegun_wid_30.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -8833,7 +8833,7 @@
   },
   {
     "weaponType": "Light Machine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/0/07/SA87_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413005257",
+    "imageRelativePath": "mw_weapon_images/wt_lightmachinegun_wid_31.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -9115,7 +9115,7 @@
   },
   {
     "weaponType": "Light Machine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/d/d6/M91_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413005256",
+    "imageRelativePath": "mw_weapon_images/wt_lightmachinegun_wid_32.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -9405,7 +9405,7 @@
   },
   {
     "weaponType": "Light Machine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/6/6b/MG34_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20191119013209",
+    "imageRelativePath": "mw_weapon_images/wt_lightmachinegun_wid_33.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -9691,7 +9691,7 @@
   },
   {
     "weaponType": "Light Machine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/5/56/Holger-26_model_MW.png/revision/latest/scale-to-width-down/349?cb=20200125023033",
+    "imageRelativePath": "mw_weapon_images/wt_lightmachinegun_wid_34.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -9977,7 +9977,7 @@
   },
   {
     "weaponType": "Light Machine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/9/91/Bruen_Mk9_Gunsmith_MW.png/revision/latest/scale-to-width-down/350?cb=20210413004433",
+    "imageRelativePath": "mw_weapon_images/wt_lightmachinegun_wid_35.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -10271,7 +10271,7 @@
   },
   {
     "weaponType": "Light Machine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/b/b3/FiNN_LMG_Gunsmith_MW.png/revision/latest/scale-to-width-down/350?cb=20200825144825",
+    "imageRelativePath": "mw_weapon_images/wt_lightmachinegun_wid_36.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -10555,7 +10555,7 @@
   },
   {
     "weaponType": "Light Machine Gun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/2/2e/RAAL_MG_HUD_Icon_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413050304",
+    "imageRelativePath": "mw_weapon_images/wt_lightmachinegun_wid_37.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -10825,7 +10825,7 @@
   },
   {
     "weaponType": "Marksman Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/7/7f/EBR-14_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20210413085749",
+    "imageRelativePath": "mw_weapon_images/wt_marksmanrifle_wid_38.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -11093,7 +11093,7 @@
   },
   {
     "weaponType": "Marksman Rifle",
-    "imageUrl": null,
+    "imageRelativePath": null,
     "supportedAttachments": [
       {
         "attachments": [
@@ -11339,7 +11339,7 @@
   },
   {
     "weaponType": "Marksman Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/e/e6/Kar98k_menu_icon_MW.png/revision/latest/scale-to-width-down/130?cb=20200418175806",
+    "imageRelativePath": "mw_weapon_images/wt_marksmanrifle_wid_40.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -11591,7 +11591,7 @@
   },
   {
     "weaponType": "Marksman Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/5/55/Crossbow_model_MW.png/revision/latest/scale-to-width-down/350?cb=20210413004820",
+    "imageRelativePath": "mw_weapon_images/wt_marksmanrifle_wid_41.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -11815,7 +11815,7 @@
   },
   {
     "weaponType": "Marksman Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/2/22/SKS_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20200725015150",
+    "imageRelativePath": "mw_weapon_images/wt_marksmanrifle_wid_42.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -12079,7 +12079,7 @@
   },
   {
     "weaponType": "Marksman Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/3/39/SP-R_208_Gunsmith_MW.png/revision/latest/scale-to-width-down/350?cb=20201005025558",
+    "imageRelativePath": "mw_weapon_images/wt_marksmanrifle_wid_43.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -12357,7 +12357,7 @@
   },
   {
     "weaponType": "Sniper Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/7/76/Dragunov_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20191118200732",
+    "imageRelativePath": "mw_weapon_images/wt_sniperrifle_wid_44.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -12553,7 +12553,7 @@
   },
   {
     "weaponType": "Sniper Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/4/4b/HDR_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/349?cb=20191122025017",
+    "imageRelativePath": "mw_weapon_images/wt_sniperrifle_wid_45.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -12753,7 +12753,7 @@
   },
   {
     "weaponType": "Sniper Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/4/4c/AX-50_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20191119183608",
+    "imageRelativePath": "mw_weapon_images/wt_sniperrifle_wid_46.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -12967,7 +12967,7 @@
   },
   {
     "weaponType": "Sniper Rifle",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/e/e4/Rytec_AMR_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20200725015141",
+    "imageRelativePath": "mw_weapon_images/wt_sniperrifle_wid_47.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -13161,7 +13161,7 @@
   },
   {
     "weaponType": "Handgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/e/e1/X16_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413010921",
+    "imageRelativePath": "mw_weapon_images/wt_handgun_wid_48.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -13357,7 +13357,7 @@
   },
   {
     "weaponType": "Handgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/1/1b/1911_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413010917",
+    "imageRelativePath": "mw_weapon_images/wt_handgun_wid_49.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -13549,7 +13549,7 @@
   },
   {
     "weaponType": "Handgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/d/de/.357_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413010916",
+    "imageRelativePath": "mw_weapon_images/wt_handgun_wid_50.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -13777,7 +13777,7 @@
   },
   {
     "weaponType": "Handgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/b/b1/M19_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413010919",
+    "imageRelativePath": "mw_weapon_images/wt_handgun_wid_51.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -13969,7 +13969,7 @@
   },
   {
     "weaponType": "Handgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/5/5f/.50_GS_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413010915",
+    "imageRelativePath": "mw_weapon_images/wt_handgun_wid_52.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -14193,7 +14193,7 @@
   },
   {
     "weaponType": "Handgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/3/30/Renetti_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210413010920",
+    "imageRelativePath": "mw_weapon_images/wt_handgun_wid_53.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -14439,7 +14439,7 @@
   },
   {
     "weaponType": "Handgun",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/1/1f/Sykov_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210415203832",
+    "imageRelativePath": "mw_weapon_images/wt_handgun_wid_54.webp",
     "supportedAttachments": [
       {
         "attachments": [
@@ -14661,56 +14661,56 @@
   },
   {
     "weaponType": "Launcher",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/3/3a/PILA_model_MW.png/revision/latest/scale-to-width-down/350?cb=20210413172724",
+    "imageRelativePath": "mw_weapon_images/wt_launcher_wid_55.webp",
     "supportedAttachments": [],
     "id": 55,
     "name": "PILA"
   },
   {
     "weaponType": "Launcher",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/d/d2/Strela-P_model_MW.png/revision/latest/scale-to-width-down/350?cb=20200125023729",
+    "imageRelativePath": "mw_weapon_images/wt_launcher_wid_56.webp",
     "supportedAttachments": [],
     "id": 56,
     "name": "Strela-P"
   },
   {
     "weaponType": "Launcher",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/e/ea/JOKR_model_MW.png/revision/latest/scale-to-width-down/350?cb=20200125023810",
+    "imageRelativePath": "mw_weapon_images/wt_launcher_wid_57.webp",
     "supportedAttachments": [],
     "id": 57,
     "name": "JOKR"
   },
   {
     "weaponType": "Launcher",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/2/23/RPG-7_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20191119042041",
+    "imageRelativePath": "mw_weapon_images/wt_launcher_wid_58.webp",
     "supportedAttachments": [],
     "id": 58,
     "name": "RPG-7"
   },
   {
     "weaponType": "Melee",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/0/06/Riot_Shield_Gunsmith_Preview_MW.png/revision/latest/scale-to-width-down/350?cb=20191119182146",
+    "imageRelativePath": "mw_weapon_images/wt_melee_wid_59.webp",
     "supportedAttachments": [],
     "id": 59,
     "name": "Riot Shield"
   },
   {
     "weaponType": "Melee",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/1/13/Combat_Knife_model_MW.png/revision/latest/scale-to-width-down/350?cb=20200125023856",
+    "imageRelativePath": "mw_weapon_images/wt_melee_wid_60.webp",
     "supportedAttachments": [],
     "id": 60,
     "name": "Combat Knife"
   },
   {
     "weaponType": "Melee",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/d/d9/Kali_Stick_Gunsmith_MW2019.png/revision/latest/scale-to-width-down/350?cb=20210406041236",
+    "imageRelativePath": "mw_weapon_images/wt_melee_wid_61.webp",
     "supportedAttachments": [],
     "id": 61,
     "name": "Kali Sticks"
   },
   {
     "weaponType": "Melee",
-    "imageUrl": "https://static.wikia.nocookie.net/callofduty/images/5/5b/Dual_Kodachis_Gunsmith_MW.png/revision/latest/scale-to-width-down/350?cb=20200808040536",
+    "imageRelativePath": "mw_weapon_images/wt_melee_wid_62.webp",
     "supportedAttachments": [],
     "id": 62,
     "name": "Dual Kodachis"
