@@ -4,4 +4,4 @@ import Weapon from "./Weapon";
 import Attachment from "./Attachment";
 import IdName from "./IdName";
 
-export type { IdName, LoadoutGenerationHints, Loadout, Weapon, Attachment };
+export { IdName, LoadoutGenerationHints, Loadout, Weapon, Attachment };

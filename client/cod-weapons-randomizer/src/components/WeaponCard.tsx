@@ -3,7 +3,6 @@ import { Weapon, Attachment } from "../api/models";
 import { Card, ListGroup } from "react-bootstrap";
 
 const WeaponCard = ({ weapon }: { weapon: Weapon }) => {
-  console.log(weapon);
   return (
     <Card>
       <Card.Header>
