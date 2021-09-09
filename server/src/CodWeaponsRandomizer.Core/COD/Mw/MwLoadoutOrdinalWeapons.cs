@@ -10,8 +10,8 @@
 
         public MwLoadoutOrdinalWeapons()
         {
-            _primaryWeaponTypes = ParseWeaponTypes("Assault Rifle", "Submachine Gun", "Sniper Rifle", "Marksman Rifle", "Shotgun", "Light Machine Gun", "Melee");
-            _secondaryWeaponTypes = ParseWeaponTypes("Handgun", "Launcher", "Melee");
+            _primaryWeaponTypes = HashSetHelper.ParseSet("Assault Rifle", "Submachine Gun", "Sniper Rifle", "Marksman Rifle", "Shotgun", "Light Machine Gun", "Melee");
+            _secondaryWeaponTypes = HashSetHelper.ParseSet("Handgun", "Launcher", "Melee");
         }
     }
 }

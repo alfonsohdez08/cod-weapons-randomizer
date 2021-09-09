@@ -11,8 +11,8 @@
 
         public CwLoadoutOrdinalWeapons()
         {
-            _primaryWeaponTypes = ParseWeaponTypes("Assault Rifle", "Submachine Gun", "Sniper Rifle", "Tactical Rifle", "Shotgun", "Light Machine Gun");
-            _secondaryWeaponTypes = ParseWeaponTypes("Pistol", "Launcher", "Melee");
+            _primaryWeaponTypes = HashSetHelper.ParseSet("Assault Rifle", "Submachine Gun", "Sniper Rifle", "Tactical Rifle", "Shotgun", "Light Machine Gun");
+            _secondaryWeaponTypes = HashSetHelper.ParseSet("Pistol", "Launcher", "Melee");
         }
     }
 }
