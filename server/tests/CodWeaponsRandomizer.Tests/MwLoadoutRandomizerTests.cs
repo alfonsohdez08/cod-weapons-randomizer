@@ -1,4 +1,3 @@
-using CodWeaponsRandomizer.Core.COD.Mw;
 using CodWeaponsRandomizer.Core.Entities;
 using Xunit;
 
@@ -48,17 +47,5 @@ public class MwLoadoutRandomizerTests: IClassFixture<MwLoadoutRandomizerFixture>
         Loadout loadout = _fixture.MwLoadoutRandomizer.Randomize(mwLoadoutHints);
 
         LoadoutAssert.IsValidMwLoadout(loadout, _fixture.MwDb, assertOverkillPerk: false);
-    }
-}
-
-public class MwLoadoutRandomizerFixture
-{
-    public MwLoadoutRandomizer MwLoadoutRandomizer { get; }
-    public MwDb MwDb { get; }
-
-    public MwLoadoutRandomizerFixture()
-    {
-        MwDb = new MwDb(@"test-dbs\mw");
-        MwLoadoutRandomizer = new MwLoadoutRandomizer(MwDb);
     }
 }
