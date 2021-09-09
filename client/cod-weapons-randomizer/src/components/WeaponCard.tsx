@@ -10,8 +10,8 @@ const WeaponCard = ({ weapon }: { weapon: Weapon }) => {
         <div className="d-inline-block h4">{weapon.name}</div>
         <span className="ms-1 text-muted h6">({weapon.weaponType})</span>
       </Card.Header>
-      <Card.Img></Card.Img>
-      {weapon.attachments ? (
+      <Card.Img src={weapon.imageUrl} variant="top"></Card.Img>
+      {weapon.attachments && weapon.attachments.length > 0 ? (
         <WeaponAttachmentList attachments={weapon.attachments} />
       ) : (
         <></>
