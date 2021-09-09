@@ -50,10 +50,48 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
 
         protected virtual void Export()
         {
-            Export("weapons.json", _weapons);
+            ExportWeapons();
             Export("perks.json", _perkTiers);
             Export("tacticals.json", _tacticals);
             Export("lethals.json", _lethals);
+        }
+
+        private void ExportWeapons()
+        {
+            /* TODO: think a better solution to the images exporting
+                This is a code smell because this method has a side effect: export images and update weapons collection to add the filename.
+                The fact that updates the weapon collection should be explicit.
+             */
+            ExportWeaponImages();
+            Export("weapons.json", _weapons);
+
+            void ExportWeaponImages()
+            {
+                string weaponImagesFolder = $"{ExportRootFolder}_weapon_images";
+                string weaponImagesFolderPath = Path.Combine(_dbExportPath, weaponImagesFolder);
+                if (!Directory.Exists(weaponImagesFolderPath))
+                    Directory.CreateDirectory(weaponImagesFolderPath);
+
+                using var httpClient = new HttpClient();
+
+                foreach (Weapon weapon in _weapons.Where(w => !string.IsNullOrEmpty(w.ImageUrl)))
+                {
+                    string weaponImageFilename = ParseImageFilename(weapon);
+                    DownloadImage(httpClient, weapon.ImageUrl!, Path.Combine(weaponImagesFolderPath, weaponImageFilename));
+
+                    weapon.ImageRelativePath = $"{weaponImagesFolder}/{weaponImageFilename}";
+                }
+            }
+
+            static void DownloadImage(HttpClient httpClient, string url, string fullImagePath)
+            {
+                HttpResponseMessage responseMessage = httpClient.GetAsync(url).Result;
+                byte[] content = responseMessage.Content.ReadAsByteArrayAsync().Result;
+
+                File.WriteAllBytes(fullImagePath, content);
+            }
+
+            static string ParseImageFilename(Weapon weapon) => $"wt_{weapon.WeaponType.Replace(" ", "").ToLower()}_wid_{weapon.Id}.webp";
         }
 
         public void Export(string path)
