@@ -1,10 +1,10 @@
-import Perk from "./Perk";
+import IdName from "./IdName";
 import Weapon from "./Weapon";
 
 export default interface Loadout {
     primaryWeapon: Weapon;
     secondaryWeapon: Weapon;
-    perks: Perk[];
-    tactical: string;
-    lethal: string;
+    perks: IdName[];
+    tactical: IdName;
+    lethal: IdName;
 }

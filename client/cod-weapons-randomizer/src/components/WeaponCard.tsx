@@ -8,7 +8,7 @@ const WeaponCard = ({ weapon }: { weapon: Weapon }) => {
     <Card>
       <Card.Header>
         <div className="d-inline-block h4">{weapon.name}</div>
-        <span className="ms-1 text-muted h6">({weapon.category})</span>
+        <span className="ms-1 text-muted h6">({weapon.weaponType})</span>
       </Card.Header>
       <Card.Img></Card.Img>
       {weapon.attachments ? (
@@ -32,8 +32,8 @@ const WeaponAttachmentList = ({
       </ListGroup.Item>
       {attachments.map((a, idx) => (
         <ListGroup.Item variant="secondary" key={idx}>
-          <strong>{a.attachmentCategory}:</strong>
-          <span className="ms-2">{a.name}</span>
+          <strong>{a.name}:</strong>
+          <span className="ms-2">{a.variant.name}</span>
         </ListGroup.Item>
       ))}
     </ListGroup>

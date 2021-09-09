@@ -1,4 +1,4 @@
 export default interface LoadoutGenerationHints {
-    enforceUseAllWeaponAttachments: boolean;
+    enforceUseAllWeaponAttachmentSlots: boolean;
     enforceUseOverkillPerk: boolean;
 }

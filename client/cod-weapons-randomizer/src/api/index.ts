@@ -10,7 +10,7 @@ const generateRandomLoadout = async (hints: LoadoutGenerationHints): Promise<Loa
     headers: requestHeaders,
   };
 
-  const response = await fetch("https://localhost:5001/loadouts", requestInit);
+  const response = await fetch("https://localhost:5001/mw-loadouts", requestInit);
   const loadout: Loadout = await response.json();
 
   return loadout;

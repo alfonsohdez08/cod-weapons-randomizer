@@ -2,6 +2,6 @@ import LoadoutGenerationHints from "./LoadoutGenerationHints";
 import Loadout from "./Loadout";
 import Weapon from "./Weapon";
 import Attachment from "./Attachment";
-import Perk from "./Perk";
+import IdName from "./IdName";
 
-export type { LoadoutGenerationHints, Loadout, Weapon, Attachment, Perk };
+export type { IdName, LoadoutGenerationHints, Loadout, Weapon, Attachment };

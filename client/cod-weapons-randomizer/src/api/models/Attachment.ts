@@ -1,4 +1,5 @@
-export default interface Attachment{
-    name: string;
-    attachmentCategory: string;
+import IdName from "./IdName";
+
+export default interface Attachment extends IdName {
+  variant: IdName;
 }
