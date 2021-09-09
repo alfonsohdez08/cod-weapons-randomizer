@@ -27,6 +27,10 @@ export default class Weapon implements IdName {
     this.imageUrl = `${serverBaseUrl}/${this.imageServerPath}`;
   }
 
+  public hasImage(): boolean{
+    return this.imageServerPath !== null;
+  }
+
   public static clone(weapon: Weapon): Weapon {
     return new Weapon(
       weapon.id,
