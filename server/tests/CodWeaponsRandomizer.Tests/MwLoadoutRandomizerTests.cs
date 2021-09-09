@@ -23,7 +23,7 @@ public class MwLoadoutRandomizerTests: IClassFixture<MwLoadoutRandomizerFixture>
 
         Loadout loadout = _fixture.MwLoadoutRandomizer.Randomize(mwLoadoutHints);
 
-        LoadoutAssert.IsValidMwLoadout(loadout, _fixture.MwDb, assertOverkill: false);
+        LoadoutAssert.IsValidMwLoadout(loadout, _fixture.MwDb, assertOverkillPerk: false);
     }
 
     [Fact]
@@ -37,7 +37,7 @@ public class MwLoadoutRandomizerTests: IClassFixture<MwLoadoutRandomizerFixture>
 
         Loadout loadout = _fixture.MwLoadoutRandomizer.Randomize(mwLoadoutHints);
 
-        LoadoutAssert.IsValidMwLoadout(loadout, _fixture.MwDb, assertOverkill: true);
+        LoadoutAssert.IsValidMwLoadout(loadout, _fixture.MwDb, assertOverkillPerk: true);
     }
 
     [Fact]
@@ -47,7 +47,7 @@ public class MwLoadoutRandomizerTests: IClassFixture<MwLoadoutRandomizerFixture>
 
         Loadout loadout = _fixture.MwLoadoutRandomizer.Randomize(mwLoadoutHints);
 
-        LoadoutAssert.IsValidMwLoadout(loadout, _fixture.MwDb, assertOverkill: false);
+        LoadoutAssert.IsValidMwLoadout(loadout, _fixture.MwDb, assertOverkillPerk: false);
     }
 }
 
