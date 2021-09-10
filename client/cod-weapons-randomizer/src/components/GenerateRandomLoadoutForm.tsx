@@ -38,7 +38,6 @@ const GenerateRandomLoadoutForm = ({
       enforceUseAllWeaponAttachmentSlots,
       enforceUseOverkillPerk: enforceUseOverkillPerk,
     }).then((loadout) => {
-      console.log(loadout);
       onGenerateLoadout(loadout);
     });
   };

@@ -4,7 +4,7 @@ import { Card, ListGroup } from "react-bootstrap";
 
 const WeaponCard = ({ weapon }: { weapon: Weapon }) => {
   return (
-    <Card>
+    <Card as="div">
       <Card.Header>
         <div className="d-inline-block h4">{weapon.name}</div>
         <span className="ms-1 text-muted h6">({weapon.weaponType})</span>
