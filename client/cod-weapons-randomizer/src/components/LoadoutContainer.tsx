@@ -10,7 +10,7 @@ const LoadoutContainer = ({ loadout }: { loadout: Loadout }) => {
         <Col>
           <Row className="row-cols-1">
             <Col>
-              <LoadoutSectionHeading placeholder="Weapons" />
+              <LoadoutHeading placeholder="Weapons" />
             </Col>
             <Col>
               <Row className="row-cols-1 row-cols-md-2 gy-2 gy-md-0 gx-md-3">
@@ -29,7 +29,7 @@ const LoadoutContainer = ({ loadout }: { loadout: Loadout }) => {
             <Col>
               <Row className="row-cols-1">
                 <Col>
-                  <LoadoutSectionHeading placeholder="Perks" />
+                  <LoadoutHeading placeholder="Perks" />
                 </Col>
                 <Col>
                   <List
@@ -46,7 +46,7 @@ const LoadoutContainer = ({ loadout }: { loadout: Loadout }) => {
                 <Col>
                   <Row className="row-cols-1">
                     <Col>
-                      <LoadoutSectionHeading placeholder="Tactical" />
+                      <LoadoutHeading placeholder="Tactical" />
                     </Col>
                     <Col>
                       <span>{loadout.tactical.name}</span>
@@ -56,7 +56,7 @@ const LoadoutContainer = ({ loadout }: { loadout: Loadout }) => {
                 <Col>
                   <Row className="row-cols-1">
                     <Col>
-                      <LoadoutSectionHeading placeholder="Lethal" />
+                      <LoadoutHeading placeholder="Lethal" />
                     </Col>
                     <Col>
                       <span>{loadout.lethal.name}</span>
@@ -72,7 +72,7 @@ const LoadoutContainer = ({ loadout }: { loadout: Loadout }) => {
   );
 };
 
-const LoadoutSectionHeading = ({ placeholder }: { placeholder: string }) => (
+const LoadoutHeading = ({ placeholder }: { placeholder: string }) => (
   <h3 className="d-inline-block">{placeholder}</h3>
 );
 
