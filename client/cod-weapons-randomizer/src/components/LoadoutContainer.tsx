@@ -66,9 +66,9 @@ const LoadoutSectionHeading = ({ placeholder }: { placeholder: string }) => (
 );
 
 const List = ({ items }: { items: { id: number; label: string }[] }) => (
-  <ul className="list-unstyled">
+  <ul className="list-inline mb-0">
     {items.map((i) => (
-      <li key={`${i.id}_${i.label}`}>{i.label}</li>
+      <li key={`${i.id}_${i.label}`} className="list-inline-item">{i.label}</li>
     ))}
   </ul>
 );
