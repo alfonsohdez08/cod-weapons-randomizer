@@ -7,7 +7,7 @@ const LoadoutContainer = ({ loadout }: { loadout: Loadout }) => {
   return (
     <Container>
       <Row className="row-cols-1 row-cols-xl-2 gy-2 gy-xl-0 gx-xl-5">
-        <Col>
+        <Col className="col-xl-8">
           <Row className="row-cols-1">
             <Col>
               <LoadoutHeading placeholder="Weapons" />
@@ -24,7 +24,7 @@ const LoadoutContainer = ({ loadout }: { loadout: Loadout }) => {
             </Col>
           </Row>
         </Col>
-        <Col>
+        <Col className="col-xl-4">
           <Row className="row-cols-1 row-cols-md-2 row-cols-xl-1 gy-2">
             <Col>
               <Row className="row-cols-1">
