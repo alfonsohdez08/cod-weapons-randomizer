@@ -50,6 +50,20 @@ const GenerateRandomLoadoutForm = ({
       <Container className="px-0">
         <Row className="row-cols-1 gy-2">
           <Col>
+            <div className="d-flex flex-row justify-content-center align-items-center">
+              <img
+                src="/mw_logo.png"
+                alt="COD MW 2019 Logo"
+                style={{ height: "22px", width: "60px" }}
+              />
+              <img
+                src="/wz_logo.png"
+                alt="COD MW 2019 Logo"
+                style={{ height: "50px", width: "90px" }}
+              />
+            </div>
+          </Col>
+          <Col>
             <LoadoutGenerationHints
               enforceUseAllWeaponAttachmentSlots={
                 enforceUseAllWeaponAttachmentSlots

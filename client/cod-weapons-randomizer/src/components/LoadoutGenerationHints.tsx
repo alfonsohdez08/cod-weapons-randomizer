@@ -28,6 +28,9 @@ const LoadoutGenerationHints = ({
 
   return (
     <>
+      <div className="text-center">
+        <span className="h3">Hints</span>
+      </div>
       <div className="d-md-none ">
         {checkBoxes.map((ch, idx) => (
           <div key={idx} className="d-block">
