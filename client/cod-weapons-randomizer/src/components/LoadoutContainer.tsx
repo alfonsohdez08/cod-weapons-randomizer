@@ -25,7 +25,7 @@ const LoadoutContainer = ({ loadout }: { loadout: Loadout }) => {
           </Row>
         </Col>
         <Col>
-          <Row className="row-cols-1 row-cols-md-2">
+          <Row className="row-cols-1 row-cols-md-2 row-cols-xl-1 gy-xl-2">
             <Col>
               <Row className="row-cols-1">
                 <Col>
