@@ -5,7 +5,7 @@ export interface ButtonProps {
   placeholder: string | React.ReactNode;
   disabled?: boolean;
   type: "submit" | "button";
-  theme: "primary" | "secondary" | "warning";
+  theme: "primary" | "secondary" | "warning" | "danger" | "dark";
   className?: string;
 }
 

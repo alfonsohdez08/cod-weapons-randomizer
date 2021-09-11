@@ -29,9 +29,12 @@ const GenerateRandomLoadoutForm = ({
 }: {
   onGenerateLoadout: (loadout: Loadout) => void;
 }) => {
-  const [enforceUseOverkillPerk, setEnforceUseOverkillPerk] = React.useState(false);
-  const [enforceUseAllWeaponAttachmentSlots, setEnforceUseAllWeaponAttachmentSlots] =
+  const [enforceUseOverkillPerk, setEnforceUseOverkillPerk] =
     React.useState(false);
+  const [
+    enforceUseAllWeaponAttachmentSlots,
+    setEnforceUseAllWeaponAttachmentSlots,
+  ] = React.useState(false);
 
   const generateRandomLoadout = () => {
     API.generateRandomLoadout({
@@ -48,8 +51,12 @@ const GenerateRandomLoadoutForm = ({
         <Row className="row-cols-1 gy-2">
           <Col>
             <LoadoutGenerationHints
-              enforceUseAllWeaponAttachmentSlots={enforceUseAllWeaponAttachmentSlots}
-              onEnforceUseAllWeaponAttachmentSlotsChange={setEnforceUseAllWeaponAttachmentSlots}
+              enforceUseAllWeaponAttachmentSlots={
+                enforceUseAllWeaponAttachmentSlots
+              }
+              onEnforceUseAllWeaponAttachmentSlotsChange={
+                setEnforceUseAllWeaponAttachmentSlots
+              }
               enforceUseOverkillPerk={enforceUseOverkillPerk}
               onEnforceUseOverkillPerkChange={setEnforceUseOverkillPerk}
             />
@@ -59,7 +66,7 @@ const GenerateRandomLoadoutForm = ({
               <Button
                 placeholder="Generate Loadout"
                 type="submit"
-                theme="secondary"
+                theme="danger"
               />
             </div>
           </Col>
