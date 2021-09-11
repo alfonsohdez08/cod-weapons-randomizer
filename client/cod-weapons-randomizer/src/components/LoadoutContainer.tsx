@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { Loadout } from "../api/models";
+import { IdName, Loadout } from "../api/models";
 
 import WeaponCard from "./WeaponCard";
 
@@ -25,24 +25,19 @@ const LoadoutContainer = ({ loadout }: { loadout: Loadout }) => {
           </Row>
         </Col>
         <Col>
-          <Row className="row-cols-1 row-cols-md-2 row-cols-xl-1 gy-xl-2">
+          <Row className="row-cols-1 row-cols-md-2 row-cols-xl-1 gy-2">
             <Col>
               <Row className="row-cols-1">
                 <Col>
                   <LoadoutHeading placeholder="Perks" />
                 </Col>
                 <Col>
-                  <List
-                    items={loadout.perks.map((p) => ({
-                      id: p.id,
-                      label: p.name,
-                    }))}
-                  />
+                  <PerkList perks={loadout.perks} />
                 </Col>
               </Row>
             </Col>
             <Col>
-              <Row className="row-cols-1">
+              <Row className="row-cols-1 gy-2">
                 <Col>
                   <Row className="row-cols-1">
                     <Col>
@@ -76,18 +71,29 @@ const LoadoutHeading = ({ placeholder }: { placeholder: string }) => (
   <h3 className="d-inline-block">{placeholder}</h3>
 );
 
-const List = ({ items }: { items: { id: number; label: string }[] }) => {
+const PerkList = ({ perks }: { perks: IdName[] }) => {
+  const data = perks.map((p, i) => ({
+    id: `${p.id}_${p.name}`,
+    perk: p.name,
+    tier: `Tier ${i + 1}`,
+  }));
+
   return (
     <>
       <ul className="list-unstyled d-xl-none mb-0">
-        {items.map((i) => (
-          <li key={`${i.id}_${i.label}`}>{i.label}</li>
+        {data.map((d) => (
+          <li key={d.id}>
+            <span className="fw-bold">{d.tier}:</span> {d.perk}
+          </li>
         ))}
       </ul>
       <ul className="d-none d-xl-block list-inline mb-0">
-        {items.map((i) => (
-          <li key={`${i.id}_${i.label}`} className="list-inline-item">
-            {i.label}
+        {data.map((d) => (
+          <li key={d.id} className="list-inline-item">
+            <div className="d-inline-flex flex-column">
+              <span className="fw-bold d-block text-center">{d.tier}</span>
+              <span className="d-block">{d.perk}</span>
+            </div>
           </li>
         ))}
       </ul>
