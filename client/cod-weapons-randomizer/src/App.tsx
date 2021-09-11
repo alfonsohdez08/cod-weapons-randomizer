@@ -12,18 +12,18 @@ const App = () => {
   const [loadout, setLoadout] = React.useState<Loadout | undefined>();
 
   return (
-    <>
+    <div className="h-100 bg-light">
       <div className="w-75 mt-3 mx-auto">
         <GenerateRandomLoadoutForm onGenerateLoadout={setLoadout} />
         {loadout ? (
-          <div className="mt-3">
+          <div className="mt-3 bg-white border-2 rounded-3 shadow p-2 p-md-4">
             <LoadoutContainer loadout={loadout} />
           </div>
         ) : (
           <></>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
