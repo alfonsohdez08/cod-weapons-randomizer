@@ -102,7 +102,7 @@ const GenerateRandomLoadoutForm = ({
               <Button
                 placeholder="Generate Loadout"
                 type="submit"
-                theme="danger"
+                theme="secondary"
               />
             </div>
           </Col>
