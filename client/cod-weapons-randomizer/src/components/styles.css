@@ -7,3 +7,7 @@
   height: 50px;
   width: 90px;
 }
+
+.weapon-image {
+  max-height: 260px;
+}

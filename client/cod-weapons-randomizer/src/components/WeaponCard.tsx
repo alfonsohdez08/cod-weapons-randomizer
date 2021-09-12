@@ -10,7 +10,11 @@ const WeaponCard = ({ weapon }: { weapon: Weapon }) => {
         <span className="ms-1 text-muted h6">({weapon.weaponType})</span>
       </Card.Header>
       {weapon.hasImage() ? (
-        <Card.Img src={weapon.imageUrl} variant="top" />
+        <Card.Img
+          src={weapon.imageUrl}
+          variant="top"
+          className="weapon-image"
+        />
       ) : (
         <></>
       )}
