@@ -12,7 +12,7 @@ const App = () => {
   const [loadout, setLoadout] = React.useState<Loadout | undefined>();
 
   return (
-    <div className="min-h-100 bg-light">
+    <div className="min-h-100 bg-secondary text-dark">
       <div className="w-75 mx-auto">
         <GenerateRandomLoadoutForm onGenerateLoadout={setLoadout} />
         {loadout ? (
