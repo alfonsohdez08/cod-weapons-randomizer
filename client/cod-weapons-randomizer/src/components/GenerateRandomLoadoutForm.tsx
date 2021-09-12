@@ -8,6 +8,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import API from "../api";
 import { Loadout } from "../api/models";
 
+import "./styles.css";
+
 const Form = ({
   onSubmit,
   children,
@@ -61,8 +63,7 @@ const GenerateRandomLoadoutForm = ({
               <img
                 src="/mw_logo.png"
                 alt="COD MW 2019 Logo"
-                style={{ height: "22px", width: "60px" }}
-                className="ml-1"
+                className="mw-logo"
               />
               <GameRadioButton
                 value={COD.Warzone}
@@ -72,7 +73,7 @@ const GenerateRandomLoadoutForm = ({
               <img
                 src="/wz_logo.png"
                 alt="COD MW 2019 Logo"
-                style={{ height: "50px", width: "90px" }}
+                className="wz-logo"
               />
             </div>
           </Col>
