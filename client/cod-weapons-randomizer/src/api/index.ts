@@ -1,8 +1,15 @@
+import { COD } from "../components/GameRadioButton";
 import { Loadout, LoadoutGenerationHints, Weapon } from "./models";
 
 const baseUrl = "https://localhost:5001";
 
+const CODUrls = {
+  [COD.ModernWarfare]: "mw-loadouts",
+  [COD.Warzone]: "wz-loadouts",
+};
+
 const generateRandomLoadout = async (
+  cod: COD,
   hints: LoadoutGenerationHints
 ): Promise<Loadout> => {
   const requestHeaders: HeadersInit = new Headers();
@@ -14,7 +21,7 @@ const generateRandomLoadout = async (
     headers: requestHeaders,
   };
 
-  const response = await fetch(`${baseUrl}/mw-loadouts`, requestInit);
+  const response = await fetch(`${baseUrl}/${CODUrls[cod]}`, requestInit);
   const loadout: Loadout = await response.json();
 
   setLoadoutWeaponImageUrls(loadout);

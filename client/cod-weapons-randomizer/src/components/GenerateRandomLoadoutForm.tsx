@@ -39,7 +39,7 @@ const GenerateRandomLoadoutForm = ({
   const [cod, setCod] = React.useState(COD.ModernWarfare);
 
   const generateRandomLoadout = () => {
-    API.generateRandomLoadout({
+    API.generateRandomLoadout(cod, {
       enforceUseAllWeaponAttachmentSlots,
       enforceUseOverkillPerk,
     }).then((loadout) => {
