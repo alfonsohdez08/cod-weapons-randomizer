@@ -1,25 +1,23 @@
-import React from "react";
 import { Form } from "react-bootstrap";
 
-export enum CodGame {
+export enum COD {
   ModernWarfare = "mw",
   Warzone = "wz",
 }
 
 export interface RadioProps {
-  label: React.ReactNode;
-  value: CodGame;
-  onChange: (selectedGame: CodGame) => void;
+  value: COD;
+  onChange: (selectedGame: COD) => void;
   checked: boolean;
 }
 
-const GameRadioButton = ({ label, value, onChange, checked }: RadioProps) => (
+const GameRadioButton = ({ value, onChange, checked }: RadioProps) => (
   <Form.Check
     type="radio"
-    label={label}
     value={value.toString()}
+    className="d-inline-block"
     checked={checked}
-    onChange={(e) => onChange(e.target.value as CodGame)}
+    onChange={(e) => onChange(e.target.value as COD)}
   />
 );
 

@@ -1,5 +1,6 @@
 import LoadoutGenerationHints from "./LoadoutGenerationHints";
 import Button from "./Button";
+import GameRadioButton, { COD } from "./GameRadioButton";
 
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
@@ -35,11 +36,12 @@ const GenerateRandomLoadoutForm = ({
     enforceUseAllWeaponAttachmentSlots,
     setEnforceUseAllWeaponAttachmentSlots,
   ] = React.useState(false);
+  const [cod, setCod] = React.useState(COD.ModernWarfare);
 
   const generateRandomLoadout = () => {
     API.generateRandomLoadout({
       enforceUseAllWeaponAttachmentSlots,
-      enforceUseOverkillPerk: enforceUseOverkillPerk,
+      enforceUseOverkillPerk,
     }).then((loadout) => {
       onGenerateLoadout(loadout);
     });
@@ -51,10 +53,21 @@ const GenerateRandomLoadoutForm = ({
         <Row className="row-cols-1 gy-2">
           <Col>
             <div className="d-flex flex-row justify-content-center align-items-center">
+              <GameRadioButton
+                value={COD.ModernWarfare}
+                checked={cod === COD.ModernWarfare}
+                onChange={setCod}
+              />
               <img
                 src="/mw_logo.png"
                 alt="COD MW 2019 Logo"
                 style={{ height: "22px", width: "60px" }}
+                className="ml-1"
+              />
+              <GameRadioButton
+                value={COD.Warzone}
+                checked={cod === COD.Warzone}
+                onChange={setCod}
               />
               <img
                 src="/wz_logo.png"
