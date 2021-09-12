@@ -54,28 +54,36 @@ const GenerateRandomLoadoutForm = ({
       <Container className="px-0">
         <Row className="row-cols-1 gy-2">
           <Col>
-            <div className="d-flex flex-row justify-content-center align-items-center">
-              <GameRadioButton
-                value={COD.ModernWarfare}
-                checked={cod === COD.ModernWarfare}
-                onChange={setCod}
-              />
-              <img
-                src="/mw_logo.png"
-                alt="COD MW 2019 Logo"
-                className="mw-logo"
-              />
-              <GameRadioButton
-                value={COD.Warzone}
-                checked={cod === COD.Warzone}
-                onChange={setCod}
-              />
-              <img
-                src="/wz_logo.png"
-                alt="COD MW 2019 Logo"
-                className="wz-logo"
-              />
-            </div>
+            <Row className="gy-0 gx-1 row-cols-auto align-items-center justify-content-center">
+              <Col>
+                <GameRadioButton
+                  value={COD.ModernWarfare}
+                  checked={cod === COD.ModernWarfare}
+                  onChange={setCod}
+                />
+              </Col>
+              <Col>
+                <img
+                  src="/mw_logo.png"
+                  alt="COD MW 2019 Logo"
+                  className="mw-logo"
+                />
+              </Col>
+              <Col className="offset-1">
+                <GameRadioButton
+                  value={COD.Warzone}
+                  checked={cod === COD.Warzone}
+                  onChange={setCod}
+                />
+              </Col>
+              <Col>
+                <img
+                  src="/wz_logo.png"
+                  alt="COD MW 2019 Logo"
+                  className="wz-logo"
+                />
+              </Col>
+            </Row>
           </Col>
           <Col>
             <LoadoutGenerationHints
