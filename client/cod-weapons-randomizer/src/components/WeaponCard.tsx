@@ -4,10 +4,10 @@ import { Card, ListGroup } from "react-bootstrap";
 
 const WeaponCard = ({ weapon }: { weapon: Weapon }) => {
   return (
-    <Card as="div">
+    <Card as="div" bg="secondary" border="dark">
       <Card.Header>
         <div className="d-inline-block h4">{weapon.name}</div>
-        <span className="ms-1 text-muted h6">({weapon.weaponType})</span>
+        <span className="ms-1 text-dark h6">({weapon.weaponType})</span>
       </Card.Header>
       {weapon.hasImage() ? (
         <Card.Img
