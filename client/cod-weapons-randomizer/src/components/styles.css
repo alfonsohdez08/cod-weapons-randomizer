@@ -11,3 +11,8 @@
 .weapon-image {
   max-height: 270px;
 }
+
+.github-logo {
+  max-height: 28px;
+  max-width: 28px;
+}

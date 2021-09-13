@@ -5,6 +5,7 @@ import "./App.css";
 
 import GenerateRandomLoadoutForm from "./components/GenerateRandomLoadoutForm";
 import LoadoutContainer from "./components/LoadoutContainer";
+import Header from "./components/Header";
 
 import { Loadout } from "./api/models";
 
@@ -13,7 +14,7 @@ const App = () => {
 
   return (
     <div className="text-white">
-      <h2 className="text-center display-2 fw-bold">COD Loadout Randomizer</h2>
+      <Header />
       <div className="w-75 mx-auto">
         <GenerateRandomLoadoutForm onGenerateLoadout={setLoadout} />
         {loadout ? (
