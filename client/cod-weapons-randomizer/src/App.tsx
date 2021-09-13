@@ -13,6 +13,7 @@ const App = () => {
 
   return (
     <div className="text-white">
+      <h2 className="text-center display-2 fw-bold">COD Loadout Randomizer</h2>
       <div className="w-75 mx-auto">
         <GenerateRandomLoadoutForm onGenerateLoadout={setLoadout} />
         {loadout ? (
