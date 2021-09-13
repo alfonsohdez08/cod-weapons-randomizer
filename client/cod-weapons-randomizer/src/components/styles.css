@@ -13,6 +13,11 @@
 }
 
 .github-logo {
-  max-height: 28px;
-  max-width: 28px;
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.github-logo-sm {
+  max-height: 22px;
+  max-width: 22px;
 }
