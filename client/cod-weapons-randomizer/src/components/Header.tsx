@@ -5,8 +5,8 @@ const Header = () => (
     <div className="d-flex flex-row-reverse">
       <div className="p-2 p-sm-3">
         <a href={gitHubRepoUrl}>
-          <GitHubImage className="github-logo d-sm-none" />
-          <GitHubImage className="github-logo-sm d-none d-sm-inline-block" />
+          <GitHubLogo className="github-logo d-sm-none" />
+          <GitHubLogo className="github-logo-sm d-none d-sm-inline-block" />
         </a>
       </div>
     </div>
@@ -14,7 +14,7 @@ const Header = () => (
   </div>
 );
 
-const GitHubImage = ({ className }: { className: string }) => (
+const GitHubLogo = ({ className }: { className: string }) => (
   <img src="/octocat.png" alt="GitHub logo" className={className} />
 );
 
