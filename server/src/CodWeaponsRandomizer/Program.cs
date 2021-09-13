@@ -16,9 +16,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton(typeof(MwDb), new MwDb(MwDbFolderPath));
 builder.Services.AddSingleton(typeof(CwDb), new CwDb(CwDbFolderPath));
 
-builder.Services.AddTransient<MwLoadoutRandomizer>();
-builder.Services.AddTransient<WzLoadoutRandomizer>();
-builder.Services.AddTransient<LoadoutRandomizer>();
+builder.Services.AddScoped<MwLoadoutRandomizer>();
+builder.Services.AddScoped<WzLoadoutRandomizer>();
+builder.Services.AddScoped<LoadoutRandomizer>();
 
 builder.Services.AddCors((corsOptions) =>
 {
