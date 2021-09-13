@@ -59,7 +59,7 @@ namespace CodWeaponsRandomizer.Core.COD
             return perks;
         }
 
-        protected WeaponBuild RandomizeWeapon(IEnumerable<Weapon> weapons)
+        private WeaponBuild PickWeapon(IEnumerable<Weapon> weapons)
         {
             var weaponRandomizer = new WeaponRandomizer(weapons);
             var weaponHints = new WeaponHints()
@@ -71,19 +71,19 @@ namespace CodWeaponsRandomizer.Core.COD
             return weaponRandomizer.Randomize(weaponHints);
         }
 
-        protected virtual WeaponBuild PickPrimaryWeapon(Weapon? excludedWeapon = null)
+        protected WeaponBuild PickPrimaryWeapon(Weapon? excludedWeapon = null)
         {
             List<Weapon> primaryWeapons = GetPrimaryWeapons();
             if (excludedWeapon != null)
                 primaryWeapons = primaryWeapons.Where(w => w != excludedWeapon).ToList();
 
-            return RandomizeWeapon(primaryWeapons);
+            return PickWeapon(primaryWeapons);
         }
 
-        protected virtual WeaponBuild PickSecondaryWeapon()
+        protected WeaponBuild PickSecondaryWeapon()
         {
             List<Weapon> secondaryWeapons = GetSecondaryWeapons();
-            return RandomizeWeapon(secondaryWeapons);
+            return PickWeapon(secondaryWeapons);
         }
 
         protected virtual List<Weapon> GetPrimaryWeapons()

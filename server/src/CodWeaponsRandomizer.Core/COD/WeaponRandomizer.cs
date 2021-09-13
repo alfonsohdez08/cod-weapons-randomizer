@@ -33,9 +33,9 @@ namespace CodWeaponsRandomizer.Core.COD
             if (!weapon.SupportedAttachments.Any())
                 return new List<AttachmentType>();
 
-            int weaponMaxAttachments = Math.Min(weapon.SupportedAttachments.Count, _hints!.MaxAttachmentSlots);
+            int maxSupportedAttachments = Math.Min(weapon.SupportedAttachments.Count, _hints!.MaxAttachmentSlots);
             int attachmentSlots = _hints!.EnforceUseAllAttachmentSlots ?
-                weaponMaxAttachments : GenerateRandomNumber(1, weaponMaxAttachments + 1);
+                maxSupportedAttachments : GenerateRandomNumber(1, maxSupportedAttachments + 1);
 
             var attachmentTypes = new List<AttachmentType>(attachmentSlots);
 
