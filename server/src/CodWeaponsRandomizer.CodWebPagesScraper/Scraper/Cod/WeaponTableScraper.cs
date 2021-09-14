@@ -14,7 +14,7 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
                 .Where(a => a.NextSibling is null || !a.NextSibling.TextContent.Contains("SP"))
                 .Select(a => a.Href).ToList();
 
-        public List<Weapon> ScrapWeapons()
+        public virtual List<Weapon> ScrapWeapons()
         {
             var weaponSet = new Set<Weapon>();
             foreach (string weaponWikiHref in ScrapWeaponHrefs())
@@ -26,9 +26,9 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper.Scraper.Cod
             return weaponSet.ToList();
         }
 
-        public List<GameItem> ScrapLethals() => ParseAnchors(GetSingleRowAnchors(LethalRowNumber));
+        public virtual List<GameItem> ScrapLethals() => ParseAnchors(GetSingleRowAnchors(LethalRowNumber));
 
-        public List<GameItem> ScrapTacticals() => ParseAnchors(GetSingleRowAnchors(TacticalRowNumber));
+        public virtual List<GameItem> ScrapTacticals() => ParseAnchors(GetSingleRowAnchors(TacticalRowNumber));
 
         public abstract int WeaponRowCount { get; }
         public abstract int LethalRowNumber { get; }
