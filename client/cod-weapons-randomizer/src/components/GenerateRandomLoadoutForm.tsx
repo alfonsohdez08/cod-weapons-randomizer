@@ -1,12 +1,11 @@
 import LoadoutGenerationHints from "./LoadoutGenerationHints";
 import Button from "./Button";
-import GameRadioButton, { COD } from "./GameRadioButton";
+import GameRadioButton from "./GameRadioButton";
 
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 
 import API from "../api";
-import { Loadout } from "../api/models";
+import { Loadout, COD } from "../api/models";
 
 import "./styles.css";
 

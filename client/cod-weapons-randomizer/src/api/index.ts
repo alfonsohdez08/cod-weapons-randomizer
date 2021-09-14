@@ -1,5 +1,4 @@
-import { COD } from "../components/GameRadioButton";
-import { Loadout, LoadoutGenerationHints } from "./models";
+import { COD, Loadout, LoadoutGenerationHints } from "./models";
 import Weapon from "./models/Weapon"; // this is a hack
 
 const baseUrl = "https://localhost:5001";

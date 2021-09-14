@@ -1,9 +1,5 @@
 import { Form } from "react-bootstrap";
-
-export enum COD {
-  ModernWarfare = "mw",
-  Warzone = "wz",
-}
+import { COD } from "../api/models";
 
 export interface RadioProps {
   value: COD;
