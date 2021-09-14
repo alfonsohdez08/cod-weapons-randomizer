@@ -37,6 +37,8 @@ const setLoadoutWeaponImageUrls = (loadout: Loadout): void => {
   loadout.secondaryWeapon.setWeaponImageUrl(baseUrl);
 };
 
-export default {
+const api = {
   generateRandomLoadout,
 };
+
+export default api;
