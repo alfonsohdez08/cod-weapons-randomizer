@@ -4,6 +4,7 @@ using CodWeaponsRandomizer.Core.COD.Cw;
 using CodWeaponsRandomizer.Core.COD.Mw;
 using CodWeaponsRandomizer.Core.COD.Wz;
 using CodWeaponsRandomizer.Core.Entities;
+using CodWeaponsRandomizer.Models;
 using Microsoft.AspNetCore.Mvc;
 
 const string MwDbFolderPath = @".\dbs\mw";

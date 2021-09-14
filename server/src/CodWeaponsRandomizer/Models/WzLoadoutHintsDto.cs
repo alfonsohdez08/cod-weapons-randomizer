@@ -1,5 +1,5 @@
 ﻿
-namespace CodWeaponsRandomizer;
+namespace CodWeaponsRandomizer.Models;
 public class WzLoadoutHintsDto: MwLoadoutHintsDto
 {
 

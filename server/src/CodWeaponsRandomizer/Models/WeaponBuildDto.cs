@@ -1,7 +1,7 @@
 ﻿
 using System.Text.Json.Serialization;
 
-namespace CodWeaponsRandomizer;
+namespace CodWeaponsRandomizer.Models;
 public class WeaponBuildDto: IdNameDto
 {
     [JsonPropertyName("weaponType")]
