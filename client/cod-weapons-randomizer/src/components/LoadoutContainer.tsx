@@ -1,7 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { IdName, Loadout } from "../api/models";
 
 import WeaponCard from "./WeaponCard";
+
+import { IdName, Loadout } from "../api/models";
 
 const LoadoutContainer = ({ loadout }: { loadout: Loadout }) => {
   return (

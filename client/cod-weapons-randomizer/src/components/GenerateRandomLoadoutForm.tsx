@@ -1,8 +1,8 @@
+import React from "react";
+
 import LoadoutGenerationHints from "./LoadoutGenerationHints";
 import Button from "./Button";
 import GameRadioButton from "./GameRadioButton";
-
-import React from "react";
 
 import API from "../api";
 import { Loadout, COD } from "../api/models";
