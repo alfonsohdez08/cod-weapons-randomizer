@@ -1,7 +1,7 @@
 import { COD, Loadout, LoadoutGenerationHints } from "./models";
 import Weapon from "./models/Weapon"; // this is a hack
 
-const baseUrl = "https://localhost:5001";
+const baseUrl = process.env.REACT_APP_API_URL || "";
 
 const CODUrls = {
   [COD.ModernWarfare]: "mw-loadouts",
