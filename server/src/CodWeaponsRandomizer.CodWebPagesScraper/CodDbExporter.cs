@@ -18,11 +18,12 @@ namespace CodWeaponsRandomizer.CodWebPagesScraper
         {
             _jsonSerializerOptions = new JsonSerializerOptions()
             {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                WriteIndented = true
             };
-#if DEBUG
-            _jsonSerializerOptions.WriteIndented = true;
-#endif
+//#if DEBUG
+//            _jsonSerializerOptions.WriteIndented = true;
+//#endif
             _weapons = codWikiHomePageScraper.ScrapWeapons();
             _perkTiers = codWikiHomePageScraper.ScrapPerkTiers();
             _tacticals = codWikiHomePageScraper.ScrapTacticals();
