@@ -383,3 +383,4 @@ FodyWeavers.xsd
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/server/src/CodWeaponsRandomizer/Properties/ServiceDependencies/cod-loadout-randomizer - Web Deploy/profile.arm.json
