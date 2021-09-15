@@ -14,4 +14,10 @@ code {
 
 body > div {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root > div {
+  flex-grow: 1;
 }
