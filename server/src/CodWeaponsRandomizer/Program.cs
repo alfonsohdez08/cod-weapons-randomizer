@@ -49,6 +49,8 @@ app.MapPost("/wz-loadouts",
     ([FromServices] LoadoutRandomizer loadoutRandomizer, [FromBody] WzLoadoutHintsDto hints) => RandomizeLoadout(loadoutRandomizer, MapWzLoadoutHints(hints))
     );
 
+app.MapGet("/health", () => "OK");
+
 static MwLoadoutHints MapMwLoadoutHints(MwLoadoutHintsDto hints) => new MwLoadoutHints()
 {
     EnforceUseAllWeaponAttachmentSlots = hints.EnforceUseAllWeaponAttachmentSlots,
