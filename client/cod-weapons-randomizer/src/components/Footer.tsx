@@ -3,7 +3,7 @@ const Footer = () => {
     <span>
       <span className="fw-bold">DISCLAIMER: </span>
       <span className="fst-italic">
-        This app is not endorsed by Activision and its subsidiaries, nor the
+        This App is not endorsed by Activision and its subsidiaries, nor the
         data displayed here belongs to the App developer. All the data is coming
         from{" "}
         <a
