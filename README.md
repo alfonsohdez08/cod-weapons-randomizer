@@ -27,9 +27,9 @@ Please, visit to the [client folder](/client/cod-weapons-randomizer/README.md) a
 
 ## Features roadmap
 
-[ ] Differentiate MW weapons from CW weapons in UI.
-[ ] Provide a Warzone loadout hint to select a weapon from each game.
-[ ] Able to share loadout.
+- [ ] Differentiate MW weapons from CW weapons in UI.
+- [ ] Provide a Warzone loadout hint to select a weapon from each game.
+- [ ] Able to share loadout.
 
 ## Disclaimer
 
