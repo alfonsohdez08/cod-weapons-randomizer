@@ -4,7 +4,7 @@ An app that randomizes a Call of Duty Modern Warfare (2019) and Call of Duty War
 
 ## Where the data come from?
 
-All the data displayed in the application has been scraped from the [Call of Duty Wiki](https://callofduty.fandom.com/wiki/Call_of_Duty_Wiki) pages. The web scraper is under the `server` folder as [CodWeaponsRandomizer.CodWebPagesScraper](https://github.com/alfonsohdez08/cod-weapons-randomizer/tree/master/server/src/CodWeaponsRandomizer.CodWebPagesScraper).
+All the data displayed in the application has been scraped from the [Call of Duty Wiki](https://callofduty.fandom.com/wiki/Call_of_Duty_Wiki) pages. The web scraper is under the `server` folder as [CodWeaponsRandomizer.CodWebPagesScraper](/server/src/CodWeaponsRandomizer.CodWebPagesScraper).
 
 ### Data Accuracy
 
@@ -23,7 +23,7 @@ Due to the CW integration with WZ, CW data has been scraped as well. However, th
 
 ## How to run it locally?
 
-Please, visit to the [client folder](https://github.com/alfonsohdez08/cod-weapons-randomizer/tree/master/client/cod-weapons-randomizer) and [server folder](https://github.com/alfonsohdez08/cod-weapons-randomizer/tree/master/server) so you can find more details about how to run both application components.
+Please, visit to the [client folder](/client/cod-weapons-randomizer/README.md) and [server folder](/server/README.md) so you can find more details about how to run both application components.
 
 ## Disclaimer
 
