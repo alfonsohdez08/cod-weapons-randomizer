@@ -25,6 +25,12 @@ Due to the CW integration with WZ, CW data has been scraped as well. However, th
 
 Please, visit to the [client folder](/client/cod-weapons-randomizer/README.md) and [server folder](/server/README.md) so you can find more details about how to run both application components.
 
+## Features roadmap
+
+[ ] Differentiate MW weapons from CW weapons in UI.
+[ ] Provide a Warzone loadout hint to select a weapon from each game.
+[ ] Able to share loadout.
+
 ## Disclaimer
 
 This App is not endorsed by Activision and its subsidiaries, nor the
