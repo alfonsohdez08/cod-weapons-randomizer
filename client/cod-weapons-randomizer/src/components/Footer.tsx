@@ -3,9 +3,13 @@ const Footer = () => {
     <span>
       <span className="fw-bold">DISCLAIMER: </span>
       <span className="fst-italic">
-        I do not own any data displayed here, nor I do not any relationship with
-        Activision. All the data is coming from{" "}
-        <a href="https://callofduty.fandom.com/wiki/Call_of_Duty_Wiki">
+        This app is not endorsed by Activision and its subsidiaries, nor the
+        data displayed here belongs to the App developer. All the data is coming
+        from{" "}
+        <a
+          href="https://callofduty.fandom.com/wiki/Call_of_Duty_Wiki"
+          className="text-white"
+        >
           Call of Duty Wiki
         </a>
         .
