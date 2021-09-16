@@ -1,5 +1,29 @@
 # Call of Duty Loadout Randomizer (MW & WZ)
 
+An app that randomizes a Call of Duty Modern Warfare (2019) and Call of Duty Warzone loadout.
+
+## Where the data come from?
+
+All the data displayed in the application has been scraped from the [Call of Duty Wiki](https://callofduty.fandom.com/wiki/Call_of_Duty_Wiki) pages. The web scraper is under the `server` folder as [CodWeaponsRandomizer.CodWebPagesScraper](https://github.com/alfonsohdez08/cod-weapons-randomizer/tree/master/server/src/CodWeaponsRandomizer.CodWebPagesScraper).
+
+### Data Accuracy
+
+#### Call of Duty Modern Warfare (2019)
+
+All the weapons, perks, lethals and tacticals have been scraped/imported with no issue.
+
+#### Call of Duty Black Ops Cold War
+
+Due to the CW integration with WZ, CW data has been scraped as well. However, there are 4 weapons missing because the current approach is not able to scrap them:
+
+- Ballistic Knife (a Special weapon for CW, but a Melee weapon for WZ).
+- M79 (a Special weapon for CW, but a Launcher weapon for WZ).
+- Nail Gun (a Special weapon for CW, but a SMG for WZ).
+- R1 Shadowhunter (a Special weapon for CW, but a Tactical Rifle for WZ).
+
+## How to run it locally?
+
+Please, visit to the [client folder](https://github.com/alfonsohdez08/cod-weapons-randomizer/tree/master/client/cod-weapons-randomizer) and [server folder](https://github.com/alfonsohdez08/cod-weapons-randomizer/tree/master/server) so you can find more details about how to run both application components.
 
 ## Disclaimer
 
