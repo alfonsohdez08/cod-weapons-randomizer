@@ -1,6 +1,6 @@
 # Call of Duty Loadout Randomizer (MW & WZ)
 
-An app that randomizes a Call of Duty Modern Warfare (2019) and Call of Duty Warzone loadout.
+An app that randomizes a Call of Duty Modern Warfare (2019) and Call of Duty Warzone loadout. Application is already hosted [here](https://festive-almeida-fd2818.netlify.app/).
 
 ## Where the data come from?
 
