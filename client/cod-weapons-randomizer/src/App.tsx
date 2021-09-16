@@ -6,6 +6,7 @@ import "./App.css";
 import GenerateRandomLoadoutForm from "./components/GenerateRandomLoadoutForm";
 import LoadoutContainer from "./components/LoadoutContainer";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 import { Loadout } from "./api/models";
 
@@ -15,7 +16,7 @@ const App = () => {
   return (
     <div className="text-white d-flex flex-column">
       <Header />
-      <div className="flex-grow-1 d-flex flex-column">
+      <div className="flex-grow-1 d-flex flex-column gap-3">
         <div className="w-75 mx-auto flex-grow-1">
           <GenerateRandomLoadoutForm onGenerateLoadout={setLoadout} />
           {loadout ? (
@@ -26,6 +27,7 @@ const App = () => {
             <></>
           )}
         </div>
+        <Footer />
       </div>
     </div>
   );

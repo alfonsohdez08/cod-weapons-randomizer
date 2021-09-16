@@ -21,3 +21,11 @@
   max-height: 22px;
   max-width: 22px;
 }
+
+.disclaimer {
+  font-size: 0.6rem;
+}
+
+.disclaimer-md {
+  font-size: 0.7rem;
+}
