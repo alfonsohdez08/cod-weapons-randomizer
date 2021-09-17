@@ -2,6 +2,8 @@
 
 An app that randomizes a Call of Duty Modern Warfare (2019) and Call of Duty Warzone loadout. Application is already hosted [here](https://festive-almeida-fd2818.netlify.app/).
 
+![COD Loadout Randomizer Gif](/cod_loadout_rnd_demo.gif)
+
 ## Where the data come from?
 
 All the data displayed in the application has been scraped from the [Call of Duty Wiki](https://callofduty.fandom.com/wiki/Call_of_Duty_Wiki) pages. The web scraper is under the `server` folder as [CodWeaponsRandomizer.CodWebPagesScraper](/server/src/CodWeaponsRandomizer.CodWebPagesScraper).
