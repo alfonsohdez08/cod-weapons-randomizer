@@ -1,4 +1,6 @@
-﻿namespace CodWeaponsRandomizer.Core.COD
+﻿using System;
+
+namespace CodWeaponsRandomizer.Core.COD
 {
     public abstract class Randomizer<THints, TRandomType>
         where THints: class

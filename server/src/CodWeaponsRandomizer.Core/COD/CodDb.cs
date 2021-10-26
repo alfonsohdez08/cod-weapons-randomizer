@@ -1,4 +1,6 @@
 ﻿using CodWeaponsRandomizer.Core.Entities;
+using System.Collections.Generic;
+using System.IO;
 using System.Text.Json;
 
 namespace CodWeaponsRandomizer.Core.COD

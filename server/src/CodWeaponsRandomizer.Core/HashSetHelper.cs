@@ -1,4 +1,6 @@
-﻿namespace CodWeaponsRandomizer.Core
+﻿using System.Collections.Generic;
+
+namespace CodWeaponsRandomizer.Core
 {
     internal static class HashSetHelper
     {

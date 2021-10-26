@@ -1,5 +1,8 @@
 ﻿using CodWeaponsRandomizer.Core.COD.Mw;
 using CodWeaponsRandomizer.Core.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CodWeaponsRandomizer.Core.COD
 {
