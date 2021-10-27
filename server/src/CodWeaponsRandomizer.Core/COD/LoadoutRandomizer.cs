@@ -1,6 +1,7 @@
 ﻿using CodWeaponsRandomizer.Core.COD.Mw;
 using CodWeaponsRandomizer.Core.COD.Wz;
 using CodWeaponsRandomizer.Core.Entities;
+using System;
 
 namespace CodWeaponsRandomizer.Core.COD
 {

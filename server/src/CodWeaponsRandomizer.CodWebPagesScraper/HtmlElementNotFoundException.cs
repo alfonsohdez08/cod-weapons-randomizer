@@ -1,4 +1,6 @@
-﻿namespace CodWeaponsRandomizer.CodWebPagesScraper
+﻿using System;
+
+namespace CodWeaponsRandomizer.CodWebPagesScraper
 {
     class HtmlElementNotFoundException : Exception
     {

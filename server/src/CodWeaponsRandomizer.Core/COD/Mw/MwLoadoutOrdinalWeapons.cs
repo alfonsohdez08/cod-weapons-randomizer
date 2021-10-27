@@ -1,4 +1,6 @@
-﻿namespace CodWeaponsRandomizer.Core.COD.Mw
+﻿using System.Collections.Generic;
+
+namespace CodWeaponsRandomizer.Core.COD.Mw
 {
     internal class MwLoadoutOrdinalWeapons : LoadoutOrdinalWeapons
     {

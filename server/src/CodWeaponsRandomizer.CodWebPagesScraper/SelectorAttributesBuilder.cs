@@ -1,4 +1,7 @@
-﻿namespace CodWeaponsRandomizer.CodWebPagesScraper
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace CodWeaponsRandomizer.CodWebPagesScraper
 {
     enum AttributeSearchCriteria
     {

@@ -1,4 +1,8 @@
-﻿namespace CodWeaponsRandomizer.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CodWeaponsRandomizer.Core
 {
     internal static class IEnumerableExtensions
     {

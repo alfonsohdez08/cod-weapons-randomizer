@@ -1,4 +1,6 @@
-﻿namespace CodWeaponsRandomizer.Core.COD
+﻿using System.Collections.Generic;
+
+namespace CodWeaponsRandomizer.Core.COD
 {
     internal abstract class LoadoutOrdinalWeapons
     {
